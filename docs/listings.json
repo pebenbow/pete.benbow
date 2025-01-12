@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/courses.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/projects.html",
+    "items": [
+      "/projects/powerbi.html",
+      "/projects/r.html",
+      "/projects/homelab.html"
+    ]
+  }
+]
