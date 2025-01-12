@@ -1,0 +1,17 @@
+- title: "Power BI"
+  path: powerbi.qmd
+  image: images/pbi.png
+  description: >
+    A modest selection of a few Power BI projects I've built over the years.
+
+- title: "R"
+  path: r.qmd
+  image: images/Rlogo.png
+  description: >
+    R projects built in Shiny, Quarto, and other formats.
+
+- title: "Home Lab"
+  path: homelab.qmd
+  image: images/anne-nygard-vc-vPgGqAr4-unsplash.jpg
+  description: >
+    Gaming PCs and other cool stuff I've built for personal use.

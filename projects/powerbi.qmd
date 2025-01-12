@@ -1,0 +1,40 @@
+---
+title: "Power BI Projects"
+format: html
+toc: true
+sidebar: false
+---
+
+This is a sampling of some of the data viz work I've done in Microsoft Power BI.
+
+### Davidson College Fact File
+
+Institutional research teams at colleges and universities across the United States
+maintain institutional "fact files" or "fact books" that contain aggregated data
+about the schools. These data are carefully curated each year and scrutinized before
+the schools publish them because these are considered official publications that
+represent various facets of the institution, including enrollment, academics, 
+faculty demographics, and so forth.
+
+A few years ago, I was tasked with revamping Davidson's fact file into an 
+interactive Power BI report, and this was the result.
+
+<iframe title="Davidson College Fact File" width="800" height="520" src="https://app.powerbi.com/view?r=eyJrIjoiYWFiYmZmZTktNGRmZC00NmNhLWFiNzItZDFlMmQ0MWViNzdjIiwidCI6IjM1ZDg3NjNjLWQyYjEtNDIxMy1iNjI5LWY1ZGYwYWY5ZTNjMyIsImMiOjF9" frameborder="0" allowFullScreen="true"></iframe>
+
+### Basketball analytics
+
+I have horrible sports knowledge, but I **love** Davidson basketball. Anyone who
+has been to my office and seen the signed memorabilia on the wall from Davidson's
+fairy-tale run to the Elite Eight in March 2008 knows the level of my commitment
+to Wildcat hoops. So it was really cool when my colleague Tim Chartier asked me
+to showcase Power BI's capabilities with some shot data that was collected by the
+[Cats Stats](https://catsstats.timchartier.com){target="_blank"} sports analytics group that he works with.
+
+This is one of my older projects, but a favorite of mine because of the dark theme,
+the amount of interactivity to allow you to explore the data, and the chance I had
+to build unique visuals. I especially love the shot charts, which are just basic
+scatterplots with semi-transparent backgrounds laid on top of an image of an NCAA
+regulation basketball court, and the chord diagram, which does a fantastic job of
+showing the relationships between players as they pass to each other.
+
+<iframe title="Davidson Mens Basketball 2017-18" width="800" height="480" src="https://app.powerbi.com/view?r=eyJrIjoiM2U5ZDY1NDctMGEwNC00MTg5LWI5NDItMDVhMTY1ZjdiMzZhIiwidCI6IjM1ZDg3NjNjLWQyYjEtNDIxMy1iNjI5LWY1ZGYwYWY5ZTNjMyIsImMiOjF9&pageName=ReportSection088b44c595a39c7c6380" frameborder="0" allowFullScreen="true"></iframe>

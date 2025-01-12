@@ -1,0 +1,28 @@
+---
+title: "Pete Benbow"
+subtitle: "Data Science Educator"
+# `profile.jpg` photo by Jan Tinneberg on https://unsplash.com
+image: images/pete-meeko.jpg
+about: # https://quarto.org/docs/websites/website-about.html
+  template: trestles
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/pebenbow
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/pdbenbow/
+---
+
+## Hello, world!
+
+I’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. 
+I accepted an appointment to the Davidson faculty in 2024 after working for over a decade 
+as a developer, consultant, and team leader in the private sector and higher education.
+
+The focus of my teaching is on practical data skills. I'm not a scholar, and don't 
+pretend to be one. I'm just an average guy who loves building cool stuff with data.
+
+And this is my home on the internet, where I keep my [bio](bio.qmd) and [CV](cv.qmd), a list of the
+[courses](courses.qmd) I teach, and some of the [projects](projects.qmd) I have worked on.

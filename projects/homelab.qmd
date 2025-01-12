@@ -1,0 +1,49 @@
+---
+title: "Home Lab"
+format: html
+toc: true
+sidebar: false
+lightbox:
+  match: auto
+  effect: zoom
+  desc-position: bottom
+  loop: true
+---
+
+## Custom PC (2025)
+
+Coming soon! All parts have been ordered, just awaiting shipping...
+
+## Custom PC (2020)
+
+![](images/custom-pc2020.jpg){style="float:left;padding: 0 10px 0 10px;" width="300"}
+
+This was the first custom PC I ever built myself. I ordered the parts for this 
+in March 2020, literally one week before the whole world went on lockdown due
+to COVID-19. If I had waited any longer, I might have never gotten these
+components because suddenly everybody decided to use the pandemic as an excuse to 
+get into gaming, plus the crypto-bros started to buy up all the GPUs, leading
+to worldwide scarcity and price-gouging. Those were weird days...
+
+I did a fair amount of gaming on this, but I also used it as my video editing/production 
+station when I was recording all the content for my Power BI and SQL courses on edX. 
+It served me really well until 2025 when it got replaced by my newest rig.
+
+### Component List
+
+|                      |                                                         |
+|----------------------|---------------------------------------------------------|
+| CPU                  | AMD Ryzen 7 3700X                                       |
+| GPU                  | NVIDIA Founders Edition GeForce RTX 3070[^1]            |
+| Memory               | G.Skill Trident Z Neo 32 GB (2 x 16 GB) DDR4-3600       |
+| Motherboard          | MSI MPG X570 GAMING EDGE WIFI ATX AM4                   |
+| Power supply         | EVGA SuperNOVA 750 G3 750 W 80+                         |
+| Storage (boot drive) | Sabrent Rocket 1 TB M.2-2280 PCIe 3.0 X4 NVME SSD       |
+| Storage (secondary)  | Samsung 970 Evo Plus 2 TB M.2-2280 PCIe 3.0 X4 NVME SSD |
+| Storage (tertiary)   | Seagate Barracuda Compute 2 TB 3.5" 7200 RPM HDD        |
+| Case                 | Corsair iCUE 465X RGB ATX Mid                           |
+| CPU cooler           | be quiet! Dark Rock Pro 4                               |
+| Case fans            | 4x Corsair LL120 RGB 120mm LED PWM fans                 |
+
+[^1]: When I originally built this, it had an MSI GAMING X GeForce RTX 2070 SUPER
+for graphics, but I upgraded to the RTX 3070 in 2022. 

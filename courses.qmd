@@ -1,0 +1,8 @@
+---
+title: Courses I Teach
+listing:
+  contents: courses.yml
+  type: grid
+  grid-columns: 2
+  max-description-length: 250
+---

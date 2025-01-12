@@ -1,0 +1,46 @@
+project:
+  type: website
+
+website:
+  title: "Home"
+  open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
+  page-footer: 
+    right: "Made with Quarto" 
+    background: "#0f1012"
+    foreground: "#ffffff"
+    
+  navbar:
+    right:
+      - text: Home
+        href: index.qmd
+      - text: Bio
+        href: bio.qmd  
+      - text: Courses 
+        href: courses.qmd
+      - sidebar:projects
+      - text: CV 
+        href: cv.qmd 
+        
+  sidebar:
+    - id: projects
+      title: "Projects"   
+      style: "docked"
+      background: light
+      collapse-level: 2
+      contents: 
+      - text: Power BI 
+        href: projects/powerbi.qmd 
+      - text: R
+        href: projects/r.qmd
+      - text: Home Lab
+        href: projects/homelab.qmd
+
+format:
+  html:
+    backgroundcolor: "#e6e6e6" 
+    fontcolor: "black"
+    linkcolor: "black"
+    mainfont: "roboto"
+    fontsize: 20px
+    theme: [cosmo, styles.scss]
+    
