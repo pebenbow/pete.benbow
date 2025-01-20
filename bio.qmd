@@ -23,8 +23,8 @@ twenties featured notable career accolades like being a law school dropout,
 losing my job and living on unemployment for several months during the Great Recession,
 and even two painful, sleep-deprived stints at the United States Marine Corps 
 Officer Candidates School (OCS)[^2] in Quantico, Virginia. I used to
-think I was cursed, until one day I ended up in a corporate job that I thought
-would go nowhere, but ended up changing my life forever.
+think I was cursed, until one day I landed in a corporate job that I thought
+would go nowhere, but actually changed my life forever.
 
 That job introduced me to working with data, specifically through programming and
 data visualization. And from that point on, I was hooked. And I was pretty successful at it,
@@ -123,5 +123,4 @@ I have no scholarly achievements. 😁
 
 [^2]: One of the coolest experiences I ever had, minus the part where they shaved
 my head, and minus the part where I got injured during training and they had to 
-drop me from the program. If you're curious what Marine Corps OCS is like, 
-[check out this video](https://www.youtube.com/watch?v=ZdhhuZXedts){target="_blank"}.
+discharge me from the program.
