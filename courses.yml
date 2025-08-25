@@ -15,6 +15,14 @@
     using a variety of datasets and practical learning exercises.
   categories: [Davidson]
 
+- title: "DAT-211: Data Integration & Analytics"
+  # path: https://example.com/customer-segmentation
+  image: images/database.png
+  description: >
+    An introduction to relational databases and SQL programming with PostgreSQL 
+    using a variety of datasets and practical learning exercises.
+  categories: [Davidson]
+
 - title: "edX: Analyzing & Visualizing Data with Power BI"
   path: https://www.edx.org/learn/power-bi/davidson-college-analyzing-and-visualizing-data-with-power-bi
   image: images/powerbi-course.png

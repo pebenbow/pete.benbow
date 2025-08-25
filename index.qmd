@@ -1,6 +1,6 @@
 ---
 title: "Pete Benbow"
-subtitle: "Data Science Educator"
+subtitle: "Data Science Educator & <br> Open Data Advocate"
 # `profile.jpg` photo by Jan Tinneberg on https://unsplash.com
 image: images/pete-meeko.jpg
 about: # https://quarto.org/docs/websites/website-about.html

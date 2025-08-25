@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9b2076995dcfadcd94d02e797b4adca4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -129,6 +129,7 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Courses I Teach – Home">
+<meta property="og:image" content="images/dav-dat110.png">
 <meta property="og:site_name" content="Home">
 </head>
 
@@ -224,7 +225,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="Davidson">
+<div class="g-col-1" data-index="0" data-categories="RGF2aWRzb24=">
 <a href="" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -235,7 +236,7 @@ window.Quarto = {
 DAT-110: Data Science &amp; Society
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Davidson'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('RGF2aWRzb24='); return false;">
 Davidson
 </div>
 </div>
@@ -246,7 +247,7 @@ Davidson
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Davidson">
+<div class="g-col-1" data-index="1" data-categories="RGF2aWRzb24=">
 <a href="" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -257,7 +258,7 @@ Davidson
 DAT-153: Database Programming
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Davidson'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('RGF2aWRzb24='); return false;">
 Davidson
 </div>
 </div>
@@ -268,7 +269,7 @@ Davidson
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="online">
+<div class="g-col-1" data-index="2" data-categories="b25saW5l">
 <a href="https://www.edx.org/learn/power-bi/davidson-college-analyzing-and-visualizing-data-with-power-bi" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -279,7 +280,7 @@ Davidson
 edX: Analyzing &amp; Visualizing Data with Power BI
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('online'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('b25saW5l'); return false;">
 online
 </div>
 </div>
@@ -290,7 +291,7 @@ online
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="online">
+<div class="g-col-1" data-index="3" data-categories="b25saW5l">
 <a href="https://www.edx.org/learn/sql/davidson-college-introduction-to-sql" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -301,7 +302,7 @@ online
 edX: Introduction to SQL
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('online'); return false;">
+<div class="listing-category" onclick="window.quartoListingCategory('b25saW5l'); return false;">
 online
 </div>
 </div>
@@ -399,8 +400,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -511,7 +510,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

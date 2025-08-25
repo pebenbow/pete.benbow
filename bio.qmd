@@ -17,32 +17,33 @@ A.B., Political Science (2007), Davidson College
 
 ![](images/justpete.jpg){fig-alt="Pete Benbow" style="float:right;padding: 0 0 0 10px;" height="250"}
 
-Well, as mentioned on the Home page, I'm a professor of the practice[^1] in Data Science at Davidson
-College, where I also earned my degree. I took a meandering path to get here. My
-twenties featured notable career accolades like being a law school dropout, 
-losing my job and living on unemployment for several months during the Great Recession,
-and even two painful, sleep-deprived stints at the United States Marine Corps 
-Officer Candidates School (OCS)[^2] in Quantico, Virginia. I used to
-think I was cursed, until one day I landed in a corporate job that I thought
-would go nowhere, but actually changed my life forever.
+Well, as mentioned on the Home page, I'm a professor of the practice in Data Science at Davidson
+College, where I also earned my degree. If you're not familiar with the term, 
+"professors of the practice" are faculty who are appointed to teach based on their 
+professional experience rather than any scholarly achievements, which describes 
+me perfectly because I have no scholarly achievements. 😁
 
-That job introduced me to working with data, specifically through programming and
-data visualization. And from that point on, I was hooked. And I was pretty successful at it,
-progressing from being a junior analyst to a manager to a director all in the span of less 
-than four years. But then I got really tired of managing people and took a job at Davidson
-as a developer in the IT department. It was a welcome change of pace from the
-corporate world, and it eventually led me to my dream job, the one I have now,
-teaching data science at my alma mater.
+I took a meandering path to get here. My twenties featured notable career accolades 
+like dropping out of law school, losing my job during the Great Recession and living 
+unemployed with my parents for several months, and doing a couple of stints at the 
+United States Marine Corps Officer Candidates School (OCS) in Quantico, Virginia. 
+In short, I am well-acquainted with navigating personal and professional uncertainty. 
+
+Eventually my career stabilized, and I spent the better part of a decade working my way up the ladder
+in the private sector. I quickly moved from being a junior data analyst to a manager, 
+then a director, all in the span of less than four years. But then I got really tired 
+of managing people and all their drama, so I took a demotion and left my director 
+job to come work at Davidson as a senior developer in the college's IT department. 
+It was a welcome change of pace from the corporate world, and it eventually led 
+me to my dream job, the one I have now, teaching data science at my alma mater.
 
 ### Fly-fishing
 
 I picked up the art of fly-fishing from my dad in my senior year of college.
 So far, I have fly-fished all over North Carolina, parts of Tennessee and Virginia, 
-as well as Colorado, Idaho, Wyoming, Montana, and Washington. I tried to fish on
-Isle of Skye, Scotland, but a huge storm blew through and I had to cancel the trip
-because it is literally impossible to cast a fly rod when you're facing 50mph wind gusts.
+as well as Michigan, Colorado, Idaho, Wyoming, Montana, and Washington.
 
-I'm probably an average angler at best. I go a few times a year, which is not nearly
+I'm an average angler at best. I go a few times a year, which is not nearly
 enough to satisfy my love of the sport, but it's incredibly restorative when I find 
 time for it. The solitude of being in the Appalachians and communing with nature 
 is a spiritual experience for me, even if I don't catch a single fish.
@@ -63,38 +64,14 @@ is a spiritual experience for me, even if I don't catch a single fish.
 :::
 ::::
 
-### Skiing
-
-
-Downhill skiing is my wife's passion, and she used to work as a ski instructor when
-she lived in Colorado. She re-introduced me to the sport after we got married, and
-since then we've skied mostly in Banff and Steamboat Springs. At
-some point, she says she'll take me to Park City and Big Sky, which are probably
-her two favorite places to hit the powder.
-
-I love to ski, but I'm not terribly good at it. 
-I pretty much just stick to the blue runs when we go out west.
-
-:::: {.columns}
-::: {.column width="45%"}
-![Skiing Banff, AB](images/pete-banff.jpg){style="float:right;padding: 0 10px 0 10px;" group="ski-gallery"}
-:::
-::: {.column width="10%"}
-
-:::
-::: {.column width="45%"}
-![Skiing Steamboat Springs, CO, with Wifey](images/pete-steamboat.jpg){group="ski-gallery"}
-:::
-
 ## Travels
 
-My wife and I are homebodies most of the time, no doubt about it, but occasionally
-we love to travel. As a student, I had the good fortune to study overseas at the
-University of Cambridge in the United Kingdom, where I focused on political 
-philosophy and literature. In my senior year, I also got to participate in an 
-awesome political science research trip to Colombia. Both of these experiences
-gave me the travel bug, so we try to do a big international trip every few years
-if we can.
+My wife and I are homebodies most of the time, but occasionally we love to travel. 
+As a student, I had the good fortune to study overseas at the University of Cambridge 
+in the United Kingdom, where I focused on political philosophy and literature. 
+In my senior year, I also got to participate in an awesome political science research 
+trip to Colombia. Both of these experiences gave me the travel bug, so we try to 
+do a big international trip once every few years if we can.
 
 :::: {.columns}
 ::: {.column width="45%"}
@@ -115,12 +92,3 @@ Ireland 2024
 ![Looking less exhausted in Ireland, with Wifey](images/pete-ireland02.jpg){width="600" group="travel-gallery"}
 :::
 ::::
-
-[^1]: If you're not familiar with the term, "professors of the practice" are faculty
-who are appointed to teach based on their professional experience rather 
-than any scholarly achievements, which describes me perfectly because
-I have no scholarly achievements. 😁
-
-[^2]: One of the coolest experiences I ever had, minus the part where they shaved
-my head, and minus the part where I got injured during training and they had to 
-discharge me from the program.
