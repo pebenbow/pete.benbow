@@ -12,9 +12,11 @@ lightbox:
 
 ## Custom PC (2025)
 
-![](images/custom-pc2025.jpg){style="float:left;padding: 0 10px 0 10px;" width="300"}
+![](images/custom-pc2025.jpg){height="500"}
 
-My latest creation did away with all the RGB lighting that my previous build had, instead going for a more discreet aesthetic. To get there, I used a Fractal Design North case with the same RTX 3070 GPU from my previous build, as well as the same storage configuration, but a brand new motherboard, CPU, PSU, 64GB RAM, and an AIO cooler. This thing runs like a dream, and I love the way this thing looks, especially how the walnut accents on the front of the case coordinate with my Ikea desk top and my Edifier speakers.
+My latest creation does away with all the RGB lighting that my previous build had, instead going for a more discreet aesthetic. To get there, I bought a Fractal Design North case, plus a brand new motherboard, CPU, PSU, 64GB RAM, and an AIO cooler. These new parts were all specifically curated to avoid any RGB lighting, with the exception of the temperature display on the AIO cooler's CPU mount. Carried over from my previous build was the RTX 3070 GPU and my storage config.
+
+This thing runs like a dream and I love the way it looks, especially how the walnut accents on the front of the case coordinate with my Ikea desk top and my Edifier speakers.
 
 ### Component List
 
@@ -34,7 +36,7 @@ My latest creation did away with all the RGB lighting that my previous build had
 
 ## Custom PC (2020)
 
-![](images/custom-pc2020.jpg){style="float:left;padding: 0 10px 0 10px;" width="300"}
+![](images/custom-pc2020.jpg){height="500"}
 
 This was the first custom PC I ever built myself. I ordered the parts for this 
 in March 2020, literally one week before the whole world went on lockdown due
@@ -45,7 +47,7 @@ to worldwide scarcity and price-gouging. Those were weird days...
 
 I did a fair amount of gaming on this, but I also used it as my video editing/production 
 station when I was recording all the content for my Power BI and SQL courses on edX. 
-It served me really well until 2025 when it got replaced by my newest rig.
+It served me really well until 2025 when I replaced it with my newest rig.
 
 ### Component List
 
