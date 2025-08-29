@@ -10,7 +10,7 @@ lightbox:
   loop: true
 ---
 
-## Custom PC (2025)
+### Custom PC (2025)
 
 ![](images/custom-pc2025.jpg){height="500"}
 
@@ -18,7 +18,7 @@ My latest creation does away with all the RGB lighting that my previous build ha
 
 This thing runs like a dream and I love the way it looks, especially how the walnut accents on the front of the case coordinate with my Ikea desk top and my Edifier speakers.
 
-### Component List
+#### Component List
 
 |                      |                                                         |
 |----------------------|---------------------------------------------------------|
@@ -34,7 +34,7 @@ This thing runs like a dream and I love the way it looks, especially how the wal
 | CPU cooler           | NZXT Kraken 240 AIO                                     |
 | Case fans            | 3x Noctua NF-F12 iPPC-2000 IP67 PWM 120mm cooling fans  |
 
-## Custom PC (2020)
+### Custom PC (2020)
 
 ![](images/custom-pc2020.jpg){height="500"}
 
@@ -49,7 +49,7 @@ I did a fair amount of gaming on this, but I also used it as my video editing/pr
 station when I was recording all the content for my Power BI and SQL courses on edX. 
 It served me really well until 2025 when I replaced it with my newest rig.
 
-### Component List
+#### Component List
 
 |                      |                                                         |
 |----------------------|---------------------------------------------------------|

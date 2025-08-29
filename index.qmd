@@ -25,4 +25,4 @@ The focus of my teaching is on practical data skills. I'm not a scholar, and don
 pretend to be one. I'm just an average guy who loves building cool stuff with data.
 
 And this is my home on the internet, where I keep my [bio](bio.qmd) and [CV](cv.qmd), a list of the
-[courses](courses.qmd) I teach, and some of the [projects](projects.qmd) I have worked on.
+[courses](courses.qmd) I teach, and some of the [projects](projects/projects.qmd) I have worked on.
