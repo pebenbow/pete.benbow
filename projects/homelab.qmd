@@ -18,7 +18,19 @@ My latest creation uses a Fractal Design North case with the same RTX 3070 GPU f
 
 I love the way this thing looks, especially how the walnut accents on the front of the case coordinate with my Ikea desk top and my Edifier speakers.
 
-Full component list coming soon...
+|                      |                                                         |
+|----------------------|---------------------------------------------------------|
+| CPU                  | AMD Ryzen 7 7800X3D 8-Core 16-Thread 4.2 GHz            |
+| GPU                  | NVIDIA Founders Edition GeForce RTX 3070                |
+| Memory               | Corsair Vengeance DDR5 RAM 64GB (2x32GB) 5200MHz        |
+| Motherboard          | MSI MAG B650 Tomahawk ATX DDR5 Wi-Fi 6E                 |
+| Power supply         | Corsair RM850x ATX                                      |
+| Storage (boot drive) | Sabrent Rocket 1 TB M.2-2280 PCIe 3.0 X4 NVME SSD       |
+| Storage (secondary)  | Samsung 970 Evo Plus 2 TB M.2-2280 PCIe 3.0 X4 NVME SSD |
+| Storage (tertiary)   | Seagate Barracuda Compute 2 TB 3.5" 7200 RPM HDD        |
+| Case                 | Fractal Design North, charcoal black                    |
+| CPU cooler           | NZXT Kraken 240 AIO                                     |
+| Case fans            | 3x Noctua NF-F12 iPPC-2000 IP67 PWM 120mm cooling fans  |
 
 ## Custom PC (2020)
 
