@@ -15,7 +15,7 @@ A.B., Political Science (2007), Davidson College
 
 ### About Me
 
-![](images/justpete.jpg){fig-alt="Pete Benbow" style="float:right;padding: 0 0 0 10px;" height="250"}
+![](images/justpete.jpg){fig-alt="Pete Benbow" style="float:right;padding: 0 0 0 10px;" height="300"}
 
 Well, as mentioned on the Home page, I'm a professor of the practice in Data Science at Davidson
 College, where I also earned my degree. If you're not familiar with the term, 
@@ -26,7 +26,7 @@ me perfectly because I have no scholarly achievements. 😁
 I took a meandering path to get here. My twenties featured notable career accolades 
 like dropping out of law school, losing my job during the Great Recession and living 
 unemployed with my parents for several months, and doing a couple of stints at the 
-United States Marine Corps Officer Candidates School (OCS) in Quantico, Virginia. 
+U.S. Marine Corps Officer Candidates School (OCS) in Quantico, Virginia. 
 In short, I am well-acquainted with navigating personal and professional uncertainty. 
 
 Eventually my career stabilized, and I spent the better part of a decade working my way up the ladder
