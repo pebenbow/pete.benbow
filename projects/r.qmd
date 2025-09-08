@@ -10,7 +10,7 @@ lightbox:
   loop: true
 ---
 
-### Assignment calendar with highchartr
+### Assignment calendar with highcharter
 
 ![](images/highchartr-calendar.png)
 
@@ -20,6 +20,9 @@ I wanted to give my students an easy reference for when assignments are going to
 come due, and I was inspired by the common Gantt chart visual. Every day of the 
 semester is represented on the X axis, and the Y axis is grouped by assignment 
 types (quizzes, labs, homeworks). 
+
+To create this, I used the [highcharter package](https://jkunst.com/highcharter/){target="_blank"}, 
+which supports greater interactivity than your standard base R and ggplot visuals.
 
 Beyond the basic visual, I added a couple of elements I thought would be helpful:
 

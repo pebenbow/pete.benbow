@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-calendar-with-highchartr" id="toc-assignment-calendar-with-highchartr" class="nav-link active" data-scroll-target="#assignment-calendar-with-highchartr">Assignment calendar with highchartr</a></li>
+  <li><a href="#assignment-calendar-with-highcharter" id="toc-assignment-calendar-with-highcharter" class="nav-link active" data-scroll-target="#assignment-calendar-with-highcharter">Assignment calendar with highcharter</a></li>
   <li><a href="#cat-scheduler-dashboard" id="toc-cat-scheduler-dashboard" class="nav-link" data-scroll-target="#cat-scheduler-dashboard">Cat Scheduler Dashboard</a></li>
   </ul>
 </nav>
@@ -172,10 +172,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assignment-calendar-with-highchartr" class="level3">
-<h3 class="anchored" data-anchor-id="assignment-calendar-with-highchartr">Assignment calendar with highchartr</h3>
+<section id="assignment-calendar-with-highcharter" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-calendar-with-highcharter">Assignment calendar with highcharter</h3>
 <p><a href="images/highchartr-calendar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/highchartr-calendar.png" class="img-fluid"></a></p>
 <p>As part of the custom websites I build for each of my courses, I have a calendar visual that displays the start date and due date for each assignment in the class. I wanted to give my students an easy reference for when assignments are going to come due, and I was inspired by the common Gantt chart visual. Every day of the semester is represented on the X axis, and the Y axis is grouped by assignment types (quizzes, labs, homeworks).</p>
+<p>To create this, I used the <a href="https://jkunst.com/highcharter/" target="_blank">highcharter package</a>, which supports greater interactivity than your standard base R and ggplot visuals.</p>
 <p>Beyond the basic visual, I added a couple of elements I thought would be helpful:</p>
 <ul>
 <li>A vertical red line indicating the current day.</li>
