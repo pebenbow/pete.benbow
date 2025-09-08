@@ -10,6 +10,35 @@ lightbox:
   loop: true
 ---
 
+### Assignment calendar with highchartr
+
+![](images/highchartr-calendar.png)
+
+As part of the custom websites I build for each of my courses, I have a calendar 
+visual that displays the start date and due date for each assignment in the class. 
+I wanted to give my students an easy reference for when assignments are going to 
+come due, and I was inspired by the common Gantt chart visual. Every day of the 
+semester is represented on the X axis, and the Y axis is grouped by assignment 
+types (quizzes, labs, homeworks). 
+
+Beyond the basic visual, I added a couple of elements I thought would be helpful:
+
+- A vertical red line indicating the current day.
+- A semi-transparent tooltip that appears when the student hovers over a specific assignment, displaying the release date and due date.
+
+The only thing I don't like about this is how the numeric representation of each 
+assignment's release date and due date is included in the tooltip on the very top 
+line (where you can see "17581536000000 - 17591904000000"). But as long as you 
+don't pay attention to that, I think this is a great resource for my students.
+
+Here's the R code (click to expand):
+
+::: {.callout-tip title="Code" collapse=true}
+{{< gist pebenbow 9abd371f77f9affca44bc090c987e64c >}}
+:::
+
+---
+
 ### Cat Scheduler Dashboard
 
 ![](images/catsched.png){width="800"}
