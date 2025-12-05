@@ -1,65 +1,17 @@
 [
   {
-    "objectID": "projects/r.html",
-    "href": "projects/r.html",
-    "title": "R projects",
-    "section": "",
-    "text": "Assignment calendar with highcharter\n\nAs part of the custom websites I build for each of my courses, I have a calendar visual that displays the start date and due date for each assignment in the class. I wanted to give my students an easy reference for when assignments are going to come due, and I was inspired by the common Gantt chart visual. Every day of the semester is represented on the X axis, and the Y axis is grouped by assignment types (quizzes, labs, homeworks).\nTo create this, I used the highcharter package, which supports greater interactivity than your standard base R and ggplot visuals.\nBeyond the basic visual, I added a couple of elements I thought would be helpful:\n\nA vertical red line indicating the current day.\nA semi-transparent tooltip that appears when the student hovers over a specific assignment, displaying the release date and due date.\n\nThe only thing I don’t like about this is how the numeric representation of each assignment’s release date and due date is included in the tooltip on the very top line (where you can see “17581536000000 - 17591904000000”). But as long as you don’t pay attention to that, I think this is a great resource for my students.\nHere’s the R code (click to expand):\n\n\n\n\n\n\nCode\n\n\n\n\n\n\n\n\n\n\n\n\nCat Scheduler Dashboard\n\nThis is an interactive dashboard I built in R Shiny for department chairs and Academic Affairs staff at Davidson to visualize the planned course schedule for upcoming academic years. Professors have an application they can access (called “Cat Scheduler”, abbreviated as “CatSched”) where they submit their day, time, and location preferences for the courses they’re going to teach, as well as equipment, layout, and other classroom features.\nAfter they submit these preferences, the Cat Scheduler algorithm (developed by my colleague Dr. Laurie Heyer) tries to build an optimal course schedule for the entire college based on the availability of classrooms and the preferences of the faculty. After this schedule is built, my dashboard visualizes the results so the faculty (particularly the department chairs) can make adjustments, specifically so they can try to distribute their classes somewhat evenly throughout a given week in the hopes of spreading out the demand for shared college spaces and resources.\nUsers can select the semester they want to review, as well as the “department group,” which helps group together courses from different disciplines according to some logic from the Registrar’s office that I never fully understood, but I think has to do with them often sharing the same buildings. But I could be wrong.\nThe data comes from the CatSched API, a REST interface that sits on top of MongoDB. It refreshes automatically when a user loads the dashboard, but I also included the “REFRESH DEPARTMENTS” button in the upper-right corner in case someone wants to query fresh data from the API while they’re reviewing a particular department group.\nAnother cool aspect of this is the embedded user guide, which gives users a quick walkthrough of how to navigate the dashboard.\nLink to the dashboard\nLink to source code in GitHub",
-    "crumbs": [
-      "R"
-    ]
-  },
-  {
-    "objectID": "projects/powerbi.html",
-    "href": "projects/powerbi.html",
-    "title": "Power BI Projects",
-    "section": "",
-    "text": "This is a sampling of some of the data viz work I’ve done in Microsoft Power BI.\n\nDavidson College Fact File\nInstitutional research teams at colleges and universities across the United States maintain institutional “fact files” or “fact books” that contain aggregated data about the schools. These data are carefully curated each year and scrutinized before the schools publish them because these are considered official publications that represent various facets of the institution, including enrollment, academics, faculty demographics, and so forth.\nA few years ago, I was tasked with revamping Davidson’s fact file into an interactive Power BI report, and this was the result.\n\n\n\n\nBasketball analytics\nI have horrible sports knowledge, but I love Davidson basketball. Anyone who has been to my office and seen the signed memorabilia on the wall from Davidson’s fairy-tale run to the Elite Eight in March 2008 knows the level of my commitment to Wildcat hoops. So it was really cool when my colleague Tim Chartier asked me to showcase Power BI’s capabilities with some shot data that was collected by the Cats Stats sports analytics group that he works with.\nThis is one of my older projects, but a favorite of mine because of the dark theme, the amount of interactivity to allow you to explore the data, and the chance I had to build unique visuals. I especially love the shot charts, which are just basic scatterplots with semi-transparent backgrounds laid on top of an image of an NCAA regulation basketball court, and the chord diagram, which does a fantastic job of showing the relationships between players as they pass to each other.",
-    "crumbs": [
-      "Power BI"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Pete Benbow",
-    "section": "",
-    "text": "I’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. I accepted an appointment to the Davidson faculty in 2024 after working for over a decade as a developer, consultant, and team leader in the private sector and higher education.\nThe focus of my teaching is on practical data skills. I’m not a scholar, and don’t pretend to be one. I’m just an average guy who loves building cool stuff with data.\nAnd this is my home on the internet, where I keep my bio and CV, a list of the courses I teach, and some of the projects I have worked on."
-  },
-  {
-    "objectID": "index.html#hello-world",
-    "href": "index.html#hello-world",
-    "title": "Pete Benbow",
-    "section": "",
-    "text": "I’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. I accepted an appointment to the Davidson faculty in 2024 after working for over a decade as a developer, consultant, and team leader in the private sector and higher education.\nThe focus of my teaching is on practical data skills. I’m not a scholar, and don’t pretend to be one. I’m just an average guy who loves building cool stuff with data.\nAnd this is my home on the internet, where I keep my bio and CV, a list of the courses I teach, and some of the projects I have worked on."
-  },
-  {
-    "objectID": "courses.html",
-    "href": "courses.html",
-    "title": "Courses I Teach",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
     "section": "",
     "text": "DAT-110: Data Science & Society\n\n\n\nDavidson\n\n\n\nThis course is an introduction to data science methods with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDAT-153: Database Programming\n\n\n\nDavidson\n\n\n\nAn introduction to relational databases and SQL programming with PostgreSQL using a variety of datasets and practical learning exercises.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDAT-211: Data Integration & Analytics\n\n\n\nDavidson\n\n\n\nAn introduction to relational databases and SQL programming with PostgreSQL using a variety of datasets and practical learning exercises.\n\n\n\n\n\n\n\n\n\n\n\n\n\nedX: Analyzing & Visualizing Data with Power BI\n\n\n\nonline\n\n\n\nThis course got me started on the path toward becoming a professor. We have enrolled over 160,000 learners worldwide since we launched the course in 2020.\n\n\n\n\n\n\n\n\n\n\n\n\n\nedX: Introduction to SQL\n\n\n\nonline\n\n\n\nFollowing the success we had with the Power BI course, we launched this one in 2021 to introduce students to SQL and relational databases.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "bio.html",
-    "href": "bio.html",
-    "title": "Bio",
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "A.B., Political Science (2007), Davidson College"
-  },
-  {
-    "objectID": "bio.html#travels",
-    "href": "bio.html#travels",
-    "title": "Bio",
-    "section": "Travels",
-    "text": "Travels\nMy wife and I are homebodies most of the time, but occasionally we love to travel. As a student, I had the good fortune to study overseas at the University of Cambridge in the United Kingdom, where I focused on political philosophy and literature. In my senior year, I also got to participate in an awesome political science research trip to Colombia. Both of these experiences gave me the travel bug, so we try to do a big international trip once every few years if we can.\n\n\nIsle of Skye 2022\n\n\n\nAt Neist Point, Isle of Skye, Scotland\n\n\n\n\n\nDuring a particularly grueling and windy hike up to the Old Man of Storr, Isle of Skye, Scotland\n\n\n\n\n\nIreland 2024\n\n\n\nLooking exhausted in Ireland, sans Wifey\n\n\n\n\n\nLooking less exhausted in Ireland, with Wifey"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Coming soon!"
+    "text": "Power BI\n\n\nA modest selection of a few Power BI projects I’ve built over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\n\nR projects built in Shiny, Quarto, and other formats.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHome Lab\n\n\nGaming PCs and other cool stuff I’ve built for personal use.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/homelab.html",
@@ -82,10 +34,37 @@
     ]
   },
   {
-    "objectID": "projects/projects.html",
-    "href": "projects/projects.html",
-    "title": "Projects",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
     "section": "",
-    "text": "Power BI\n\n\nA modest selection of a few Power BI projects I’ve built over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\n\nR projects built in Shiny, Quarto, and other formats.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHome Lab\n\n\nGaming PCs and other cool stuff I’ve built for personal use.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Coming soon!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Pete Benbow",
+    "section": "",
+    "text": "About\nI’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering.\n\n\nEducation\nA.B., Political Science (2007), Davidson College"
+  },
+  {
+    "objectID": "projects/powerbi.html",
+    "href": "projects/powerbi.html",
+    "title": "Power BI Projects",
+    "section": "",
+    "text": "This is a sampling of some of the data viz work I’ve done in Microsoft Power BI.\n\nDavidson College Fact File\nInstitutional research teams at colleges and universities across the United States maintain institutional “fact files” or “fact books” that contain aggregated data about the schools. These data are carefully curated each year and scrutinized before the schools publish them because these are considered official publications that represent various facets of the institution, including enrollment, academics, faculty demographics, and so forth.\nA few years ago, I was tasked with revamping Davidson’s fact file into an interactive Power BI report, and this was the result.\n\n\n\n\nBasketball analytics\nI have horrible sports knowledge, but I love Davidson basketball. Anyone who has been to my office and seen the signed memorabilia on the wall from Davidson’s fairy-tale run to the Elite Eight in March 2008 knows the level of my commitment to Wildcat hoops. So it was really cool when my colleague Tim Chartier asked me to showcase Power BI’s capabilities with some shot data that was collected by the Cats Stats sports analytics group that he works with.\nThis is one of my older projects, but a favorite of mine because of the dark theme, the amount of interactivity to allow you to explore the data, and the chance I had to build unique visuals. I especially love the shot charts, which are just basic scatterplots with semi-transparent backgrounds laid on top of an image of an NCAA regulation basketball court, and the chord diagram, which does a fantastic job of showing the relationships between players as they pass to each other.",
+    "crumbs": [
+      "Power BI"
+    ]
+  },
+  {
+    "objectID": "projects/r.html",
+    "href": "projects/r.html",
+    "title": "R projects",
+    "section": "",
+    "text": "Assignment calendar with highcharter\n\nAs part of the custom websites I build for each of my courses, I have a calendar visual that displays the start date and due date for each assignment in the class. I wanted to give my students an easy reference for when assignments are going to come due, and I was inspired by the common Gantt chart visual. Every day of the semester is represented on the X axis, and the Y axis is grouped by assignment types (quizzes, labs, homeworks).\nTo create this, I used the highcharter package, which supports greater interactivity than your standard base R and ggplot visuals.\nBeyond the basic visual, I added a couple of elements I thought would be helpful:\n\nA vertical red line indicating the current day.\nA semi-transparent tooltip that appears when the student hovers over a specific assignment, displaying the release date and due date.\n\nThe only thing I don’t like about this is how the numeric representation of each assignment’s release date and due date is included in the tooltip on the very top line (where you can see “17581536000000 - 17591904000000”). But as long as you don’t pay attention to that, I think this is a great resource for my students.\nHere’s the R code (click to expand):\n\n\n\n\n\n\nCode\n\n\n\n\n\n\n\n\n\n\n\n\nCat Scheduler Dashboard\n\nThis is an interactive dashboard I built in R Shiny for department chairs and Academic Affairs staff at Davidson to visualize the planned course schedule for upcoming academic years. Professors have an application they can access (called “Cat Scheduler”, abbreviated as “CatSched”) where they submit their day, time, and location preferences for the courses they’re going to teach, as well as equipment, layout, and other classroom features.\nAfter they submit these preferences, the Cat Scheduler algorithm (developed by my colleague Dr. Laurie Heyer) tries to build an optimal course schedule for the entire college based on the availability of classrooms and the preferences of the faculty. After this schedule is built, my dashboard visualizes the results so the faculty (particularly the department chairs) can make adjustments, specifically so they can try to distribute their classes somewhat evenly throughout a given week in the hopes of spreading out the demand for shared college spaces and resources.\nUsers can select the semester they want to review, as well as the “department group,” which helps group together courses from different disciplines according to some logic from the Registrar’s office that I never fully understood, but I think has to do with them often sharing the same buildings. But I could be wrong.\nThe data comes from the CatSched API, a REST interface that sits on top of MongoDB. It refreshes automatically when a user loads the dashboard, but I also included the “REFRESH DEPARTMENTS” button in the upper-right corner in case someone wants to query fresh data from the API while they’re reviewing a particular department group.\nAnother cool aspect of this is the embedded user guide, which gives users a quick walkthrough of how to navigate the dashboard.\nLink to the dashboard\nLink to source code in GitHub",
+    "crumbs": [
+      "R"
+    ]
   }
 ]
