@@ -69,6 +69,4 @@ in case someone wants to query fresh data from the API while they're reviewing a
 Another cool aspect of this is the embedded user guide, which gives users a quick walkthrough of how to navigate 
 the dashboard.
 
-[Link to the dashboard](https://pdbenbow.shinyapps.io/catschedDashboard/){target="_blank"}
-
 [Link to source code in GitHub](https://github.com/DavidsonCollege-DataScience/catsched-dashboard){target="_blank"}
