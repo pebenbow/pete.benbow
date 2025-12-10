@@ -15,9 +15,6 @@ jobs:
         - /etc/resolv.conf:/etc/resolv.conf
         
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4.2.2
-
       - name: Install system dependencies
         run: |
           apt-get update
@@ -26,6 +23,9 @@ jobs:
       - name: Install TinyTex
         run: |
           quarto install tinytex
+          
+      - name: Checkout
+        uses: actions/checkout@v5
           
       - name: Render website
         run: |
