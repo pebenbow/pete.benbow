@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ["self-hosted"]
+    runs-on: ubuntu-latest
     container:
       image: rocker/verse:latest
 
@@ -17,17 +17,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
+
+      - name: Install system dependencies
+        run: |
+          apt-get update
+          apt-get install -y libglpk-dev libglpk40
+          
       - name: Install TinyTex
         run: |
           quarto install tinytex
+          
       - name: Render website
         run: |
           quarto render --cache-refresh
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: site_deployment
           path: docs
+          
       - name: Setup Pages
         uses: actions/configure-pages@v5
             
