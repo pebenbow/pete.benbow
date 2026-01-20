@@ -29,7 +29,7 @@ listing:
     contents: code
     type: grid
     grid-columns: 2
-    fields: [title, description, categories]
+    fields: [title, description]
   - id: edx-listings
     contents: online
     type: grid

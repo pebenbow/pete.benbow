@@ -38,21 +38,21 @@
     "href": "index.html",
     "title": "Pete Benbow",
     "section": "",
-    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     YouTube\n  \n  \n    \n     Spotify\n  \n\n  \n  \n\nAbout\nI’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering.\n\n\nEducation\nA.B., Political Science (2007), Davidson College\n\n\nAcademic Interests\n\nRelational databases\nData engineering\nBusiness intelligence systems\nData visualization\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\nCSC-110: Data Science & Society\n\n\n\n\n\n\n\n\n\n\nDAT-153: Database Programming\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nCode\n\n\n\n\n\n\n\ngradeR\n\n\n\nco-author\n\n\ncontributor\n\n\n\nAn R package that autogrades assignment submissions\n\n\n\n\n\n\n\n\n\n\npipevizr\n\n\n\nauthor\n\n\ncreator\n\n\n\nAn R package that diagrams data lineage in tidyverse pipeline code\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nOnline Instruction\n\n\n\n\n\n\n\nAnalyzing & Visualizing Data with Power BI\n\n\n\n\n\n\n\n\n\n\nIntroduction to SQL\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     YouTube\n  \n  \n    \n     Spotify\n  \n\n  \n  \n\nAbout\nI’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering.\n\n\nEducation\nA.B., Political Science (2007), Davidson College\n\n\nAcademic Interests\n\nRelational databases\nData engineering\nBusiness intelligence systems\nData visualization\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\nCSC-110: Data Science & Society\n\n\n\n\n\n\n\n\n\n\nDAT-153: Database Programming\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nCode\n\n\n\n\n\n\n\ngradeR\n\n\nAn R package that autogrades assignment submissions\n\n\n\n\n\n\n\n\n\n\npipevizR\n\n\nAn R package that diagrams data lineage in tidyverse pipeline code\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nOnline Instruction\n\n\n\n\n\n\n\nAnalyzing & Visualizing Data with Power BI\n\n\n\n\n\n\n\n\n\n\nIntroduction to SQL\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "code/pipevizr.html",
     "href": "code/pipevizr.html",
-    "title": "pipevizr",
+    "title": "pipevizR",
     "section": "",
-    "text": "Github\n  \n\n  \n  \nInspired by the dataflow diagrams that you often see when working with business intelligence tools like Power BI and Tableau, I wrote a package that diagrams tidyverse pipeline code. The purpose is to assist data scientists and other R users visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology."
+    "text": "Github\n  \n\n  \n  \nInspired by the dataflow diagrams that you might see when working with platforms like Power BI and Tableau, I wrote a package that diagrams tidyverse pipeline code. The purpose is to help R programmers visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology."
   },
   {
     "objectID": "code/grader.html",
     "href": "code/grader.html",
     "title": "gradeR",
     "section": "",
-    "text": "Github\n  \n  \n     CRAN\n  \n\n  \n  \nLorem ipsum dolor sit amet, erant tantas sit in, an duis brute nominavi vix. Doctus diceret ne eos. Tota offendit in nam. Ei doctus commune scribentur sed. Sumo solum sea ne."
+    "text": "Github\n  \n  \n     CRAN\n  \n\n  \n  \nI was added as co-author on this package in 2026 after coding several “quality of life” enhancements. It provides a wrapper for evaluating unit tests in R with the testthat package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and gradeR has a function specifically for producing JSON output that is compatible with Gradescope’s autograder."
   },
   {
     "objectID": "cv.html",

@@ -1,7 +1,6 @@
 ---
-title: "pipevizr"
+title: "pipevizR"
 description: "An R package that diagrams data lineage in tidyverse pipeline code"
-categories: [author, creator]
 about: 
   id: hero-heading
   template: trestles
@@ -13,7 +12,7 @@ about:
 
 :::{#hero-heading}
 
-Inspired by the dataflow diagrams that you often see when working with business intelligence tools like Power BI and Tableau, I wrote a package that diagrams tidyverse pipeline code. The purpose is to assist data scientists and other R users visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology.
+Inspired by the dataflow diagrams that you might see when working with platforms like Power BI and Tableau, I wrote a package that diagrams tidyverse pipeline code. The purpose is to help R programmers visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology.
 
 :::
 

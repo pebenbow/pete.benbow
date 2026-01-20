@@ -1,7 +1,6 @@
 ---
 title: "gradeR"
 description: "An R package that autogrades assignment submissions"
-categories: [co-author, contributor]
 about: 
   id: hero-heading
   template: trestles
@@ -15,6 +14,6 @@ about:
 
 :::{#hero-heading}
 
-Lorem ipsum dolor sit amet, erant tantas sit in, an duis brute nominavi vix. Doctus diceret ne eos. Tota offendit in nam. Ei doctus commune scribentur sed. Sumo solum sea ne.
+I was added as co-author on this package in 2026 after coding several "quality of life" enhancements. It provides a wrapper for evaluating unit tests in R with the `testthat` package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and `gradeR` has a function specifically for producing JSON output that is compatible with Gradescope's autograder.
 
 :::
