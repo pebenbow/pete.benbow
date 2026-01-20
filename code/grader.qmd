@@ -1,0 +1,20 @@
+---
+title: "gradeR"
+description: "An R package that autogrades assignment submissions"
+categories: [co-author, contributor]
+about: 
+  id: hero-heading
+  template: trestles
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/tbrown122387/gradeR
+    - text: CRAN
+      href: https://cran.r-project.org/web/packages/gradeR/index.html
+---
+
+:::{#hero-heading}
+
+Lorem ipsum dolor sit amet, erant tantas sit in, an duis brute nominavi vix. Doctus diceret ne eos. Tota offendit in nam. Ei doctus commune scribentur sed. Sumo solum sea ne.
+
+:::

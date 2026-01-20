@@ -12,3 +12,11 @@ $link-color: rgb(39, 128, 227);
 $font-family-sans-serif: "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-size-root: 17px;
 
+.quarto-title .quarto-categories {
+  justify-content: center;
+  /* Add other styling as needed */
+}
+
+.quarto-about-trestles .about-entity .about-links {
+  flex-direction: column;
+}

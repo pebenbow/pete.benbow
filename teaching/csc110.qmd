@@ -1,0 +1,13 @@
+---
+title: "CSC-110: Data Science & Society"
+about: 
+  id: hero-heading
+  template: jolla
+  image: dav-dat110.png
+---
+
+:::{#hero-heading}
+
+This course is an introduction to data science methods with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States.
+
+:::

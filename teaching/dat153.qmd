@@ -1,0 +1,13 @@
+---
+title: "DAT-153: Database Programming"
+about: 
+  id: hero-heading
+  template: jolla
+  image: database.png
+---
+
+:::{#hero-heading}
+
+An introduction to relational databases and SQL programming with PostgreSQL, including object-oriented programming with Python and the SQLAlchemy and SQLModel libraries!
+
+:::

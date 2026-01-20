@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R projects – Home</title>
+<title>CSC-110: Data Science &amp; Society – Home</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,15 +33,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-57ef8ec7541b593997974d917982cc57.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,13 +67,12 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="R projects – Home">
-<meta property="og:description" content="">
-<meta property="og:image" content="images/highchartr-calendar.png">
+<meta property="og:title" content="CSC-110: Data Science &amp; Society – Home">
+<meta property="og:image" content="dav-dat110.png">
 <meta property="og:site_name" content="Home">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -132,80 +127,30 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#assignment-calendar-with-highcharter" id="toc-assignment-calendar-with-highcharter" class="nav-link active" data-scroll-target="#assignment-calendar-with-highcharter">Assignment calendar with highcharter</a></li>
-  <li><a href="#cat-scheduler-dashboard" id="toc-cat-scheduler-dashboard" class="nav-link" data-scroll-target="#cat-scheduler-dashboard">Cat Scheduler Dashboard</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-about-jolla">
+  <img src="dav-dat110.png" class="about-image
+  round " style="height: 15em; width: 15em;">
+ <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R projects</h1>
+<h1 class="title">CSC-110: Data Science &amp; Society</h1>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-  
-    
   </div>
-  
+</header><div id="hero-heading">
+<p>This course is an introduction to data science methods with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States.</p>
+</div>  
+</div>
 
 
-</header>
 
 
-<section id="assignment-calendar-with-highcharter" class="level3">
-<h3 class="anchored" data-anchor-id="assignment-calendar-with-highcharter">Assignment calendar with highcharter</h3>
-<p><a href="images/highchartr-calendar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/highchartr-calendar.png" class="img-fluid"></a></p>
-<p>As part of the custom websites I build for each of my courses, I have a calendar visual that displays the start date and due date for each assignment in the class. I wanted to give my students an easy reference for when assignments are going to come due, and I was inspired by the common Gantt chart visual. Every day of the semester is represented on the X axis, and the Y axis is grouped by assignment types (quizzes, labs, homeworks).</p>
-<p>To create this, I used the <a href="https://jkunst.com/highcharter/" target="_blank">highcharter package</a>, which supports greater interactivity than your standard base R and ggplot visuals.</p>
-<p>Beyond the basic visual, I added a couple of elements I thought would be helpful:</p>
-<ul>
-<li>A vertical red line indicating the current day.</li>
-<li>A semi-transparent tooltip that appears when the student hovers over a specific assignment, displaying the release date and due date.</li>
-</ul>
-<p>The only thing I don’t like about this is how the numeric representation of each assignment’s release date and due date is included in the tooltip on the very top line (where you can see “17581536000000 - 17591904000000”). But as long as you don’t pay attention to that, I think this is a great resource for my students.</p>
-<p>Here’s the R code (click to expand):</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Code
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><script src="https://gist.github.com/pebenbow/9abd371f77f9affca44bc090c987e64c.js"></script></p>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="cat-scheduler-dashboard" class="level3">
-<h3 class="anchored" data-anchor-id="cat-scheduler-dashboard">Cat Scheduler Dashboard</h3>
-<p><a href="images/catsched.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/catsched.png" class="img-fluid" width="800"></a></p>
-<p>This is an interactive dashboard I built in <strong>R Shiny</strong> for department chairs and Academic Affairs staff at Davidson to visualize the <em>planned</em> course schedule for upcoming academic years. Professors have an application they can access (called “Cat Scheduler”, abbreviated as “CatSched”) where they submit their day, time, and location preferences for the courses they’re going to teach, as well as equipment, layout, and other classroom features.</p>
-<p>After they submit these preferences, the Cat Scheduler algorithm (developed by my colleague Dr.&nbsp;Laurie Heyer) tries to build an optimal course schedule for the entire college based on the availability of classrooms and the preferences of the faculty. After this schedule is built, my dashboard visualizes the results so the faculty (particularly the department chairs) can make adjustments, specifically so they can try to distribute their classes somewhat evenly throughout a given week in the hopes of spreading out the demand for shared college spaces and resources.</p>
-<p>Users can select the semester they want to review, as well as the “department group,” which helps group together courses from different disciplines according to some logic from the Registrar’s office that I never fully understood, but I think has to do with them often sharing the same buildings. But I could be wrong.</p>
-<p>The data comes from the CatSched API, a REST interface that sits on top of MongoDB. It refreshes automatically when a user loads the dashboard, but I also included the “REFRESH DEPARTMENTS” button in the upper-right corner in case someone wants to query fresh data from the API while they’re reviewing a particular department group.</p>
-<p>Another cool aspect of this is the embedded user guide, which gives users a quick walkthrough of how to navigate the dashboard.</p>
-<p><a href="https://github.com/DavidsonCollege-DataScience/catsched-dashboard" target="_blank">Link to source code in GitHub</a></p>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -228,13 +173,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -639,38 +577,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":true,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

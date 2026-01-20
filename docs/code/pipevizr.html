@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="An R package that diagrams data lineage in tidyverse pipeline code">
 
-<title>Teaching – Home</title>
+<title>pipevizr – Home</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9b2076995dcfadcd94d02e797b4adca4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-57ef8ec7541b593997974d917982cc57.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,68 +66,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Teaching – Home">
-<meta property="og:image" content="images/dav-dat110.png">
+<meta property="og:title" content="pipevizr – Home">
+<meta property="og:description" content="An R package that diagrams data lineage in tidyverse pipeline code">
 <meta property="og:site_name" content="Home">
 </head>
 
@@ -140,7 +80,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Home</span>
     </a>
   </div>
@@ -151,12 +91,8 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
-<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -164,21 +100,21 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="./projects/powerbi.html">
+    <a class="dropdown-item" href="../projects/powerbi.html">
  <span class="dropdown-text">Power BI</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects/r.html">
+    <a class="dropdown-item" href="../projects/r.html">
  <span class="dropdown-text">R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./projects/homelab.html">
+    <a class="dropdown-item" href="../projects/homelab.html">
  <span class="dropdown-text">Home Lab</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -196,146 +132,46 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
+
+
+<div class="quarto-about-trestles">
+  <div class="about-entity">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Teaching</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
+<h1 class="title">pipevizr</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">author</div>
+    <div class="quarto-category">creator</div>
   </div>
-  
-
-
+  </div>
+<div>
+  <div class="description">
+    An R package that diagrams data lineage in tidyverse pipeline code
+  </div>
+</div>
+<div class="quarto-title-meta">
+  </div>
 </header>
+    <div class="about-links">
+  <a href="https://github.com/pebenbow/pipevizr" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">Github</span>
+  </a>
+</div>
+  </div>
+  <div class="about-contents"><div id="hero-heading">
+<p>Inspired by the dataflow diagrams that you often see when working with business intelligence tools like Power BI and Tableau, I wrote a package that diagrams tidyverse pipeline code. The purpose is to assist data scientists and other R users visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology.</p>
+</div></div>
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uHzHbmGFy1k?si=y5JneP9PpMyZW0H4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 
 
 
 
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RGF2aWRzb24=">
-<a href="" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/dav-dat110.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-DAT-110: Data Science &amp; Society
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RGF2aWRzb24='); return false;">
-Davidson
-</div>
-</div>
-<div class="card-text listing-description">
-<p>This course is an introduction to data science methods with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States.</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="RGF2aWRzb24=">
-<a href="" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/database.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-DAT-153: Database Programming
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RGF2aWRzb24='); return false;">
-Davidson
-</div>
-</div>
-<div class="card-text listing-description">
-<p>An introduction to relational databases and SQL programming with PostgreSQL using a variety of datasets and practical learning exercises.</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="RGF2aWRzb24=">
-<a href="" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/database.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-DAT-211: Data Integration &amp; Analytics
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RGF2aWRzb24='); return false;">
-Davidson
-</div>
-</div>
-<div class="card-text listing-description">
-<p>An introduction to relational databases and SQL programming with PostgreSQL using a variety of datasets and practical learning exercises.</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="b25saW5l">
-<a href="https://www.edx.org/learn/power-bi/davidson-college-analyzing-and-visualizing-data-with-power-bi" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/powerbi-course.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-edX: Analyzing &amp; Visualizing Data with Power BI
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('b25saW5l'); return false;">
-online
-</div>
-</div>
-<div class="card-text listing-description">
-<p>This course got me started on the path toward becoming a professor. We have enrolled over 160,000 learners worldwide since we launched the course in 2020.</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="b25saW5l">
-<a href="https://www.edx.org/learn/sql/davidson-college-introduction-to-sql" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/sql-course.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-edX: Introduction to SQL
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('b25saW5l'); return false;">
-online
-</div>
-</div>
-<div class="card-text listing-description">
-<p>Following the success we had with the Power BI course, we launched this one in 2021 to introduce students to SQL and relational databases.</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -356,13 +192,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

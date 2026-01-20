@@ -1,9 +1,10 @@
 ---
 title: "Pete Benbow"
 subtitle: "Data Science Educator"
-image: images/pete-skye01.jpg
 about: 
+  id: hero-heading
   template: trestles
+  image: images/pete-skye01.jpg
   image-shape: round
   links:
     - icon: github
@@ -12,10 +13,31 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/pdbenbow/
+    - icon: youtube
+      text: YouTube
+      href: https://www.youtube.com/@pdb-dc
     - icon: spotify
       text: Spotify
       href: https://open.spotify.com/user/125706534?si=79d899e0fa664f15
+listing:
+  - id: teaching-listings
+    contents: teaching
+    type: grid
+    grid-columns: 2
+    fields: [title]
+  - id: code-listings
+    contents: code
+    type: grid
+    grid-columns: 2
+    fields: [title, description, categories]
+  - id: edx-listings
+    contents: online
+    type: grid
+    grid-columns: 2
+    fields: [title]
 ---
+
+:::{#hero-heading}
 
 ### About
 
@@ -24,3 +46,29 @@ I'm the James B. Duke Assistant Professor of the Practice in Data Science at Dav
 ### Education
 
 A.B., Political Science (2007), Davidson College
+
+### Academic Interests
+
+- Relational databases
+- Data engineering
+- Business intelligence systems
+- Data visualization
+
+:::
+
+### Teaching
+
+::: {#teaching-listings}
+:::
+
+### Code
+
+::: {#code-listings}
+:::
+
+### Online Instruction
+
+::: {#edx-listings}
+:::
+
+

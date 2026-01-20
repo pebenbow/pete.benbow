@@ -1,8 +1,0 @@
----
-title: Teaching
-listing:
-  contents: teaching.yml
-  type: grid
-  grid-columns: 2
-  max-description-length: 250
----
