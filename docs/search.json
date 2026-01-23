@@ -7,6 +7,20 @@
     "text": "An introduction to relational databases and SQL programming with PostgreSQL, including object-oriented programming with Python and the SQLAlchemy and SQLModel libraries!"
   },
   {
+    "objectID": "talks/pass-summit-2022.html",
+    "href": "talks/pass-summit-2022.html",
+    "title": "Database DevOps in Azure: Prepare for Ludicrous Speed!",
+    "section": "",
+    "text": "Abstract\nDevOps skills are now among the most sought-after qualifications in software development today, so you may be wondering: how can you, as a DBA or developer, implement DevOps practices to speed up the delivery of your Azure SQL and SQL Server databases? It’s probably easier than you think, and you don’t need to be a dedicated “DevOps engineer” to do it. In this session, you’ll learn the basics and watch a live demo of database DevOps in practice using an array of Microsoft products: Visual Studio, SQL Server Data Tools, and Azure DevOps. You’ll learn concepts like state-based database delivery, Git workflows, continuous integration, and configuration-as-code with YAML. By the end, you’ll see just how easy it is to establish a DevOps pipeline for rapid development and deployment of your databases!"
+  },
+  {
+    "objectID": "talks/hedw-2019.html",
+    "href": "talks/hedw-2019.html",
+    "title": "Automating the Enterprise Data Warehouse Using Azure DevOps",
+    "section": "",
+    "text": "Abstract\nDeploying changes to your data warehouse can be an elaborate, hands-on affair. Everything from work item tracking to code review, merges, builds, deployments, and documentation can take days to orchestrate across a plethora of systems. In this session, we’ll show you how Davidson College uses Azure DevOps as its one-stop shop for all these functions, creating a streamlined and automated lifecycle for our Enterprise Data Warehouse that saves valuable hours of productivity and allows us to iterate very rapidly across the database, ETL, and semantic layers."
+  },
+  {
     "objectID": "projects/r.html",
     "href": "projects/r.html",
     "title": "R projects",
@@ -38,21 +52,21 @@
     "href": "index.html",
     "title": "Pete Benbow",
     "section": "",
-    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     College bio\n  \n  \n    \n     YouTube\n  \n  \n    \n     Spotify\n  \n\n  \n  \n\nAbout\nI’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering.\n\n\nEducation\nA.B., Political Science (2007), Davidson College\n\n\nAcademic Interests\n\nRelational databases\nData engineering\nBusiness intelligence systems\nData visualization\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\nCSC-110: Data Science & Society\n\n\n\n\n\n\n\n\n\n\nDAT-153: Database Programming\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nCode\n\n\n\n\n\n\n\ngradeR\n\n\nAn R package that autogrades assignment submissions\n\n\n\n\n\n\n\n\n\n\npipevizR\n\n\nAn R package that diagrams data lineage in tidyverse pipeline code\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nOnline Instruction\n\n\n\n\n\n\n\nAnalyzing & Visualizing Data with Power BI\n\n\n\n\n\n\n\n\n\n\nIntroduction to SQL\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     College bio\n  \n  \n    \n     YouTube\n  \n  \n    \n     Spotify\n  \n\n  \n  \n\nAbout\nI’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering.\n\n\nEducation\nA.B., Political Science (2007), Davidson College\n\n\nAcademic Interests\n\nRelational databases\nData engineering\nBusiness intelligence systems\nData visualization\n\n\n\nPersonal Stuff\n\nFly-fishing\nScience fiction & fantasy\nGaming\nSinging\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\nCSC-110: Data Science & Society\n\n\n\n\n\n\n\n\n\n\nDAT-153: Database Programming\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nCode\n\n\n\n\n\n\n\n\ngradeR\n\n\nAn R package that autogrades assignment submissions\n\n\n\n\n\n\n\n\n\n\n\npipevizR\n\n\nAn R package that diagrams data lineage in tidyverse pipeline code\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nOnline Instruction\n\n\n\n\n\n\n\n\nAnalyzing & Visualizing Data with Power BI\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to SQL\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nTalks\n\n\n\n\n\nTitle\n\n\nDate\n\n\nlocation\n\n\n\n\n\n\nModeling Graduate Outcomes Using National Student Clearinghouse Data\n\n\n9/20/23\n\n\nYouTube\n\n\n\n\nModeling Further Education of Graduates With NSC Data in Power BI\n\n\n6/2/23\n\n\nCleveland, OH\n\n\n\n\nDatabase DevOps in Azure: Prepare for Ludicrous Speed!\n\n\n11/17/22\n\n\nSeattle, WA\n\n\n\n\nAutomating the Enterprise Data Warehouse Using Azure DevOps\n\n\n4/17/19\n\n\nAnn Arbor, MI\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "code/pipevizr.html",
     "href": "code/pipevizr.html",
     "title": "pipevizR",
     "section": "",
-    "text": "Github\n  \n\n  \n  \nInspired by the dataflow diagrams that you might see when working with platforms like Power BI and Tableau, I wrote a package that diagrams tidyverse pipeline code. The purpose is to help R programmers visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology."
+    "text": "Github\n  \n\n      \nInspired by the dataflow diagrams that you might see when working with platforms like Power BI and Tableau, I’m developing a package that diagrams tidyverse pipeline code. The purpose is to help R programmers visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology."
   },
   {
     "objectID": "code/grader.html",
     "href": "code/grader.html",
     "title": "gradeR",
     "section": "",
-    "text": "Github\n  \n  \n    \n     CRAN\n  \n\n  \n  \nI was added as co-author on this package in 2026 after coding several “quality of life” enhancements. It provides a wrapper for evaluating unit tests in R with the testthat package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and gradeR has a function specifically for producing JSON output that is compatible with Gradescope’s autograder."
+    "text": "Github\n  \n  \n    \n     CRAN\n  \n\n      \nI was added as co-author on this package in 2026 after coding several “quality of life” enhancements. It provides a wrapper for evaluating unit tests in R with the testthat package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and gradeR has a function specifically for producing JSON output that is compatible with Gradescope’s autograder."
   },
   {
     "objectID": "cv.html",
@@ -94,6 +108,20 @@
     "title": "Projects",
     "section": "",
     "text": "Power BI\n\n\nA modest selection of a few Power BI projects I’ve built over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\n\nR projects built in Shiny, Quarto, and other formats.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHome Lab\n\n\nGaming PCs and other cool stuff I’ve built for personal use.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/air-forum-2023.html",
+    "href": "talks/air-forum-2023.html",
+    "title": "Modeling Further Education of Graduates With NSC Data in Power BI",
+    "section": "",
+    "text": "Abstract\nInstitutional Research and Technology & Innovation collaborated to create a Power BI report on additional education graduates pursue after completing their degree. Multiple faculty requests to IR for post-graduation educational pursuits of departmental majors indicated the need for this information. Additional uses of the report and these data for other campus departments were identified. This session will share the process commencing with requesting data from the National Student Clearinghouse through data cleaning, model development, and creation of the final report. Beyond the development process, the presentation will include a demonstration of the report features and a discussion of the next steps for maintaining and updating the report."
+  },
+  {
+    "objectID": "talks/hepbiug-01.html",
+    "href": "talks/hepbiug-01.html",
+    "title": "Modeling Graduate Outcomes Using National Student Clearinghouse Data",
+    "section": "",
+    "text": "Abstract\nInstitutional Research and Technology & Innovation collaborated to create a Power BI report on additional education graduates pursue after completing their degree. Multiple faculty requests to IR for post-graduation educational pursuits of departmental majors indicated the need for this information. Additional uses of the report and these data for other campus departments were identified. This session will share the process commencing with requesting data from the National Student Clearinghouse through data cleaning, model development, and creation of the final report. Beyond the development process, the presentation will include a demonstration of the report features and a discussion of the next steps for maintaining and updating the report."
   },
   {
     "objectID": "teaching/csc110.html",

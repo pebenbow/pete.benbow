@@ -1,0 +1,16 @@
+---
+title: "Automating the Enterprise Data Warehouse Using Azure DevOps"
+description: "Higher Education Data World Conference"
+location: "Ann Arbor, MI"
+date: "Apr 17, 2019"
+format: html
+about: 
+  id: hero-heading
+  template: solana
+---
+
+### Abstract
+
+Deploying changes to your data warehouse can be an elaborate, hands-on affair. Everything from work item tracking to code review, merges, builds, deployments, and documentation can take days to orchestrate across a plethora of systems. In this session, we’ll show you how Davidson College uses Azure DevOps as its one-stop shop for all these functions, creating a streamlined and automated lifecycle for our Enterprise Data Warehouse that saves valuable hours of productivity and allows us to iterate very rapidly across the database, ETL, and semantic layers.
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/335927910?h=a762702008&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2019 - Automating the Enterprise Data Warehouse Using Azure DevOps"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>

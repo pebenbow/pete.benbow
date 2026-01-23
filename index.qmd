@@ -37,12 +37,22 @@ listing:
     contents: code
     type: grid
     grid-columns: 2
-    fields: [title, description]
+    image-height: "300px"
+    fields: [image, title, description]
   - id: edx-listings
     contents: online
     type: grid
     grid-columns: 2
-    fields: [title]
+    fields: [image, title]
+  - id: talks-listings
+    contents: talks
+    type: table
+    sort: "date desc"
+    filter-ui: false
+    sort-ui: false
+    fields: [title, date, location]
+    date-format: short
+    table-hover: true
 ---
 
 :::{#hero-heading}
@@ -62,6 +72,13 @@ A.B., Political Science (2007), Davidson College
 - Business intelligence systems
 - Data visualization
 
+### Personal Stuff
+
+- Fly-fishing
+- Science fiction & fantasy
+- Gaming
+- Singing
+
 :::
 
 ### Teaching
@@ -79,4 +96,7 @@ A.B., Political Science (2007), Davidson College
 ::: {#edx-listings}
 :::
 
+### Talks
 
+::: {#talks-listings}
+:::

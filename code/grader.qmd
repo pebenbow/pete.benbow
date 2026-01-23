@@ -3,7 +3,8 @@ title: "gradeR"
 description: "An R package that autogrades assignment submissions"
 about: 
   id: hero-heading
-  template: trestles
+  template: solana
+  image: grader_logo.png
   links:
     - icon: github
       text: Github

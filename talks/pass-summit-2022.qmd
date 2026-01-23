@@ -1,0 +1,16 @@
+---
+title: "Database DevOps in Azure: Prepare for Ludicrous Speed!"
+description: "PASS Data Community Summit"
+location: "Seattle, WA"
+date: "Nov 17, 2022"
+format: html
+about: 
+  id: hero-heading
+  template: solana
+---
+
+### Abstract
+
+DevOps skills are now among the most sought-after qualifications in software development today, so you may be wondering: how can you, as a DBA or developer, implement DevOps practices to speed up the delivery of your Azure SQL and SQL Server databases? It's probably easier than you think, and you don't need to be a dedicated "DevOps engineer" to do it. In this session, you'll learn the basics and watch a live demo of database DevOps in practice using an array of Microsoft products: Visual Studio, SQL Server Data Tools, and Azure DevOps. You'll learn concepts like state-based database delivery, Git workflows, continuous integration, and configuration-as-code with YAML. By the end, you'll see just how easy it is to establish a DevOps pipeline for rapid development and deployment of your databases!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WzelJ_YOHFw?si=U7KwWv9bDVBvUBxF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

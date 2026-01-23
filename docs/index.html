@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6fed0bb14fe2af1c8a97926fcc2a79f4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3e6927ac72a8fc2fb2c99aa4f5db401d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
@@ -133,13 +133,41 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-edx-listings'] = new List('listing-edx-listings', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-talks-listings .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-location',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-talks-listings'] = new List('listing-talks-listings', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -304,6 +332,15 @@ window.Quarto = {
 <li>Data visualization</li>
 </ul>
 </section>
+<section id="personal-stuff" class="level3">
+<h3 data-anchor-id="personal-stuff">Personal Stuff</h3>
+<ul>
+<li>Fly-fishing</li>
+<li>Science fiction &amp; fantasy</li>
+<li>Gaming</li>
+<li>Singing</li>
+</ul>
+</section>
 </div></div>
 </div>
 
@@ -343,9 +380,10 @@ No matching items
 <h3 data-anchor-id="code">Code</h3>
 <div id="listing-code-listings" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1769194201034" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1769200709831" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <a href="./code/grader.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="code\grader_logo.png" style="height: 300px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 gradeR
@@ -357,9 +395,10 @@ An R package that autogrades assignment submissions
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1769194212014" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1769199907528" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <a href="./code/pipevizr.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="code\pipevizr_logo.png" style="height: 300px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 pipevizR
@@ -384,6 +423,7 @@ No matching items
 <div class="g-col-1" data-index="0" data-listing-file-modified-sort="1769194196669" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
 <a href="./online/powerbi-course.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="online\powerbi-course.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Analyzing &amp; Visualizing Data with Power BI
@@ -395,6 +435,7 @@ Analyzing &amp; Visualizing Data with Power BI
 <div class="g-col-1" data-index="1" data-listing-file-modified-sort="1769194190815" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
 <a href="./online/sql-course.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="online\sql-course.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Introduction to SQL
@@ -404,6 +445,79 @@ Introduction to SQL
 </a>
 </div>
 </div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="talks" class="level3">
+<h3 data-anchor-id="talks">Talks</h3>
+<div id="listing-talks-listings" class="quarto-listing quarto-listing-container-table">
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+<th>
+Title
+</th>
+<th>
+Date
+</th>
+<th>
+location
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-date-sort="1695182400000" data-listing-file-modified-sort="1769203316930" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="123" data-listing-title-sort="Modeling Graduate Outcomes Using National Student Clearinghouse Data" data-listing-filename-sort="hepbiug-01.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./talks/hepbiug-01.html" class="title listing-title">Modeling Graduate Outcomes Using National Student Clearinghouse Data</a>
+</td>
+<td>
+<span class="listing-date">9/20/23</span>
+</td>
+<td>
+<span class="listing-location">YouTube</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1685678400000" data-listing-file-modified-sort="1769203174153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107" data-listing-title-sort="Modeling Further Education of Graduates With NSC Data in Power BI" data-listing-filename-sort="air-forum-2023.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./talks/air-forum-2023.html" class="title listing-title">Modeling Further Education of Graduates With NSC Data in Power BI</a>
+</td>
+<td>
+<span class="listing-date">6/2/23</span>
+</td>
+<td>
+<span class="listing-location">Cleveland, OH</span>
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1668661200000" data-listing-file-modified-sort="1769203601951" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147" data-listing-title-sort="Database DevOps in Azure: Prepare for Ludicrous Speed!" data-listing-filename-sort="pass-summit-2022.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./talks/pass-summit-2022.html" class="title listing-title">Database DevOps in Azure: Prepare for Ludicrous Speed!</a>
+</td>
+<td>
+<span class="listing-date">11/17/22</span>
+</td>
+<td>
+<span class="listing-location">Seattle, WA</span>
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1555473600000" data-listing-file-modified-sort="1769203270342" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="111" data-listing-title-sort="Automating the Enterprise Data Warehouse Using Azure DevOps" data-listing-filename-sort="hedw-2019.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./talks/hedw-2019.html" class="title listing-title">Automating the Enterprise Data Warehouse Using Azure DevOps</a>
+</td>
+<td>
+<span class="listing-date">4/17/19</span>
+</td>
+<td>
+<span class="listing-location">Ann Arbor, MI</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
