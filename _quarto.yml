@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Home"
+  title: "Pete Benbow"
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: 
     right: "Made with Quarto" 
@@ -14,8 +14,6 @@ website:
     right:
       - text: Home
         href: index.qmd
-      #- text: Teaching 
-      #  href: teaching.qmd
       - sidebar:projects
       - text: CV 
         href: cv.qmd 
@@ -39,7 +37,7 @@ format:
     backgroundcolor: "#e6e6e6" 
     fontcolor: "black"
     linkcolor: "black"
-    mainfont: "roboto"
+    mainfont: "Atkinson Hyperlegible"
     fontsize: 20px
     theme: [cosmo, styles.scss]
     

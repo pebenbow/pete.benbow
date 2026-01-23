@@ -8,15 +8,37 @@ $body-bg: #FFFFFF;
 $body-color: rgb(55, 58, 60);
 $link-color: rgb(39, 128, 227);
 
-/* Fonts */
-$font-family-sans-serif: "Source Sans Pro", -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-size-root: 17px;
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 
-.quarto-title .quarto-categories {
-  justify-content: center;
-  /* Add other styling as needed */
+$font-family: "Atkinson Hyperlegible", sans-serif;
+
+/*-- scss:rules --*/
+
+div.quarto-about-trestles .about-entity {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding-right: 1em
 }
 
-.quarto-about-trestles .about-entity .about-links {
-  flex-direction: column;
+div.quarto-about-trestles .about-entity .about-links {
+    flex-direction: column;
+    column-gap: .8em;
+    row-gap: 7px;
+    flex-wrap: wrap
+}
+
+div.quarto-about-trestles .about-entity .about-link {
+    font-size: 1.0em;
+    padding: .25em .5em;
+    border-radius: 4px
+}
+
+div.quarto-about-trestles .about-entity .about-link:hover {
+    color: #0336ff
+}
+
+.card:hover {
+    color: #0336ff;
 }
