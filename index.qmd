@@ -10,15 +10,23 @@ about:
     - icon: github
       text: Github
       href: https://github.com/pebenbow
+      target: _blank
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/pdbenbow/
+      target: _blank
+    - icon: bank2
+      text: College bio
+      href: https://www.davidson.edu/people/pete-benbow
+      target: _blank
     - icon: youtube
       text: YouTube
       href: https://www.youtube.com/@pdb-dc
+      target: _blank
     - icon: spotify
       text: Spotify
       href: https://open.spotify.com/user/125706534?si=79d899e0fa664f15
+      target: _blank
 listing:
   - id: teaching-listings
     contents: teaching

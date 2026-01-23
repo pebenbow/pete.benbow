@@ -8,9 +8,11 @@ about:
     - icon: github
       text: Github
       href: https://github.com/tbrown122387/gradeR
+      target: _blank
     - icon: r-square-fill
       text: CRAN
       href: https://cran.r-project.org/web/packages/gradeR/index.html
+      target: _blank
 ---
 
 :::{#hero-heading}

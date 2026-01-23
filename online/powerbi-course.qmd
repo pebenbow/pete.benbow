@@ -8,6 +8,7 @@ about:
     - icon: mortarboard-fill
       text: "Check out this course on edX"
       href: https://www.edx.org/learn/power-bi/davidson-college-analyzing-and-visualizing-data-with-power-bi
+      target: _blank
 ---
 
 :::{#hero-heading}

@@ -8,6 +8,7 @@ about:
     - icon: github
       text: Github
       href: https://github.com/pebenbow/pipevizr
+      target: _blank
 ---
 
 :::{#hero-heading}
