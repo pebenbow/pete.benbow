@@ -5,12 +5,12 @@ about:
   template: jolla
   image: sql-course.png
   links:
-    - text: "Check out this course on edX"
+    - icon: mortarboard-fill
+      text: "Check out this course on edX"
       href: https://www.edx.org/learn/sql/davidson-college-introduction-to-sql
 ---
 
 :::{#hero-heading}
+:::
 
 Following the success we had with the Power BI course, we launched this one in 2021 to introduce students to SQL and relational databases.
-
-:::

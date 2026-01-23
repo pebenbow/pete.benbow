@@ -5,12 +5,12 @@ about:
   template: jolla
   image: powerbi-course.png
   links:
-    - text: "Check out this course on edX"
+    - icon: mortarboard-fill
+      text: "Check out this course on edX"
       href: https://www.edx.org/learn/power-bi/davidson-college-analyzing-and-visualizing-data-with-power-bi
 ---
 
 :::{#hero-heading}
-
-This course got me started on the path toward becoming a professor. We have enrolled over 175,000 learners worldwide since we launched the course in 2020.
-
 :::
+
+This course got me started on the path toward becoming a professor. We have enrolled over 175,000 learners worldwide since we launched it in 2020!
