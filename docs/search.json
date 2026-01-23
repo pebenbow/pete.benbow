@@ -52,7 +52,7 @@
     "href": "code/grader.html",
     "title": "gradeR",
     "section": "",
-    "text": "Github\n  \n  \n     CRAN\n  \n\n  \n  \nI was added as co-author on this package in 2026 after coding several “quality of life” enhancements. It provides a wrapper for evaluating unit tests in R with the testthat package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and gradeR has a function specifically for producing JSON output that is compatible with Gradescope’s autograder."
+    "text": "Github\n  \n  \n    \n     CRAN\n  \n\n  \n  \nI was added as co-author on this package in 2026 after coding several “quality of life” enhancements. It provides a wrapper for evaluating unit tests in R with the testthat package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and gradeR has a function specifically for producing JSON output that is compatible with Gradescope’s autograder."
   },
   {
     "objectID": "cv.html",
