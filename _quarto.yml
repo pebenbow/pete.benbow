@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Pete Benbow"
+  site-url: https://petebenbow.com
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: 
     right: "Made with Quarto" 

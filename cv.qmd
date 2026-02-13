@@ -1,6 +1,137 @@
 ---
 title: "Curriculum Vitae"
-format: html
+pdf-engine: pdflatex
+format:
+  html:
+    html-table-processing: none
+    page-layout: full
+    toc: true
+    toc-depth: 3
+    toc-location: "left"
+  pdf:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    colorlinks: true
+    output-file: "Pete Benbow Curriculum Vitae"
 ---
 
-Coming soon!
+Pete Benbow
+
+James B. Duke Assistant Professor of the Practice in Data Science
+
+Davidson College
+
+### Education
+
+A.B., Political Science (2007), Davidson College
+
+### Experience
+
+#### Davidson College
+
+##### James B. Duke Assistant Professor of the Practice in Data Science (2024 - Present)
+
+* Advising students majoring in Data Science  
+* Faculty mentor, Community Research Fellows program  
+* Developing extracurricular Data Science programs, including ASA DataFest and the Public Good Data Wrangle  
+* Developed Davidson’s first course with a DAT (Data Science) subject code, DAT-153 Database Programming  
+* Participated in interviewing and hiring Davidson’s first tenure-track Professor of Data Science
+
+##### Director of Data CATS (2024 - Present)
+
+* Managing a team of student tutors/consultants who provide data science services to students, faculty, staff, and community members  
+* Consulted on research project to identify significant drivers of donor giving in advance of new fundraising campaign  
+* Developed a dashboard visualizing planned courses for future years to aid departments in optimizing their schedules
+
+##### Holistic/pre-major advisor (2019 - Present)
+
+##### Technology & Innovation Department
+
+* Manager of Data Operations (2023 - 2024)
+* Business Intelligence Developer (2017 - 2023)
+
+##### Committee and Task Force Service
+
+* Learning Spaces, Technology, and Design Committee (2025-present)  
+* Strategic Planning:  
+  * Working group member: “Discovering Passions, Developing Purpose” (2023-2024)  
+* Search Committees:  
+  * Director of Institutional Research (Spring 2024\)  
+  * Assistant Director of Grants and Contracts (Fall 2019\)  
+* Working group for proposed Policy Studies major (2025-2026)  
+* Data Governance Committee (2017-2024)
+
+#### Garretson Resolution Group • Charlotte, NC
+
+* Director of Research & Analytics (2015-2017)
+* Manager of Research & Analytics (2013-2015)
+* Medical Review Associate (2012-2013)
+
+### Teaching
+
+* DAT-395: Independent Study: Data Engineering (Spring 2026)
+* DAT-153: Database Programming (Spring 2025 - Present)
+* CSC-110: Data Science & Society (Fall 2026 - Present)
+
+##### Online Instruction (edX)
+
+* Analyzing & Visualizing Data with Power BI (2020 - present)
+* Introduction to SQL (2021 - present)
+
+### Software Development
+
+##### pipevizR: An R package that diagrams data lineage from tidyverse pipeline code  
+* Creator and primary author  
+* [GitHub](https://github.com/pebenbow/pipevizr)
+
+##### gradeR: An R package that autogrades programming assignments in Gradescope  
+* Co-author  
+* [GitHub](https://github.com/tbrown122387/gradeR) | [CRAN](https://cran.r-project.org/web/packages/gradeR/index.html)
+
+##### CatScheduler dashboard, Shiny/Quarto app: [In Production](https://catsched-dashboard.run.k8s.davidson.edu/) | [Prototype](https://pdbenbow.shinyapps.io/quarto-dash/)
+
+##### Davidson College Fact File: [go.davidson.edu/factfile](https://go.davidson.edu/factfile)
+
+##### Davidson College Enterprise Data Warehouse (EDW)
+
+##### Projects internal to Davidson College:
+
+* National Student Clearinghouse graduate outcomes  
+* Davidson College departmental finance reports  
+* COVID-19 campus contact-tracing report  
+* Campus Events report  
+* Tutorial Services Dashboard
+
+### Conferences & Presentations
+
+##### “Modeling Further Education of Graduates with NSC Data in Power BI,” with L. Boyles:
+
+* North Carolina Association for Institutional Research (April 2024)
+* Southern Association for Institutional Research (October 2023)
+* Association for Institutional Research (June 2023)
+  
+##### “Database DevOps in Azure: Prepare for Ludicrous Speed”
+
+* PASS Data Community Summit (November 2022)
+
+##### “Data Crunch: Using Your Data to Streamline Employer Engagements"
+
+* Southern Association of Colleges and Employers, with B. Adams (June 2020)
+
+##### “Automating the Enterprise Data Warehouse Using Azure DevOps”
+
+* Higher Education Data World Conference (April 2019)
+
+### Professional Service
+
+Graduate, MOR Leaders Program for liberal arts colleges (2023-2024 cohort)
+
+Founder and co-organizer, Higher Education Power BI User Group (Aug 2023 - Jan 2025)
+
+Member, American Statistical Association (2024 - Present)
+
+### Honors and Awards
+
+2023: First Place, Best Innovative Practice, Southern Association for Institutional Research annual conference (with L. Boyles)
+

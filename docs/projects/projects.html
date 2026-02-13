@@ -129,8 +129,10 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="Projects – Pete Benbow">
-<meta property="og:image" content="images/pbi.png">
+<meta property="og:image" content="https://petebenbow.com/projects/images/pbi.png">
 <meta property="og:site_name" content="Pete Benbow">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="630">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -378,7 +380,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/petebenbow\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

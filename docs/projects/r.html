@@ -73,8 +73,10 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="R projects – Pete Benbow">
 <meta property="og:description" content="">
-<meta property="og:image" content="images/highchartr-calendar.png">
+<meta property="og:image" content="https://petebenbow.com/projects/images/highchartr-calendar.png">
 <meta property="og:site_name" content="Pete Benbow">
+<meta property="og:image:height" content="422">
+<meta property="og:image:width" content="1201">
 </head>
 
 <body class="nav-fixed">
@@ -298,7 +300,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/petebenbow\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
