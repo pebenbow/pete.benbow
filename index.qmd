@@ -1,6 +1,9 @@
 ---
 title: "Pete Benbow"
 subtitle: "Data Science Educator"
+format:
+  html:
+    smooth-scroll: true
 about: 
   id: hero-heading
   template: trestles
@@ -57,7 +60,7 @@ listing:
 
 :::{#hero-heading}
 
-### About
+### About {#about}
 
 I'm the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering. 
 
@@ -70,7 +73,7 @@ A.B., Political Science (2007), Davidson College
 - Relational databases
 - Data engineering
 - Business intelligence systems
-- Data visualization
+- Exploratory data analysis
 
 ### Personal Stuff
 
@@ -81,22 +84,22 @@ A.B., Political Science (2007), Davidson College
 
 :::
 
-### Teaching
+### Teaching {#teaching}
 
 ::: {#teaching-listings}
 :::
 
-### Code
+### Code {#code}
 
 ::: {#code-listings}
 :::
 
-### Online Instruction
+### Online Instruction {#online}
 
 ::: {#edx-listings}
 :::
 
-### Talks
+### Talks {#talks}
 
 ::: {#talks-listings}
 :::
