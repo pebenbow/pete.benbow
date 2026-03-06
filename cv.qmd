@@ -16,6 +16,10 @@ format:
     output-file: "Pete Benbow Curriculum Vitae"
 ---
 
+::: callout-warning
+This page is under construction! (almost constantly)
+:::
+
 Pete Benbow
 
 James B. Duke Assistant Professor of the Practice in Data Science
@@ -61,6 +65,10 @@ A.B., Political Science (2007), Davidson College
   * Assistant Director of Grants and Contracts (Fall 2019\)  
 * Working group for proposed Policy Studies major (2025-2026)  
 * Data Governance Committee (2017-2024)
+
+##### Other Service
+
+* Davidson College Class of 2007 Class Secretary (2026-present)
 
 #### Garretson Resolution Group • Charlotte, NC
 
