@@ -1,0 +1,44 @@
+/*-- scss:defaults --*/
+
+// Sass Variables
+// https://quarto.org/docs/output-formats/html-themes.html#sass-variables
+
+/* Colors */
+$body-bg: #FFFFFF;
+$body-color: rgb(55, 58, 60);
+$link-color: rgb(39, 128, 227);
+
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+$font-family: "Atkinson Hyperlegible", sans-serif;
+
+/*-- scss:rules --*/
+
+div.callout-note.callout {
+    border-left-color: rgb(39, 128, 227);
+    background-color: #ffffff;
+    width: 75%;
+}
+
+.callout.callout-style-default {
+    border-left-color: rgb(39, 128, 227);
+    background-color: #ffffff;
+    border-left: 5px solid;
+    border-right: 1px solid #888888;
+    border-top: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+}
+
+.callout.callout-style-simple {
+    border-left-color: rgb(39, 128, 227);
+    background-color: #ffffff;
+    padding: .4em .7em;
+    border-left: 5px solid;
+    border-right: 1px solid #888888;
+    border-top: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+}
+
+.callout.callout-style-default .callout-body {
+    background-color: #ffffff;
+}

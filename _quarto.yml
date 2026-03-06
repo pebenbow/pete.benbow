@@ -40,5 +40,5 @@ format:
     linkcolor: "black"
     mainfont: "Atkinson Hyperlegible"
     fontsize: 20px
-    theme: [cosmo, styles.scss]
+    theme: [cosmo, style/styles.scss]
     
