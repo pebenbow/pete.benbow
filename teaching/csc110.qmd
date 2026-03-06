@@ -8,6 +8,6 @@ about:
 
 :::{#hero-heading}
 
-This course is an introduction to data science methods with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States.
+This course is an introduction to exploratory data analysis (EDA) with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States. 
 
 :::
