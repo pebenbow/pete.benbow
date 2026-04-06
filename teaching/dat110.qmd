@@ -1,5 +1,5 @@
 ---
-title: "CSC-110: Data Science & Society"
+title: "DAT 110: Data Science & Society"
 about: 
   id: hero-heading
   template: jolla

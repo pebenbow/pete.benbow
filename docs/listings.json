@@ -1,9 +1,18 @@
 [
   {
+    "listing": "/projects/projects.html",
+    "items": [
+      "/projects/powerbi.html",
+      "/projects/r.html",
+      "/projects/homelab.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
-      "/teaching/csc110.html",
+      "/teaching/dat110.html",
       "/teaching/dat153.html",
+      "/teaching/dat342.html",
       "/code/grader.html",
       "/code/pipevizr.html",
       "/online/powerbi-course.html",
@@ -12,14 +21,6 @@
       "/talks/air-forum-2023.html",
       "/talks/pass-summit-2022.html",
       "/talks/hedw-2019.html"
-    ]
-  },
-  {
-    "listing": "/projects/projects.html",
-    "items": [
-      "/projects/powerbi.html",
-      "/projects/r.html",
-      "/projects/homelab.html"
     ]
   }
 ]

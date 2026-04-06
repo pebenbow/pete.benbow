@@ -1,72 +1,65 @@
 [
   {
-    "objectID": "teaching/dat153.html",
-    "href": "teaching/dat153.html",
-    "title": "DAT-153: Database Programming",
+    "objectID": "teaching/dat342.html",
+    "href": "teaching/dat342.html",
+    "title": "DAT 342: Data Engineering",
     "section": "",
-    "text": "An introduction to relational databases and SQL programming with PostgreSQL, including object-oriented programming with Python and the SQLAlchemy and SQLModel libraries!"
+    "text": "Data engineering is the backbone that makes data science possible by providing systems that can extract, transform, and load data at scale. This course focuses on how to build the infrastructure on which the modern data stack operates, including pipelines, warehouses, lakehouses, and semantic models. Students develop systems that can ingest data from a variety of sources, including files, APIs, and non-relational databases, and they learn to process this information by streaming it in real-time or loading it in large, asynchronous batches. We also explore how data engineering overlaps with business intelligence, machine learning, and other related disciplines."
   },
   {
-    "objectID": "talks/pass-summit-2022.html",
-    "href": "talks/pass-summit-2022.html",
-    "title": "Database DevOps in Azure: Prepare for Ludicrous Speed!",
+    "objectID": "teaching/dat110.html",
+    "href": "teaching/dat110.html",
+    "title": "DAT 110: Data Science & Society",
     "section": "",
-    "text": "Abstract\nDevOps skills are now among the most sought-after qualifications in software development today, so you may be wondering: how can you, as a DBA or developer, implement DevOps practices to speed up the delivery of your Azure SQL and SQL Server databases? It’s probably easier than you think, and you don’t need to be a dedicated “DevOps engineer” to do it. In this session, you’ll learn the basics and watch a live demo of database DevOps in practice using an array of Microsoft products: Visual Studio, SQL Server Data Tools, and Azure DevOps. You’ll learn concepts like state-based database delivery, Git workflows, continuous integration, and configuration-as-code with YAML. By the end, you’ll see just how easy it is to establish a DevOps pipeline for rapid development and deployment of your databases!"
+    "text": "This course is an introduction to exploratory data analysis (EDA) with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States."
   },
   {
-    "objectID": "talks/hedw-2019.html",
-    "href": "talks/hedw-2019.html",
-    "title": "Automating the Enterprise Data Warehouse Using Azure DevOps",
+    "objectID": "talks/hepbiug-01.html",
+    "href": "talks/hepbiug-01.html",
+    "title": "Modeling Graduate Outcomes Using National Student Clearinghouse Data",
     "section": "",
-    "text": "Abstract\nDeploying changes to your data warehouse can be an elaborate, hands-on affair. Everything from work item tracking to code review, merges, builds, deployments, and documentation can take days to orchestrate across a plethora of systems. In this session, we’ll show you how Davidson College uses Azure DevOps as its one-stop shop for all these functions, creating a streamlined and automated lifecycle for our Enterprise Data Warehouse that saves valuable hours of productivity and allows us to iterate very rapidly across the database, ETL, and semantic layers."
+    "text": "Abstract\nInstitutional Research and Technology & Innovation collaborated to create a Power BI report on additional education graduates pursue after completing their degree. Multiple faculty requests to IR for post-graduation educational pursuits of departmental majors indicated the need for this information. Additional uses of the report and these data for other campus departments were identified. This session will share the process commencing with requesting data from the National Student Clearinghouse through data cleaning, model development, and creation of the final report. Beyond the development process, the presentation will include a demonstration of the report features and a discussion of the next steps for maintaining and updating the report."
   },
   {
-    "objectID": "projects/r.html",
-    "href": "projects/r.html",
-    "title": "R projects",
+    "objectID": "talks/air-forum-2023.html",
+    "href": "talks/air-forum-2023.html",
+    "title": "Modeling Further Education of Graduates With NSC Data in Power BI",
     "section": "",
-    "text": "Assignment calendar with highcharter\n\nAs part of the custom websites I build for each of my courses, I have a calendar visual that displays the start date and due date for each assignment in the class. I wanted to give my students an easy reference for when assignments are going to come due, and I was inspired by the common Gantt chart visual. Every day of the semester is represented on the X axis, and the Y axis is grouped by assignment types (quizzes, labs, homeworks).\nTo create this, I used the highcharter package, which supports greater interactivity than your standard base R and ggplot visuals.\nBeyond the basic visual, I added a couple of elements I thought would be helpful:\n\nA vertical red line indicating the current day.\nA semi-transparent tooltip that appears when the student hovers over a specific assignment, displaying the release date and due date.\n\nThe only thing I don’t like about this is how the numeric representation of each assignment’s release date and due date is included in the tooltip on the very top line (where you can see “17581536000000 - 17591904000000”). But as long as you don’t pay attention to that, I think this is a great resource for my students.\nHere’s the R code (click to expand):\n\n\n\n\n\n\nCode\n\n\n\n\n\n\n\n\n\n\n\n\nCat Scheduler Dashboard\n\nThis is an interactive dashboard I built in R Shiny for department chairs and Academic Affairs staff at Davidson to visualize the planned course schedule for upcoming academic years. Professors have an application they can access (called “Cat Scheduler”, abbreviated as “CatSched”) where they submit their day, time, and location preferences for the courses they’re going to teach, as well as equipment, layout, and other classroom features.\nAfter they submit these preferences, the Cat Scheduler algorithm (developed by my colleague Dr. Laurie Heyer) tries to build an optimal course schedule for the entire college based on the availability of classrooms and the preferences of the faculty. After this schedule is built, my dashboard visualizes the results so the faculty (particularly the department chairs) can make adjustments, specifically so they can try to distribute their classes somewhat evenly throughout a given week in the hopes of spreading out the demand for shared college spaces and resources.\nUsers can select the semester they want to review, as well as the “department group,” which helps group together courses from different disciplines according to some logic from the Registrar’s office that I never fully understood, but I think has to do with them often sharing the same buildings. But I could be wrong.\nThe data comes from the CatSched API, a REST interface that sits on top of MongoDB. It refreshes automatically when a user loads the dashboard, but I also included the “REFRESH DEPARTMENTS” button in the upper-right corner in case someone wants to query fresh data from the API while they’re reviewing a particular department group.\nAnother cool aspect of this is the embedded user guide, which gives users a quick walkthrough of how to navigate the dashboard.\nLink to source code in GitHub",
+    "text": "Abstract\nInstitutional Research and Technology & Innovation collaborated to create a Power BI report on additional education graduates pursue after completing their degree. Multiple faculty requests to IR for post-graduation educational pursuits of departmental majors indicated the need for this information. Additional uses of the report and these data for other campus departments were identified. This session will share the process commencing with requesting data from the National Student Clearinghouse through data cleaning, model development, and creation of the final report. Beyond the development process, the presentation will include a demonstration of the report features and a discussion of the next steps for maintaining and updating the report."
+  },
+  {
+    "objectID": "projects/projects.html",
+    "href": "projects/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Power BI\n\n\nA modest selection of a few Power BI projects I’ve built over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\n\nR projects built in Shiny, Quarto, and other formats.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHome Lab\n\n\nGaming PCs and other cool stuff I’ve built for personal use.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/homelab.html",
+    "href": "projects/homelab.html",
+    "title": "Home Lab",
+    "section": "",
+    "text": "My latest creation does away with all the RGB lighting that my previous build had, instead going for a more discreet aesthetic. To get there, I bought a Fractal Design North case, plus a brand new motherboard, CPU, PSU, 64GB RAM, and an AIO cooler. These new parts were all specifically curated to avoid any RGB lighting, with the exception of the temperature display on the AIO cooler’s CPU mount. Carried over from my previous build was the RTX 3070 GPU and my storage config.\nThis thing runs like a dream and I love the way it looks, especially how the walnut accents on the front of the case coordinate with my Ikea desk top and my Edifier speakers.\n\n\n\n\n\n\n\n\n\nCPU\nAMD Ryzen 7 7800X3D 8-Core 16-Thread 4.2 GHz\n\n\nGPU\nNVIDIA Founders Edition GeForce RTX 3070\n\n\nMemory\nCorsair Vengeance DDR5 RAM 64GB (2x32GB) 5200MHz\n\n\nMotherboard\nMSI MAG B650 Tomahawk ATX DDR5 Wi-Fi 6E\n\n\nPower supply\nCorsair RM850x ATX\n\n\nStorage (boot drive)\nSabrent Rocket 1 TB M.2-2280 PCIe 3.0 X4 NVME SSD\n\n\nStorage (secondary)\nSamsung 970 Evo Plus 2 TB M.2-2280 PCIe 3.0 X4 NVME SSD\n\n\nStorage (tertiary)\nSeagate Barracuda Compute 2 TB 3.5” 7200 RPM HDD\n\n\nCase\nFractal Design North, charcoal black\n\n\nCPU cooler\nNZXT Kraken 240 AIO\n\n\nCase fans\n3x Noctua NF-F12 iPPC-2000 IP67 PWM 120mm cooling fans",
     "crumbs": [
-      "R"
+      "Home Lab"
     ]
   },
   {
-    "objectID": "projects/powerbi.html",
-    "href": "projects/powerbi.html",
-    "title": "Power BI Projects",
-    "section": "",
-    "text": "This is a sampling of some of the data viz work I’ve done in Microsoft Power BI.\n\nDavidson College Fact File\nInstitutional research teams at colleges and universities across the United States maintain institutional “fact files” or “fact books” that contain aggregated data about the schools. These data are carefully curated each year and scrutinized before the schools publish them because these are considered official publications that represent various facets of the institution, including enrollment, academics, faculty demographics, and so forth.\nA few years ago, I was tasked with revamping Davidson’s fact file into an interactive Power BI report, and this was the result.\n\n\n\n\nBasketball analytics\nI have horrible sports knowledge, but I love Davidson basketball. Anyone who has been to my office and seen the signed memorabilia on the wall from Davidson’s fairy-tale run to the Elite Eight in March 2008 knows the level of my commitment to Wildcat hoops. So it was really cool when my colleague Tim Chartier asked me to showcase Power BI’s capabilities with some shot data that was collected by the Cats Stats sports analytics group that he works with.\nThis is one of my older projects, but a favorite of mine because of the dark theme, the amount of interactivity to allow you to explore the data, and the chance I had to build unique visuals. I especially love the shot charts, which are just basic scatterplots with semi-transparent backgrounds laid on top of an image of an NCAA regulation basketball court, and the chord diagram, which does a fantastic job of showing the relationships between players as they pass to each other.",
+    "objectID": "projects/homelab.html#footnotes",
+    "href": "projects/homelab.html#footnotes",
+    "title": "Home Lab",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWhen I originally built this, it had an MSI GAMING X GeForce RTX 2070 SUPER for graphics, but I upgraded to the RTX 3070 in 2022.↩︎",
     "crumbs": [
-      "Power BI"
+      "Home Lab"
     ]
   },
   {
-    "objectID": "online/sql-course.html",
-    "href": "online/sql-course.html",
-    "title": "Introduction to SQL",
+    "objectID": "online/powerbi-course.html",
+    "href": "online/powerbi-course.html",
+    "title": "Analyzing & Visualizing Data with Power BI",
     "section": "",
-    "text": "Check out this course on edX\n  \n\n\n\nFollowing the success we had with the Power BI course, we launched this one in 2021 to introduce students to SQL and relational databases."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Pete Benbow",
-    "section": "",
-    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     College bio\n  \n  \n    \n     YouTube\n  \n  \n    \n     Spotify\n  \n\n  \n  \n\nAbout\nI’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering.\n\n\nEducation\nA.B., Political Science (2007), Davidson College\n\n\nAcademic Interests\n\nRelational databases\nData engineering\nBusiness intelligence systems\nExploratory data analysis\n\n\n\nPersonal Stuff\n\nFly-fishing\nScience fiction & fantasy\nGaming\nSinging\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\nCSC-110: Data Science & Society\n\n\n\n\n\n\n\n\n\n\nDAT-153: Database Programming\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nCode\n\n\n\n\n\n\n\n\ngradeR\n\n\nAn R package that autogrades assignment submissions\n\n\n\n\n\n\n\n\n\n\n\npipevizR\n\n\nAn R package that diagrams data lineage in tidyverse pipeline code\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nOnline Instruction\n\n\n\n\n\n\n\n\nAnalyzing & Visualizing Data with Power BI\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to SQL\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nTalks\n\n\n\n\n\nTitle\n\n\nDate\n\n\nlocation\n\n\n\n\n\n\nModeling Graduate Outcomes Using National Student Clearinghouse Data\n\n\n9/20/23\n\n\nYouTube\n\n\n\n\nModeling Further Education of Graduates With NSC Data in Power BI\n\n\n6/2/23\n\n\nCleveland, OH\n\n\n\n\nDatabase DevOps in Azure: Prepare for Ludicrous Speed!\n\n\n11/17/22\n\n\nSeattle, WA\n\n\n\n\nAutomating the Enterprise Data Warehouse Using Azure DevOps\n\n\n4/17/19\n\n\nAnn Arbor, MI\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "code/pipevizr.html",
-    "href": "code/pipevizr.html",
-    "title": "pipevizR",
-    "section": "",
-    "text": "Github\n  \n\n      \nInspired by the dataflow diagrams that you might see when working with platforms like Power BI and Tableau, I’m developing a package that diagrams tidyverse pipeline code. The purpose is to help R programmers visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology."
-  },
-  {
-    "objectID": "code/grader.html",
-    "href": "code/grader.html",
-    "title": "gradeR",
-    "section": "",
-    "text": "Github\n  \n  \n    \n     CRAN\n  \n\n      \nI was added as co-author on this package in 2026 after coding several “quality of life” enhancements. It provides a wrapper for evaluating unit tests in R with the testthat package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and gradeR has a function specifically for producing JSON output that is compatible with Gradescope’s autograder."
+    "text": "Check out this course on edX\n  \n\n\n\nThis course got me started on the path toward becoming a professor. We have enrolled over 175,000 learners worldwide since we launched it in 2020!"
   },
   {
     "objectID": "cv.html",
@@ -83,18 +76,18 @@
     "text": "Davidson College\n\nJames B. Duke Assistant Professor of the Practice in Data Science (2024 - Present)\n\nAdvising students majoring in Data Science\nFaculty mentor, Community Research Fellows program\nDeveloping extracurricular Data Science programs, including ASA DataFest and the Public Good Data Wrangle\nDeveloped Davidson’s first course with a DAT (Data Science) subject code, DAT-153 Database Programming\nParticipated in interviewing and hiring Davidson’s first tenure-track Professor of Data Science\n\n\n\nDirector of Data CATS (2024 - Present)\n\nManaging a team of student tutors/consultants who provide data science services to students, faculty, staff, and community members\nConsulted on research project to identify significant drivers of donor giving in advance of new fundraising campaign\nDeveloped a dashboard visualizing planned courses for future years to aid departments in optimizing their schedules\n\n\n\nTechnology & Innovation Department\n\nManager of Data Operations (2023 - 2024)\nBusiness Intelligence Developer (2017 - 2023)\n\n\n\nCommittee and Task Force Service\n\nLearning Spaces, Technology, and Design Committee (2025 - present)\nStrategic Planning:\n\nWorking group member: “Discovering Passions, Developing Purpose” (2023 - 2024)\n\nSearch Committees:\n\nDirector of Institutional Research (Spring 2024)\nAssistant Director of Grants and Contracts (Fall 2019)\n\nWorking group for proposed Policy Studies major (2025 - 2026)\nData Governance Committee (2017 - 2024)\n\n\n\nOther Service\n\nHolistic/pre-major advisor (2019 - Present)\nDavidson College Class of 2007 Class Secretary (2026 - present)"
   },
   {
-    "objectID": "cv.html#garretson-resolution-group-charlotte-nc",
-    "href": "cv.html#garretson-resolution-group-charlotte-nc",
+    "objectID": "cv.html#garretson-resolution-group",
+    "href": "cv.html#garretson-resolution-group",
     "title": "Curriculum Vitae",
-    "section": "Garretson Resolution Group • Charlotte, NC",
-    "text": "Garretson Resolution Group • Charlotte, NC\n\nDirector of Research & Analytics (2015 - 2017)\nManager of Research & Analytics (2013 - 2015)\nMedical Review Associate (2012 - 2013)"
+    "section": "Garretson Resolution Group",
+    "text": "Garretson Resolution Group\n\nDirector of Research & Analytics (2015 - 2017)\nManager of Research & Analytics (2013 - 2015)\nMedical Review Associate (2012 - 2013)"
   },
   {
     "objectID": "cv.html#classroom-instruction",
     "href": "cv.html#classroom-instruction",
     "title": "Curriculum Vitae",
     "section": "Classroom Instruction",
-    "text": "Classroom Instruction\n\nDAT-395: Independent Study: Data Engineering (Spring 2026)\nDAT-153: Database Programming (Spring 2025 - Present)\nCSC-110: Data Science & Society (Fall 2024 - Present)"
+    "text": "Classroom Instruction\n\nDAT 395: Independent Study: Data Engineering (Spring 2026)\nDAT 342: Data Engineering (Fall 2026 - Present)\nDAT 153: Database Programming (Spring 2025 - Present)\nDAT 110: Data Science & Society (Fall 2024 - Present)"
   },
   {
     "objectID": "cv.html#online-instruction-edx",
@@ -125,58 +118,72 @@
     "text": "Power BI Projects\n\nDavidson College Fact File: go.davidson.edu/factfile\nNational Student Clearinghouse graduate outcomes\nDavidson College departmental finance reports\nCOVID-19 campus contact-tracing report\nTutorial Services Dashboard"
   },
   {
-    "objectID": "online/powerbi-course.html",
-    "href": "online/powerbi-course.html",
-    "title": "Analyzing & Visualizing Data with Power BI",
+    "objectID": "code/grader.html",
+    "href": "code/grader.html",
+    "title": "gradeR",
     "section": "",
-    "text": "Check out this course on edX\n  \n\n\n\nThis course got me started on the path toward becoming a professor. We have enrolled over 175,000 learners worldwide since we launched it in 2020!"
+    "text": "Github\n  \n  \n    \n     CRAN\n  \n\n      \nI was added as co-author on this package in 2026 after coding several “quality of life” enhancements. It provides a wrapper for evaluating unit tests in R with the testthat package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and gradeR has a function specifically for producing JSON output that is compatible with Gradescope’s autograder."
   },
   {
-    "objectID": "projects/homelab.html",
-    "href": "projects/homelab.html",
-    "title": "Home Lab",
+    "objectID": "code/pipevizr.html",
+    "href": "code/pipevizr.html",
+    "title": "pipevizR",
     "section": "",
-    "text": "My latest creation does away with all the RGB lighting that my previous build had, instead going for a more discreet aesthetic. To get there, I bought a Fractal Design North case, plus a brand new motherboard, CPU, PSU, 64GB RAM, and an AIO cooler. These new parts were all specifically curated to avoid any RGB lighting, with the exception of the temperature display on the AIO cooler’s CPU mount. Carried over from my previous build was the RTX 3070 GPU and my storage config.\nThis thing runs like a dream and I love the way it looks, especially how the walnut accents on the front of the case coordinate with my Ikea desk top and my Edifier speakers.\n\n\n\n\n\n\n\n\n\nCPU\nAMD Ryzen 7 7800X3D 8-Core 16-Thread 4.2 GHz\n\n\nGPU\nNVIDIA Founders Edition GeForce RTX 3070\n\n\nMemory\nCorsair Vengeance DDR5 RAM 64GB (2x32GB) 5200MHz\n\n\nMotherboard\nMSI MAG B650 Tomahawk ATX DDR5 Wi-Fi 6E\n\n\nPower supply\nCorsair RM850x ATX\n\n\nStorage (boot drive)\nSabrent Rocket 1 TB M.2-2280 PCIe 3.0 X4 NVME SSD\n\n\nStorage (secondary)\nSamsung 970 Evo Plus 2 TB M.2-2280 PCIe 3.0 X4 NVME SSD\n\n\nStorage (tertiary)\nSeagate Barracuda Compute 2 TB 3.5” 7200 RPM HDD\n\n\nCase\nFractal Design North, charcoal black\n\n\nCPU cooler\nNZXT Kraken 240 AIO\n\n\nCase fans\n3x Noctua NF-F12 iPPC-2000 IP67 PWM 120mm cooling fans",
+    "text": "Github\n  \n\n      \nInspired by the dataflow diagrams that you might see when working with platforms like Power BI and Tableau, I’m developing a package that diagrams tidyverse pipeline code. The purpose is to help R programmers visually understand their data lineage, mainly for the purposes of documenting their project workflow and/or research methodology."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Pete Benbow",
+    "section": "",
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     College bio\n  \n  \n    \n     YouTube\n  \n  \n    \n     Spotify\n  \n\n  \n  \n\nAbout\nI’m the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on database systems and data engineering, without which data science would not be possible.\nI’m also a halfway-decent angler.\n\n\nEducation\nA.B., Political Science (2007), Davidson College\n\n\nAcademic Interests\n\nRelational databases\nData engineering\nBusiness intelligence systems\nExploratory data analysis\n\n\n\nPersonal Stuff\n\nFly-fishing\nScience fiction & fantasy\nGaming\nSinging\n\n\n\n\n\n\nTeaching\n\n\n\n\n\n\n\nDAT 110: Data Science & Society\n\n\n\n\n\n\n\n\n\n\nDAT 153: Database Programming\n\n\n\n\n\n\n\n\n\n\nDAT 342: Data Engineering\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nCode\n\n\n\n\n\n\n\n\ngradeR\n\n\nAn R package that autogrades assignment submissions\n\n\n\n\n\n\n\n\n\n\n\npipevizR\n\n\nAn R package that diagrams data lineage in tidyverse pipeline code\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nOnline Instruction\n\n\n\n\n\n\n\n\nAnalyzing & Visualizing Data with Power BI\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to SQL\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nTalks\n\n\n\n\n\nTitle\n\n\nDate\n\n\nlocation\n\n\n\n\n\n\nModeling Graduate Outcomes Using National Student Clearinghouse Data\n\n\n9/20/23\n\n\nYouTube\n\n\n\n\nModeling Further Education of Graduates With NSC Data in Power BI\n\n\n6/2/23\n\n\nCleveland, OH\n\n\n\n\nDatabase DevOps in Azure: Prepare for Ludicrous Speed!\n\n\n11/17/22\n\n\nSeattle, WA\n\n\n\n\nAutomating the Enterprise Data Warehouse Using Azure DevOps\n\n\n4/17/19\n\n\nAnn Arbor, MI\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "online/sql-course.html",
+    "href": "online/sql-course.html",
+    "title": "Introduction to SQL",
+    "section": "",
+    "text": "Check out this course on edX\n  \n\n\n\nFollowing the success we had with the Power BI course, we launched this one in 2021 to introduce students to SQL and relational databases."
+  },
+  {
+    "objectID": "projects/powerbi.html",
+    "href": "projects/powerbi.html",
+    "title": "Power BI Projects",
+    "section": "",
+    "text": "This is a sampling of some of the data viz work I’ve done in Microsoft Power BI.\n\nDavidson College Fact File\nInstitutional research teams at colleges and universities across the United States maintain institutional “fact files” or “fact books” that contain aggregated data about the schools. These data are carefully curated each year and scrutinized before the schools publish them because these are considered official publications that represent various facets of the institution, including enrollment, academics, faculty demographics, and so forth.\nA few years ago, I was tasked with revamping Davidson’s fact file into an interactive Power BI report, and this was the result.\n\n\n\n\nBasketball analytics\nI have horrible sports knowledge, but I love Davidson basketball. Anyone who has been to my office and seen the signed memorabilia on the wall from Davidson’s fairy-tale run to the Elite Eight in March 2008 knows the level of my commitment to Wildcat hoops. So it was really cool when my colleague Tim Chartier asked me to showcase Power BI’s capabilities with some shot data that was collected by the Cats Stats sports analytics group that he works with.\nThis is one of my older projects, but a favorite of mine because of the dark theme, the amount of interactivity to allow you to explore the data, and the chance I had to build unique visuals. I especially love the shot charts, which are just basic scatterplots with semi-transparent backgrounds laid on top of an image of an NCAA regulation basketball court, and the chord diagram, which does a fantastic job of showing the relationships between players as they pass to each other.",
     "crumbs": [
-      "Home Lab"
+      "Power BI"
     ]
   },
   {
-    "objectID": "projects/homelab.html#footnotes",
-    "href": "projects/homelab.html#footnotes",
-    "title": "Home Lab",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nWhen I originally built this, it had an MSI GAMING X GeForce RTX 2070 SUPER for graphics, but I upgraded to the RTX 3070 in 2022.↩︎",
+    "objectID": "projects/r.html",
+    "href": "projects/r.html",
+    "title": "R projects",
+    "section": "",
+    "text": "Assignment calendar with highcharter\n\nAs part of the custom websites I build for each of my courses, I have a calendar visual that displays the start date and due date for each assignment in the class. I wanted to give my students an easy reference for when assignments are going to come due, and I was inspired by the common Gantt chart visual. Every day of the semester is represented on the X axis, and the Y axis is grouped by assignment types (quizzes, labs, homeworks).\nTo create this, I used the highcharter package, which supports greater interactivity than your standard base R and ggplot visuals.\nBeyond the basic visual, I added a couple of elements I thought would be helpful:\n\nA vertical red line indicating the current day.\nA semi-transparent tooltip that appears when the student hovers over a specific assignment, displaying the release date and due date.\n\nThe only thing I don’t like about this is how the numeric representation of each assignment’s release date and due date is included in the tooltip on the very top line (where you can see “17581536000000 - 17591904000000”). But as long as you don’t pay attention to that, I think this is a great resource for my students.\nHere’s the R code (click to expand):\n\n\n\n\n\n\nCode\n\n\n\n\n\n\n\n\n\n\n\n\nCat Scheduler Dashboard\n\nThis is an interactive dashboard I built in R Shiny for department chairs and Academic Affairs staff at Davidson to visualize the planned course schedule for upcoming academic years. Professors have an application they can access (called “Cat Scheduler”, abbreviated as “CatSched”) where they submit their day, time, and location preferences for the courses they’re going to teach, as well as equipment, layout, and other classroom features.\nAfter they submit these preferences, the Cat Scheduler algorithm (developed by my colleague Dr. Laurie Heyer) tries to build an optimal course schedule for the entire college based on the availability of classrooms and the preferences of the faculty. After this schedule is built, my dashboard visualizes the results so the faculty (particularly the department chairs) can make adjustments, specifically so they can try to distribute their classes somewhat evenly throughout a given week in the hopes of spreading out the demand for shared college spaces and resources.\nUsers can select the semester they want to review, as well as the “department group,” which helps group together courses from different disciplines according to some logic from the Registrar’s office that I never fully understood, but I think has to do with them often sharing the same buildings. But I could be wrong.\nThe data comes from the CatSched API, a REST interface that sits on top of MongoDB. It refreshes automatically when a user loads the dashboard, but I also included the “REFRESH DEPARTMENTS” button in the upper-right corner in case someone wants to query fresh data from the API while they’re reviewing a particular department group.\nAnother cool aspect of this is the embedded user guide, which gives users a quick walkthrough of how to navigate the dashboard.\nLink to source code in GitHub",
     "crumbs": [
-      "Home Lab"
+      "R"
     ]
   },
   {
-    "objectID": "projects/projects.html",
-    "href": "projects/projects.html",
-    "title": "Projects",
+    "objectID": "talks/hedw-2019.html",
+    "href": "talks/hedw-2019.html",
+    "title": "Automating the Enterprise Data Warehouse Using Azure DevOps",
     "section": "",
-    "text": "Power BI\n\n\nA modest selection of a few Power BI projects I’ve built over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR\n\n\nR projects built in Shiny, Quarto, and other formats.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHome Lab\n\n\nGaming PCs and other cool stuff I’ve built for personal use.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Abstract\nDeploying changes to your data warehouse can be an elaborate, hands-on affair. Everything from work item tracking to code review, merges, builds, deployments, and documentation can take days to orchestrate across a plethora of systems. In this session, we’ll show you how Davidson College uses Azure DevOps as its one-stop shop for all these functions, creating a streamlined and automated lifecycle for our Enterprise Data Warehouse that saves valuable hours of productivity and allows us to iterate very rapidly across the database, ETL, and semantic layers."
   },
   {
-    "objectID": "talks/air-forum-2023.html",
-    "href": "talks/air-forum-2023.html",
-    "title": "Modeling Further Education of Graduates With NSC Data in Power BI",
+    "objectID": "talks/pass-summit-2022.html",
+    "href": "talks/pass-summit-2022.html",
+    "title": "Database DevOps in Azure: Prepare for Ludicrous Speed!",
     "section": "",
-    "text": "Abstract\nInstitutional Research and Technology & Innovation collaborated to create a Power BI report on additional education graduates pursue after completing their degree. Multiple faculty requests to IR for post-graduation educational pursuits of departmental majors indicated the need for this information. Additional uses of the report and these data for other campus departments were identified. This session will share the process commencing with requesting data from the National Student Clearinghouse through data cleaning, model development, and creation of the final report. Beyond the development process, the presentation will include a demonstration of the report features and a discussion of the next steps for maintaining and updating the report."
+    "text": "Abstract\nDevOps skills are now among the most sought-after qualifications in software development today, so you may be wondering: how can you, as a DBA or developer, implement DevOps practices to speed up the delivery of your Azure SQL and SQL Server databases? It’s probably easier than you think, and you don’t need to be a dedicated “DevOps engineer” to do it. In this session, you’ll learn the basics and watch a live demo of database DevOps in practice using an array of Microsoft products: Visual Studio, SQL Server Data Tools, and Azure DevOps. You’ll learn concepts like state-based database delivery, Git workflows, continuous integration, and configuration-as-code with YAML. By the end, you’ll see just how easy it is to establish a DevOps pipeline for rapid development and deployment of your databases!"
   },
   {
-    "objectID": "talks/hepbiug-01.html",
-    "href": "talks/hepbiug-01.html",
-    "title": "Modeling Graduate Outcomes Using National Student Clearinghouse Data",
+    "objectID": "teaching/dat153.html",
+    "href": "teaching/dat153.html",
+    "title": "DAT 153: Database Programming",
     "section": "",
-    "text": "Abstract\nInstitutional Research and Technology & Innovation collaborated to create a Power BI report on additional education graduates pursue after completing their degree. Multiple faculty requests to IR for post-graduation educational pursuits of departmental majors indicated the need for this information. Additional uses of the report and these data for other campus departments were identified. This session will share the process commencing with requesting data from the National Student Clearinghouse through data cleaning, model development, and creation of the final report. Beyond the development process, the presentation will include a demonstration of the report features and a discussion of the next steps for maintaining and updating the report."
-  },
-  {
-    "objectID": "teaching/csc110.html",
-    "href": "teaching/csc110.html",
-    "title": "CSC-110: Data Science & Society",
-    "section": "",
-    "text": "This course is an introduction to exploratory data analysis (EDA) with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States."
+    "text": "This course provides an introduction to database programming. Using the SQL language, students learn how to explore and interact with databases, create and manipulate data, and extract knowledge through analytics and visualization. They also learn fundamental database design principles and methods, and apply this knowledge to develop databases of their own. While the course focuses predominantly on the applied use of relational databases, it also introduces neighboring topics like non-relational data, APIs, extract-transform-load (ETL) processes, and business intelligence (BI) systems."
   }
 ]

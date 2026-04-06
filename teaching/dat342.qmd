@@ -1,0 +1,13 @@
+---
+title: "DAT 342: Data Engineering"
+about: 
+  id: hero-heading
+  template: jolla
+  image: database.png
+---
+
+:::{#hero-heading}
+
+Data engineering is the backbone that makes data science possible by providing systems that can extract, transform, and load data at scale. This course focuses on how to build the infrastructure on which the modern data stack operates, including pipelines, warehouses, lakehouses, and semantic models. Students develop systems that can ingest data from a variety of sources, including files, APIs, and non-relational databases, and they learn to process this information by streaming it in real-time or loading it in large, asynchronous batches. We also explore how data engineering overlaps with business intelligence, machine learning, and other related disciplines.
+
+:::

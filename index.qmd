@@ -7,7 +7,7 @@ format:
 about: 
   id: hero-heading
   template: trestles
-  image: images/pete-skye01.jpg
+  image: images/fishing01.jpg
   image-shape: round
   links:
     - icon: github
@@ -62,7 +62,9 @@ listing:
 
 ### About {#about}
 
-I'm the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on practical skills around programming, analytics, and data engineering. 
+I'm the James B. Duke Assistant Professor of the Practice in Data Science at Davidson College. My teaching is mainly focused on database systems and data engineering, without which data science would not be possible.
+
+I'm also a halfway-decent angler.
 
 ### Education
 

@@ -8,7 +8,7 @@ format:
     html-table-processing: none
     page-layout: full
     toc: true
-    toc-depth: 3
+    toc-depth: 1
     toc-location: "left"
     theme: [cosmo, style/cv-styles.scss]
   pdf:
@@ -69,7 +69,7 @@ A.B., Political Science (2007), Davidson College
 * Holistic/pre-major advisor (2019 - Present)
 * Davidson College Class of 2007 Class Secretary (2026 - present)
 
-## Garretson Resolution Group • Charlotte, NC
+## Garretson Resolution Group
 
 * Director of Research & Analytics (2015 - 2017)
 * Manager of Research & Analytics (2013 - 2015)
@@ -81,9 +81,10 @@ A.B., Political Science (2007), Davidson College
 
 ## Classroom Instruction
 
-* DAT-395: Independent Study: Data Engineering (Spring 2026)
-* DAT-153: Database Programming (Spring 2025 - Present)
-* CSC-110: Data Science & Society (Fall 2024 - Present)
+* DAT 395: Independent Study: Data Engineering (Spring 2026)
+* DAT 342: Data Engineering (Fall 2026 - Present)
+* DAT 153: Database Programming (Spring 2025 - Present)
+* DAT 110: Data Science & Society (Fall 2024 - Present)
 
 ## Online Instruction (edX)
 
@@ -124,38 +125,34 @@ A.B., Political Science (2007), Davidson College
 
 # Conferences & Presentations
 
-#### “Modeling Further Education of Graduates with NSC Data in Power BI,” with L. Boyles:
+**“Modeling Further Education of Graduates with NSC Data in Power BI,”** with L. Boyles:
 
-North Carolina Association for Institutional Research (April 2024)
-
-Southern Association for Institutional Research (October 2023)
-
-Association for Institutional Research (June 2023)
+* North Carolina Association for Institutional Research (April 2024)
+* Southern Association for Institutional Research (October 2023)
+* Association for Institutional Research (June 2023)
   
-#### “Database DevOps in Azure: Prepare for Ludicrous Speed”
+**“Database DevOps in Azure: Prepare for Ludicrous Speed”**
 
-PASS Data Community Summit (November 2022)
+* PASS Data Community Summit (November 2022)
 
-#### “Data Crunch: Using Your Data to Streamline Employer Engagements"
+**“Data Crunch: Using Your Data to Streamline Employer Engagements"**
 
-Southern Association of Colleges and Employers, with B. Adams (June 2020)
+* Southern Association of Colleges and Employers, with B. Adams (June 2020)
 
-#### “Automating the Enterprise Data Warehouse Using Azure DevOps”
+**“Automating the Enterprise Data Warehouse Using Azure DevOps”**
 
-Higher Education Data World Conference (April 2019)
+* Higher Education Data World Conference (April 2019)
 
 ---
 
 # Professional Service
 
-Graduate, MOR Leaders Program for liberal arts colleges (2023-2024 cohort)
-
-Founder and co-organizer, Higher Education Power BI User Group (Aug 2023 - Jan 2025)
-
-Member, American Statistical Association (2024 - Present)
+* Graduate, MOR Leaders Program for liberal arts colleges (2023-2024 cohort)
+* Founder and co-organizer, Higher Education Power BI User Group (Aug 2023 - Jan 2025)
+* Member, American Statistical Association (2024 - Present)
 
 ---
 
 # Honors and Awards
 
-2023: First Place, Best Innovative Practice, Southern Association for Institutional Research annual conference (with L. Boyles)
+* 2023: First Place, Best Innovative Practice, Southern Association for Institutional Research annual conference (with L. Boyles)

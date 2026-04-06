@@ -1,5 +1,5 @@
 ---
-title: "DAT-153: Database Programming"
+title: "DAT 153: Database Programming"
 about: 
   id: hero-heading
   template: jolla
@@ -8,6 +8,6 @@ about:
 
 :::{#hero-heading}
 
-An introduction to relational databases and SQL programming with PostgreSQL, including object-oriented programming with Python and the SQLAlchemy and SQLModel libraries!
+This course provides an introduction to database programming. Using the SQL language, students learn how to explore and interact with databases, create and manipulate data, and extract knowledge through analytics and visualization. They also learn fundamental database design principles and methods, and apply this knowledge to develop databases of their own. While the course focuses predominantly on the applied use of relational databases, it also introduces neighboring topics like non-relational data, APIs, extract-transform-load (ETL) processes, and business intelligence (BI) systems.
 
 :::
