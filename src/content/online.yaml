@@ -1,0 +1,11 @@
+- id: powerbi-course
+  title: "Analyzing & Visualizing Data with Power BI"
+  image: "/images/online/powerbi-course.png"
+  url: "https://www.edx.org/learn/power-bi/davidson-college-analyzing-and-visualizing-data-with-power-bi"
+  blurb: "This course got me started on the path toward becoming a professor. We have enrolled over 175,000 learners worldwide since we launched it in 2020!"
+
+- id: sql-course
+  title: "Introduction to SQL"
+  image: "/images/online/sql-course.png"
+  url: "https://www.edx.org/learn/sql/davidson-college-introduction-to-sql"
+  blurb: "Following the success we had with the Power BI course, we launched this one in 2021 to introduce students to SQL and relational databases."

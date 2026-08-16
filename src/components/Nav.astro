@@ -1,0 +1,88 @@
+---
+import { Icon } from "astro-icon/components";
+
+const links = [
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#teaching", label: "Teaching" },
+  { href: "/#projects", label: "Projects" },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-ink-800 bg-ink-950/85 backdrop-blur">
+	<div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+		<a href="/" class="font-display text-lg font-semibold tracking-tight text-ink-50">
+			Pete Benbow
+		</a>
+
+		<nav class="hidden items-center gap-8 md:flex">
+			{links.map((link) => (
+				<a
+					href={link.href}
+					class="text-sm font-medium text-ink-200 transition-colors hover:text-accent-400"
+				>
+					{link.label}
+				</a>
+			))}
+			<a
+				href="/cv"
+				class="flex items-center gap-1.5 rounded-full bg-accent-500 px-5 py-2 text-sm font-semibold text-ink-50 transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent-600 hover:shadow-lg hover:shadow-accent-500/30"
+			>
+				<Icon name="lucide:file-text" class="h-4 w-4" />
+				CV
+			</a>
+		</nav>
+
+		<button
+			id="nav-toggle"
+			type="button"
+			aria-expanded="false"
+			aria-controls="mobile-nav"
+			class="flex items-center justify-center rounded-md p-2 text-ink-200 md:hidden"
+		>
+			<span class="sr-only">Toggle navigation</span>
+			<Icon id="nav-icon-menu" name="lucide:menu" class="h-6 w-6" />
+			<Icon id="nav-icon-close" name="lucide:x" class="hidden h-6 w-6" />
+		</button>
+	</div>
+
+	<nav id="mobile-nav" class="hidden flex-col gap-1 border-t border-ink-800 px-6 py-4 md:hidden">
+		{links.map((link) => (
+			<a
+				href={link.href}
+				class="rounded-md px-2 py-2 text-sm font-medium text-ink-200 hover:bg-ink-800 hover:text-accent-400"
+			>
+				{link.label}
+			</a>
+		))}
+		<a
+			href="/cv"
+			class="mt-2 rounded-full bg-accent-500 px-5 py-2.5 text-center text-sm font-semibold text-ink-50 transition-colors hover:bg-accent-600"
+		>
+			CV
+		</a>
+	</nav>
+</header>
+
+<script>
+	const toggle = document.getElementById("nav-toggle");
+	const menu = document.getElementById("mobile-nav");
+	const iconMenu = document.getElementById("nav-icon-menu");
+	const iconClose = document.getElementById("nav-icon-close");
+
+	function setOpen(isOpen: boolean) {
+		menu?.classList.toggle("hidden", !isOpen);
+		menu?.classList.toggle("flex", isOpen);
+		iconMenu?.classList.toggle("hidden", isOpen);
+		iconClose?.classList.toggle("hidden", !isOpen);
+		toggle?.setAttribute("aria-expanded", String(isOpen));
+	}
+
+	toggle?.addEventListener("click", () => {
+		setOpen(menu?.classList.contains("hidden") ?? false);
+	});
+
+	menu?.querySelectorAll("a").forEach((link) => {
+		link.addEventListener("click", () => setOpen(false));
+	});
+</script>

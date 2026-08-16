@@ -1,0 +1,15 @@
+---
+interface Props {
+  color?: string;
+  class?: string;
+}
+
+const { color = "var(--color-accent-500)", class: className = "" } = Astro.props;
+---
+
+<div
+	aria-hidden="true"
+	class={`pointer-events-none absolute -z-10 h-[420px] w-[420px] rounded-full opacity-25 blur-[120px] print:hidden ${className}`}
+	style={{ background: color }}
+>
+</div>

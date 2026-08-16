@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+	<defs>
+		<filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+			<feGaussianBlur stdDeviation="60" />
+		</filter>
+		<pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+			<circle cx="2" cy="2" r="1.4" fill="#26292e" />
+		</pattern>
+	</defs>
+
+	<rect width="800" height="450" fill="#0b0c0e" />
+	<rect width="800" height="450" fill="url(#dots)" />
+
+	<circle cx="180" cy="120" r="140" fill="#2780e3" opacity="0.22" filter="url(#blur1)" />
+	<circle cx="640" cy="340" r="150" fill="#8b5cf6" opacity="0.16" filter="url(#blur1)" />
+
+	<g fill="none" stroke="#5aa9ff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+		<ellipse cx="400" cy="140" rx="130" ry="42" />
+		<path d="M270 140 V310" />
+		<path d="M530 140 V310" />
+		<path d="M270 225 A130 42 0 0 0 530 225" />
+		<path d="M270 310 A130 42 0 0 0 530 310" />
+	</g>
+</svg>

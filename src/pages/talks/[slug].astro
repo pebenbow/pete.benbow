@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Glow from "../../components/Glow.astro";
+
+export async function getStaticPaths() {
+  const talks = await getCollection("talks");
+  return talks.map((talk) => ({
+    params: { slug: talk.id },
+    props: { talk },
+  }));
+}
+
+const { talk } = Astro.props;
+const { Content } = await render(talk);
+const formattedDate = talk.data.date.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<BaseLayout title={`${talk.data.title} — Pete Benbow`} description={talk.data.event}>
+	<article class="relative mx-auto max-w-3xl px-6 py-20">
+		<Glow color="var(--color-violet-500)" class="-top-20 -right-32" />
+		<Glow color="var(--color-coral-500)" class="top-[60%] -left-40" />
+		<a href="/#talks" class="text-sm font-medium text-accent-400 hover:underline">&larr; Back to talks</a>
+
+		<h1 class="mt-4 font-display text-4xl font-bold text-ink-50">{talk.data.title}</h1>
+		<p class="mt-2 text-ink-400">{talk.data.event} &middot; {talk.data.location} &middot; {formattedDate}</p>
+
+		<div class="prose prose-invert prose-headings:font-display prose-a:text-accent-400 mt-10 max-w-none">
+			<Content />
+		</div>
+	</article>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import TagChip from "./TagChip.astro";
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  image?: string;
+  href?: string;
+  tags?: string[];
+}
+
+const { title, subtitle, description, image, href, tags = [] } = Astro.props;
+const Tag = href ? "a" : "div";
+---
+
+<Tag
+	href={href}
+	class="group flex h-full flex-col overflow-hidden rounded-xl border border-ink-800 bg-ink-900 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500/40 hover:shadow-xl hover:shadow-accent-500/10"
+>
+	{image && (
+		<div class="aspect-video w-full overflow-hidden bg-ink-800">
+			<img
+				src={image}
+				alt=""
+				class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+				loading="lazy"
+			/>
+		</div>
+	)}
+	<div class="flex flex-1 flex-col gap-3 p-5">
+		<div>
+			<h3 class="font-display text-lg font-semibold text-ink-50">{title}</h3>
+			{subtitle && (
+				<p class="mt-0.5 text-xs font-semibold uppercase tracking-wider text-accent-400">{subtitle}</p>
+			)}
+		</div>
+		{description && <p class="text-sm text-ink-400">{description}</p>}
+		{tags.length > 0 && (
+			<div class="mt-auto flex flex-wrap gap-2 pt-2">
+				{tags.map((tag) => <TagChip label={tag} />)}
+			</div>
+		)}
+	</div>
+</Tag>

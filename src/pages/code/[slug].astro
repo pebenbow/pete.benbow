@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from "astro:content";
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Glow from "../../components/Glow.astro";
+
+export async function getStaticPaths() {
+  const items = await getCollection("code");
+  return items.map((item) => ({
+    params: { slug: item.id },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+---
+
+<BaseLayout title={`${item.data.title} — Pete Benbow`} description={item.data.description}>
+	<article class="relative mx-auto max-w-3xl px-6 py-20">
+		<Glow color="var(--color-coral-500)" class="-top-20 -left-32" />
+		<Glow color="var(--color-accent-500)" class="top-[60%] -right-40" />
+		<a href="/#code" class="text-sm font-medium text-accent-400 hover:underline">&larr; Back to code</a>
+
+		<h1 class="mt-4 font-display text-4xl font-bold text-ink-50">{item.data.title}</h1>
+		<p class="mt-2 text-ink-400">{item.data.description}</p>
+
+		<div class="mt-4 flex flex-wrap gap-3">
+			{item.data.links.map((link) => (
+				<a
+					href={link.href}
+					target="_blank"
+					rel="noreferrer"
+					class="flex items-center gap-2 rounded-full border border-ink-700 px-5 py-2 text-sm font-medium text-ink-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent-400 hover:bg-ink-800 hover:text-accent-400"
+				>
+					{link.icon && <Icon name={link.icon} class="h-4 w-4" />}
+					{link.label}
+				</a>
+			))}
+		</div>
+
+		<div class="prose prose-invert prose-headings:font-display prose-a:text-accent-400 mt-10 max-w-none">
+			<Content />
+		</div>
+	</article>
+</BaseLayout>

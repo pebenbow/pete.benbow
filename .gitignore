@@ -7,3 +7,12 @@
 _site/
 
 /.quarto/
+
+# Astro
+.astro/
+node_modules/
+docs/
+npm-debug.log*
+.env
+.env.production
+.idea/

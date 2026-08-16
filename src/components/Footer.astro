@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+import { socialLinks } from "../data/social";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-ink-800">
+	<div class="mx-auto flex max-w-5xl flex-col-reverse items-center gap-4 px-6 py-8 text-sm text-ink-400 sm:flex-row sm:justify-between">
+		<p>&copy; {year} Pete Benbow &middot; Davidson, North Carolina</p>
+		<div class="flex items-center gap-4">
+			{socialLinks.map((link) => (
+				<a
+					href={link.href}
+					target="_blank"
+					rel="noreferrer"
+					aria-label={link.label}
+					class="text-ink-400 transition-colors hover:text-accent-400"
+				>
+					<Icon name={link.icon} class="h-5 w-5" />
+				</a>
+			))}
+		</div>
+	</div>
+</footer>

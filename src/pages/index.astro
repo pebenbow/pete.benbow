@@ -1,0 +1,204 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import Card from "../components/Card.astro";
+import TagChip from "../components/TagChip.astro";
+import Glow from "../components/Glow.astro";
+import { skills as skillGroups } from "../data/cv";
+import { socialLinks } from "../data/social";
+
+const projects = (await getCollection("projects")).sort(
+	(a, b) => a.data.order - b.data.order,
+);
+const teachingItems = (await getCollection("teaching")).sort(
+	(a, b) => a.data.order - b.data.order,
+);
+const codeItems = (await getCollection("code")).sort(
+	(a, b) => a.data.order - b.data.order,
+);
+const onlineItems = await getCollection("online");
+const talks = (await getCollection("talks")).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout title="Pete Benbow">
+	<section id="about" class="relative mx-auto max-w-5xl px-6 py-24">
+		<Glow color="var(--color-accent-500)" class="-top-32 -left-32" />
+		<Glow color="var(--color-violet-500)" class="-bottom-40 -right-24" />
+		<div class="relative grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+			<div>
+				<p class="font-display text-sm font-semibold uppercase tracking-wider text-accent-400">
+					Data Science Educator
+				</p>
+				<h1 class="mt-2 text-4xl font-bold text-ink-50 sm:text-5xl">
+					Pete Benbow
+				</h1>
+				<div class="mt-6 space-y-4 text-ink-300">
+					<p>
+						I'm the James B. Duke Assistant Professor of the Practice in Data Science
+						at Davidson College. My teaching focuses on database systems and data
+						engineering, the back-end infrastructure that makes data science possible.
+					</p>
+					<p>I'm also a halfway-decent angler.</p>
+				</div>
+
+				<div class="mt-8 flex flex-wrap gap-3">
+					{socialLinks.map((link) => (
+						<a
+							href={link.href}
+							target="_blank"
+							rel="noreferrer"
+							class="flex items-center gap-2 rounded-full border border-ink-700 px-5 py-2 text-sm font-medium text-ink-200 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent-400 hover:bg-ink-800 hover:text-accent-400"
+						>
+							<Icon name={link.icon} class="h-4 w-4" />
+							{link.label}
+						</a>
+					))}
+				</div>
+			</div>
+
+			<div class="mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-2xl border border-ink-800">
+				<img src="/images/fishing01.jpg" alt="Pete Benbow fly-fishing" class="h-full w-full object-cover" />
+			</div>
+		</div>
+
+		<div class="mt-16 grid gap-8 sm:grid-cols-3">
+			<div>
+				<h3 class="font-display text-sm font-semibold uppercase tracking-wider text-ink-400">Education</h3>
+				<p class="mt-2 text-ink-200">A.B., Political Science (2007), Davidson College</p>
+			</div>
+			<div>
+				<h3 class="font-display text-sm font-semibold uppercase tracking-wider text-ink-400">Academic Interests</h3>
+				<ul class="mt-2 space-y-1 text-ink-200">
+					<li>Relational databases</li>
+					<li>Data engineering</li>
+					<li>Business intelligence systems</li>
+					<li>Exploratory data analysis</li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="font-display text-sm font-semibold uppercase tracking-wider text-ink-400">Personal Stuff</h3>
+				<ul class="mt-2 space-y-1 text-ink-200">
+					<li>Fly-fishing</li>
+					<li>Science fiction &amp; fantasy</li>
+					<li>Gaming</li>
+					<li>Singing</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="skills" class="relative mx-auto max-w-5xl px-6 py-24">
+		<Glow color="var(--color-coral-500)" class="top-0 right-0" />
+		<SectionHeading icon="lucide:sparkles" title="Skills" description="Tools and platforms I use for teaching, research, and building." />
+		<div class="relative mt-10 grid gap-8 sm:grid-cols-2">
+			{skillGroups.map((group) => (
+				<div class="rounded-xl border border-ink-800 bg-ink-900 p-6">
+					<div class="flex items-center gap-2">
+						<span class="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
+							<Icon name={group.icon} class="h-4 w-4" />
+						</span>
+						<h3 class="font-display text-base font-semibold text-ink-50">{group.category}</h3>
+					</div>
+					<div class="mt-4 flex flex-wrap gap-2">
+						{group.items.map((item) => <TagChip label={item} />)}
+					</div>
+				</div>
+			))}
+		</div>
+	</section>
+
+	<section id="teaching" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading icon="lucide:graduation-cap" title="Teaching" description="Courses I teach at Davidson College." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{teachingItems.map((course) => (
+				<Card
+					title={course.data.title}
+					subtitle={course.data.subtitle}
+					description={course.data.blurb}
+					image={course.data.image}
+					href={`/teaching/${course.id}/`}
+				/>
+			))}
+		</div>
+	</section>
+
+	<section id="projects" class="relative mx-auto max-w-5xl px-6 py-24">
+		<Glow color="var(--color-violet-500)" class="top-1/2 left-0 -translate-y-1/2" />
+		<SectionHeading icon="lucide:folder-kanban" title="Projects" description="A selection of the data, engineering, and hardware projects I've built." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{projects.map((project) => (
+				<Card
+					title={project.data.title}
+					description={project.data.summary}
+					image={project.data.image}
+					tags={project.data.tags}
+					href={`/projects/${project.id}/`}
+				/>
+			))}
+		</div>
+	</section>
+
+	<section id="code" class="relative mx-auto max-w-5xl px-6 py-24">
+		<Glow color="var(--color-accent-500)" class="top-0 right-1/4" />
+		<SectionHeading icon="lucide:code-2" title="Code" description="R packages and tools I've built or contributed to." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{codeItems.map((item) => (
+				<Card
+					title={item.data.title}
+					description={item.data.description}
+					image={item.data.image}
+					href={`/code/${item.id}/`}
+				/>
+			))}
+		</div>
+	</section>
+
+	<section id="online" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading icon="lucide:monitor-play" title="Online Instruction" description="Courses I've built for edX." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{onlineItems.map((course) => (
+				<Card
+					title={course.data.title}
+					description={course.data.blurb}
+					image={course.data.image}
+					href={course.data.url}
+				/>
+			))}
+		</div>
+	</section>
+
+	<section id="talks" class="relative mx-auto max-w-5xl px-6 py-24">
+		<Glow color="var(--color-violet-500)" class="bottom-0 left-1/3" />
+		<SectionHeading icon="lucide:mic" title="Talks" description="Conference sessions and presentations." />
+		<div class="mt-8 overflow-x-auto rounded-xl border border-ink-800">
+			<table class="w-full text-left text-sm">
+				<thead>
+					<tr class="border-b border-ink-800 text-ink-400">
+						<th class="px-4 py-3 font-medium">Title</th>
+						<th class="px-4 py-3 font-medium">Date</th>
+						<th class="px-4 py-3 font-medium">Location</th>
+					</tr>
+				</thead>
+				<tbody>
+					{talks.map((talk) => (
+						<tr class="border-b border-ink-800 last:border-0 hover:bg-ink-900">
+							<td class="px-4 py-3">
+								<a href={`/talks/${talk.id}/`} class="font-medium text-ink-100 hover:text-accent-400">
+									{talk.data.title}
+								</a>
+							</td>
+							<td class="px-4 py-3 text-ink-400">
+								{talk.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+							</td>
+							<td class="px-4 py-3 text-ink-400">{talk.data.location}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
+	</section>
+</BaseLayout>

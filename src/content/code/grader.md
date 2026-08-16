@@ -1,0 +1,15 @@
+---
+title: "gradeR"
+description: "An R package that autogrades assignment submissions"
+image: "/images/code/grader_logo.png"
+links:
+  - label: "GitHub"
+    href: "https://github.com/tbrown122387/gradeR"
+    icon: "simple-icons:github"
+  - label: "CRAN"
+    href: "https://cran.r-project.org/web/packages/gradeR/index.html"
+    icon: "simple-icons:r"
+order: 2
+---
+
+I was added as co-author on this package in 2026 after coding several "quality of life" enhancements. It provides a wrapper for evaluating unit tests in R with the `testthat` package, and producing output that can be used with certain autograder software. For example, I rely on Gradescope for my courses, and `gradeR` has a function specifically for producing JSON output that is compatible with Gradescope's autograder.
