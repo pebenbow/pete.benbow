@@ -133,6 +133,7 @@ const talks = (await getCollection("talks")).sort(
 			{teachingItems.map((course) => (
 				<Card
 					title={course.data.title}
+					subtitle={course.data.subtitle}
 					description={course.data.blurb}
 					image={course.data.image}
 					href={`/teaching/${course.id}/`}

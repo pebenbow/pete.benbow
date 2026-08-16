@@ -3,13 +3,14 @@ import TagChip from "./TagChip.astro";
 
 interface Props {
   title: string;
+  subtitle?: string;
   description?: string;
   image?: string;
   href?: string;
   tags?: string[];
 }
 
-const { title, description, image, href, tags = [] } = Astro.props;
+const { title, subtitle, description, image, href, tags = [] } = Astro.props;
 const Tag = href ? "a" : "div";
 ---
 
@@ -28,7 +29,12 @@ const Tag = href ? "a" : "div";
 		</div>
 	)}
 	<div class="flex flex-1 flex-col gap-3 p-5">
-		<h3 class="font-display text-lg font-semibold text-ink-50">{title}</h3>
+		<div>
+			<h3 class="font-display text-lg font-semibold text-ink-50">{title}</h3>
+			{subtitle && (
+				<p class="mt-0.5 text-xs font-semibold uppercase tracking-wider text-accent-400">{subtitle}</p>
+			)}
+		</div>
 		{description && <p class="text-sm text-ink-400">{description}</p>}
 		{tags.length > 0 && (
 			<div class="mt-auto flex flex-wrap gap-2 pt-2">

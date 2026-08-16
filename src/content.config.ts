@@ -37,6 +37,7 @@ const teaching = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/teaching" }),
   schema: z.object({
     title: z.string(),
+    subtitle: z.string().optional(),
     image: z.string(),
     icon: z.string(),
     blurb: z.string(),
