@@ -2,15 +2,112 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import Card from "../components/Card.astro";
+import TagChip from "../components/TagChip.astro";
+
+const socialLinks = [
+	{ label: "GitHub", href: "https://github.com/pebenbow" },
+	{ label: "LinkedIn", href: "https://www.linkedin.com/in/pdbenbow/" },
+	{ label: "College bio", href: "https://www.davidson.edu/people/pete-benbow" },
+	{ label: "YouTube", href: "https://www.youtube.com/@pdb-dc" },
+	{ label: "Spotify", href: "https://open.spotify.com/user/125706534?si=79d899e0fa664f15" },
+];
+
+const skillGroups = [
+	{
+		category: "Languages & Data Tools",
+		items: ["R", "SQL", "DAX", "tidyverse"],
+	},
+	{
+		category: "BI & Visualization",
+		items: ["Power BI", "R Shiny", "highcharter"],
+	},
+	{
+		category: "Data Engineering",
+		items: ["Azure DevOps", "ETL", "Enterprise Data Warehousing", "REST APIs", "MongoDB"],
+	},
+	{
+		category: "Teaching & Platforms",
+		items: ["Curriculum Design", "edX", "Gradescope", "Quarto"],
+	},
+];
 ---
 
 <BaseLayout title="Pete Benbow">
 	<section id="about" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="About" title="Redesign in progress" description="Hero content lands in the next phase." />
+		<div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+			<div>
+				<p class="font-display text-sm font-semibold uppercase tracking-wider text-accent-400">
+					Data Science Educator
+				</p>
+				<h1 class="mt-2 text-4xl font-bold text-ink-50 sm:text-5xl">
+					Pete Benbow
+				</h1>
+				<div class="mt-6 space-y-4 text-ink-300">
+					<p>
+						I'm the James B. Duke Assistant Professor of the Practice in Data Science
+						at Davidson College. My teaching focuses on database systems and data
+						engineering, the back-end infrastructure that makes data science possible.
+					</p>
+					<p>I'm also a halfway-decent angler.</p>
+				</div>
+
+				<div class="mt-8 flex flex-wrap gap-3">
+					{socialLinks.map((link) => (
+						<a
+							href={link.href}
+							target="_blank"
+							rel="noreferrer"
+							class="rounded-full border border-ink-700 px-4 py-1.5 text-sm font-medium text-ink-200 transition-colors hover:border-accent-400 hover:text-accent-400"
+						>
+							{link.label}
+						</a>
+					))}
+				</div>
+			</div>
+
+			<div class="mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-2xl border border-ink-800">
+				<img src="/images/fishing01.jpg" alt="Pete Benbow fly-fishing" class="h-full w-full object-cover" />
+			</div>
+		</div>
+
+		<div class="mt-16 grid gap-8 sm:grid-cols-3">
+			<div>
+				<h3 class="font-display text-sm font-semibold uppercase tracking-wider text-ink-400">Education</h3>
+				<p class="mt-2 text-ink-200">A.B., Political Science (2007), Davidson College</p>
+			</div>
+			<div>
+				<h3 class="font-display text-sm font-semibold uppercase tracking-wider text-ink-400">Academic Interests</h3>
+				<ul class="mt-2 space-y-1 text-ink-200">
+					<li>Relational databases</li>
+					<li>Data engineering</li>
+					<li>Business intelligence systems</li>
+					<li>Exploratory data analysis</li>
+				</ul>
+			</div>
+			<div>
+				<h3 class="font-display text-sm font-semibold uppercase tracking-wider text-ink-400">Personal Stuff</h3>
+				<ul class="mt-2 space-y-1 text-ink-200">
+					<li>Fly-fishing</li>
+					<li>Science fiction &amp; fantasy</li>
+					<li>Gaming</li>
+					<li>Singing</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 
 	<section id="skills" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Skills" title="Skills" />
+		<SectionHeading eyebrow="Skills" title="Skills" description="Tools and platforms I use for teaching, research, and building." />
+		<div class="mt-10 grid gap-8 sm:grid-cols-2">
+			{skillGroups.map((group) => (
+				<div class="rounded-xl border border-ink-800 bg-ink-900 p-6">
+					<h3 class="font-display text-base font-semibold text-ink-50">{group.category}</h3>
+					<div class="mt-4 flex flex-wrap gap-2">
+						{group.items.map((item) => <TagChip label={item} />)}
+					</div>
+				</div>
+			))}
+		</div>
 	</section>
 
 	<section id="projects" class="mx-auto max-w-5xl px-6 py-24">
