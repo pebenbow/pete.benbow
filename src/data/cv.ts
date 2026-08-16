@@ -203,7 +203,7 @@ export const honors = [
 ];
 
 export const skills: SkillGroup[] = [
-  { category: "Languages", icon: "lucide:code-2", items: ["SQL", "R", "Python"] },
+  { category: "Languages", icon: "lucide:code", items: ["SQL", "R", "Python"] },
   { category: "Databases", icon: "lucide:database", items: ["PostgreSQL", "Microsoft SQL Server", "MySQL", "Oracle RDBMS", "DuckDB", "MongoDB"] },
   { category: "BI & Data Viz", icon: "lucide:bar-chart-3", items: ["ggplot2", "Power BI", "R Shiny", "Tableau", "Superset"] },
   { category: "Data Engineering", icon: "lucide:workflow", items: ["Databricks", "Microsoft Fabric", "Duckle", "Spark", "Polars"] },
