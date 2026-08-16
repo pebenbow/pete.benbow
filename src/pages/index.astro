@@ -93,7 +93,7 @@ const talks = (await getCollection("talks")).sort(
 
 	<section id="skills" class="relative mx-auto max-w-5xl px-6 py-24">
 		<Glow color="var(--color-coral-500)" class="top-0 right-0" />
-		<SectionHeading icon="lucide:sparkles" eyebrow="Skills" title="Skills" description="Tools and platforms I use for teaching, research, and building." />
+		<SectionHeading icon="lucide:sparkles" title="Skills" description="Tools and platforms I use for teaching, research, and building." />
 		<div class="relative mt-10 grid gap-8 sm:grid-cols-2">
 			{skillGroups.map((group) => (
 				<div class="rounded-xl border border-ink-800 bg-ink-900 p-6">
@@ -113,7 +113,7 @@ const talks = (await getCollection("talks")).sort(
 
 	<section id="projects" class="relative mx-auto max-w-5xl px-6 py-24">
 		<Glow color="var(--color-violet-500)" class="top-1/2 left-0 -translate-y-1/2" />
-		<SectionHeading icon="lucide:folder-kanban" eyebrow="Projects" title="Projects" description="A selection of the data, engineering, and hardware projects I've built." />
+		<SectionHeading icon="lucide:folder-kanban" title="Projects" description="A selection of the data, engineering, and hardware projects I've built." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{projects.map((project) => (
 				<Card
@@ -143,7 +143,7 @@ const talks = (await getCollection("talks")).sort(
 
 	<section id="code" class="relative mx-auto max-w-5xl px-6 py-24">
 		<Glow color="var(--color-accent-500)" class="top-0 right-1/4" />
-		<SectionHeading icon="lucide:code-2" eyebrow="Code" title="Code" description="R packages and tools I've built or contributed to." />
+		<SectionHeading icon="lucide:code-2" title="Code" description="R packages and tools I've built or contributed to." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{codeItems.map((item) => (
 				<Card
@@ -157,7 +157,7 @@ const talks = (await getCollection("talks")).sort(
 	</section>
 
 	<section id="online" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading icon="lucide:monitor-play" eyebrow="Online Instruction" title="Online Instruction" description="Courses I've built for edX." />
+		<SectionHeading icon="lucide:monitor-play" title="Online Instruction" description="Courses I've built for edX." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{onlineItems.map((course) => (
 				<Card
@@ -172,7 +172,7 @@ const talks = (await getCollection("talks")).sort(
 
 	<section id="talks" class="relative mx-auto max-w-5xl px-6 py-24">
 		<Glow color="var(--color-violet-500)" class="bottom-0 left-1/3" />
-		<SectionHeading icon="lucide:mic" eyebrow="Talks" title="Talks" description="Conference sessions and presentations." />
+		<SectionHeading icon="lucide:mic" title="Talks" description="Conference sessions and presentations." />
 		<div class="mt-8 overflow-x-auto rounded-xl border border-ink-800">
 			<table class="w-full text-left text-sm">
 				<thead>
