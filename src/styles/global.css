@@ -1,1 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Atkinson Hyperlegible", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-ink-950: #0b0c0e;
+  --color-ink-900: #121316;
+  --color-ink-800: #1b1d21;
+  --color-ink-700: #26292e;
+  --color-ink-600: #3a3e45;
+  --color-ink-400: #8b8f98;
+  --color-ink-200: #d4d6da;
+  --color-ink-50: #f5f6f7;
+
+  --color-accent-400: #5aa9ff;
+  --color-accent-500: #2780e3;
+  --color-accent-600: #1c66bd;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-ink-50);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    color: var(--color-accent-400);
+  }
+}

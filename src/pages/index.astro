@@ -1,16 +1,26 @@
 ---
-import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import Card from "../components/Card.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Pete Benbow</title>
-	</head>
-	<body class="bg-neutral-950 text-neutral-100">
-		<h1 class="p-8 text-3xl font-bold">Pete Benbow — redesign in progress</h1>
-	</body>
-</html>
+<BaseLayout title="Pete Benbow">
+	<section id="about" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading eyebrow="About" title="Redesign in progress" description="Hero content lands in the next phase." />
+	</section>
 
+	<section id="skills" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading eyebrow="Skills" title="Skills" />
+	</section>
+
+	<section id="projects" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading eyebrow="Projects" title="Projects" />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			<Card title="Sample project" description="Card component check." tags={["R", "Shiny"]} href="/" />
+		</div>
+	</section>
+
+	<section id="teaching" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading eyebrow="Teaching" title="Teaching" />
+	</section>
+</BaseLayout>
