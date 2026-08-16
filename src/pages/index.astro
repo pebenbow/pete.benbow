@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import Card from "../components/Card.astro";
 import TagChip from "../components/TagChip.astro";
+import { skills as skillGroups } from "../data/cv";
 
 const projects = (await getCollection("projects")).sort(
 	(a, b) => a.data.order - b.data.order,
@@ -15,25 +16,6 @@ const socialLinks = [
 	{ label: "College bio", href: "https://www.davidson.edu/people/pete-benbow" },
 	{ label: "YouTube", href: "https://www.youtube.com/@pdb-dc" },
 	{ label: "Spotify", href: "https://open.spotify.com/user/125706534?si=79d899e0fa664f15" },
-];
-
-const skillGroups = [
-	{
-		category: "Languages & Data Tools",
-		items: ["R", "SQL", "DAX", "tidyverse"],
-	},
-	{
-		category: "BI & Visualization",
-		items: ["Power BI", "R Shiny", "highcharter"],
-	},
-	{
-		category: "Data Engineering",
-		items: ["Azure DevOps", "ETL", "Enterprise Data Warehousing", "REST APIs", "MongoDB"],
-	},
-	{
-		category: "Teaching & Platforms",
-		items: ["Curriculum Design", "edX", "Gradescope", "Quarto"],
-	},
 ];
 ---
 

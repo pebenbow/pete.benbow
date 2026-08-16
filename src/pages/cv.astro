@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+	education,
+	experience,
+	teaching,
+	software,
+	conferences,
+	professionalService,
+	honors,
+} from "../data/cv";
+---
+
+<BaseLayout title="Pete Benbow — Curriculum Vitae" description="Curriculum Vitae for Pete Benbow, Assistant Professor of the Practice in Data Science at Davidson College.">
+	<article id="cv" class="mx-auto max-w-3xl px-6 py-20 print:max-w-none print:px-0 print:py-0">
+		<div class="flex flex-wrap items-start justify-between gap-4 print:hidden">
+			<div>
+				<h1 class="font-display text-4xl font-bold text-ink-50">Curriculum Vitae</h1>
+				<p class="mt-1 text-ink-400">Pete Benbow</p>
+			</div>
+			<a
+				href="/pete-benbow-cv.pdf"
+				class="rounded-full bg-accent-500 px-5 py-2 text-sm font-semibold text-ink-50 transition-colors hover:bg-accent-600"
+				download
+			>
+				Download PDF
+			</a>
+		</div>
+
+		<h1 class="hidden font-display text-3xl font-bold text-black print:mb-1 print:block">Pete Benbow — Curriculum Vitae</h1>
+
+		<section class="mt-12 print:mt-4">
+			<h2 class="font-display text-xl font-semibold text-ink-50 print:text-black">Education</h2>
+			<ul class="mt-3 space-y-1 text-ink-200 print:text-black">
+				{education.map((entry) => (
+					<li>{entry.degree} ({entry.year}), {entry.institution}</li>
+				))}
+			</ul>
+		</section>
+
+		<section class="mt-10 print:mt-4">
+			<h2 class="font-display text-xl font-semibold text-ink-50 print:text-black">Experience</h2>
+			{experience.map((org) => (
+				<div class="mt-4">
+					<h3 class="font-display text-base font-semibold text-ink-100 print:text-black">{org.name}</h3>
+					<div class="mt-2 space-y-4">
+						{org.roles.map((role) => (
+							<div>
+								<p class="font-medium text-ink-200 print:text-black">
+									{role.title}
+									{role.dates && <span class="text-ink-400 print:text-neutral-600"> ({role.dates})</span>}
+								</p>
+								{role.bullets && role.bullets.length > 0 && (
+									<ul class="mt-1 list-disc space-y-1 pl-5 text-sm text-ink-400 print:text-neutral-700">
+										{role.bullets.map((bullet) => <li>{bullet}</li>)}
+									</ul>
+								)}
+							</div>
+						))}
+					</div>
+				</div>
+			))}
+		</section>
+
+		<section class="mt-10 print:mt-4">
+			<h2 class="font-display text-xl font-semibold text-ink-50 print:text-black">Teaching</h2>
+			<h3 class="mt-3 font-display text-base font-semibold text-ink-100 print:text-black">Classroom Instruction</h3>
+			<ul class="mt-1 list-disc space-y-1 pl-5 text-sm text-ink-400 print:text-neutral-700">
+				{teaching.classroom.map((item) => <li>{item}</li>)}
+			</ul>
+			<h3 class="mt-4 font-display text-base font-semibold text-ink-100 print:text-black">Online Instruction (edX)</h3>
+			<ul class="mt-1 list-disc space-y-1 pl-5 text-sm text-ink-400 print:text-neutral-700">
+				{teaching.online.map((item) => <li>{item}</li>)}
+			</ul>
+		</section>
+
+		<section class="mt-10 print:mt-4">
+			<h2 class="font-display text-xl font-semibold text-ink-50 print:text-black">Software Development</h2>
+			{software.map((group) => (
+				<div class="mt-4">
+					<h3 class="font-display text-base font-semibold text-ink-100 print:text-black">{group.category}</h3>
+					<ul class="mt-2 space-y-2 text-sm text-ink-400 print:text-neutral-700">
+						{group.projects.map((project) => (
+							<li>
+								<span class="font-medium text-ink-200 print:text-black">{project.name}</span>: {project.description}
+								{project.role && <span> — {project.role}</span>}
+								{project.links && project.links.length > 0 && (
+									<span>
+										{" "}(
+										{project.links.map((link, i) => (
+											<>
+												{i > 0 && " | "}
+												<a href={link.href} target="_blank" rel="noreferrer" class="text-accent-400 print:text-black print:underline">{link.label}</a>
+											</>
+										))}
+										)
+									</span>
+								)}
+							</li>
+						))}
+					</ul>
+				</div>
+			))}
+		</section>
+
+		<section class="mt-10 print:mt-4">
+			<h2 class="font-display text-xl font-semibold text-ink-50 print:text-black">Conferences &amp; Presentations</h2>
+			<ul class="mt-3 space-y-3 text-sm text-ink-400 print:text-neutral-700">
+				{conferences.map((conf) => (
+					<li>
+						<p class="font-medium text-ink-200 print:text-black">
+							“{conf.title}”{conf.note && <span>, {conf.note}</span>}
+						</p>
+						<ul class="mt-1 list-disc space-y-0.5 pl-5">
+							{conf.presentations.map((p) => <li>{p.venue} ({p.date})</li>)}
+						</ul>
+					</li>
+				))}
+			</ul>
+		</section>
+
+		<section class="mt-10 print:mt-4">
+			<h2 class="font-display text-xl font-semibold text-ink-50 print:text-black">Professional Service</h2>
+			<ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-ink-400 print:text-neutral-700">
+				{professionalService.map((item) => <li>{item}</li>)}
+			</ul>
+		</section>
+
+		<section class="mt-10 print:mt-4">
+			<h2 class="font-display text-xl font-semibold text-ink-50 print:text-black">Honors and Awards</h2>
+			<ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-ink-400 print:text-neutral-700">
+				{honors.map((item) => <li>{item}</li>)}
+			</ul>
+		</section>
+	</article>
+</BaseLayout>
