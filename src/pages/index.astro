@@ -1,10 +1,13 @@
 ---
 import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import Card from "../components/Card.astro";
 import TagChip from "../components/TagChip.astro";
+import Glow from "../components/Glow.astro";
 import { skills as skillGroups } from "../data/cv";
+import { socialLinks } from "../data/social";
 
 const projects = (await getCollection("projects")).sort(
 	(a, b) => a.data.order - b.data.order,
@@ -17,19 +20,13 @@ const onlineItems = await getCollection("online");
 const talks = (await getCollection("talks")).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
-
-const socialLinks = [
-	{ label: "GitHub", href: "https://github.com/pebenbow" },
-	{ label: "LinkedIn", href: "https://www.linkedin.com/in/pdbenbow/" },
-	{ label: "College bio", href: "https://www.davidson.edu/people/pete-benbow" },
-	{ label: "YouTube", href: "https://www.youtube.com/@pdb-dc" },
-	{ label: "Spotify", href: "https://open.spotify.com/user/125706534?si=79d899e0fa664f15" },
-];
 ---
 
 <BaseLayout title="Pete Benbow">
-	<section id="about" class="mx-auto max-w-5xl px-6 py-24">
-		<div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+	<section id="about" class="relative mx-auto max-w-5xl overflow-hidden px-6 py-24">
+		<Glow color="var(--color-accent-500)" class="-top-32 -left-32" />
+		<Glow color="var(--color-violet-500)" class="-bottom-40 -right-24" />
+		<div class="relative grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center">
 			<div>
 				<p class="font-display text-sm font-semibold uppercase tracking-wider text-accent-400">
 					Data Science Educator
@@ -52,8 +49,9 @@ const socialLinks = [
 							href={link.href}
 							target="_blank"
 							rel="noreferrer"
-							class="rounded-full border border-ink-700 px-4 py-1.5 text-sm font-medium text-ink-200 transition-colors hover:border-accent-400 hover:text-accent-400"
+							class="flex items-center gap-2 rounded-full border border-ink-700 px-4 py-1.5 text-sm font-medium text-ink-200 transition-colors hover:border-accent-400 hover:text-accent-400"
 						>
+							<Icon name={link.icon} class="h-4 w-4" />
 							{link.label}
 						</a>
 					))}
@@ -91,12 +89,18 @@ const socialLinks = [
 		</div>
 	</section>
 
-	<section id="skills" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Skills" title="Skills" description="Tools and platforms I use for teaching, research, and building." />
-		<div class="mt-10 grid gap-8 sm:grid-cols-2">
+	<section id="skills" class="relative mx-auto max-w-5xl overflow-hidden px-6 py-24">
+		<Glow color="var(--color-coral-500)" class="top-0 right-0" />
+		<SectionHeading icon="lucide:sparkles" eyebrow="Skills" title="Skills" description="Tools and platforms I use for teaching, research, and building." />
+		<div class="relative mt-10 grid gap-8 sm:grid-cols-2">
 			{skillGroups.map((group) => (
 				<div class="rounded-xl border border-ink-800 bg-ink-900 p-6">
-					<h3 class="font-display text-base font-semibold text-ink-50">{group.category}</h3>
+					<div class="flex items-center gap-2">
+						<span class="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
+							<Icon name={group.icon} class="h-4 w-4" />
+						</span>
+						<h3 class="font-display text-base font-semibold text-ink-50">{group.category}</h3>
+					</div>
 					<div class="mt-4 flex flex-wrap gap-2">
 						{group.items.map((item) => <TagChip label={item} />)}
 					</div>
@@ -105,8 +109,9 @@ const socialLinks = [
 		</div>
 	</section>
 
-	<section id="projects" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Projects" title="Projects" description="A selection of the data, engineering, and hardware projects I've built." />
+	<section id="projects" class="relative mx-auto max-w-5xl overflow-hidden px-6 py-24">
+		<Glow color="var(--color-violet-500)" class="top-1/2 left-0 -translate-y-1/2" />
+		<SectionHeading icon="lucide:folder-kanban" eyebrow="Projects" title="Projects" description="A selection of the data, engineering, and hardware projects I've built." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{projects.map((project) => (
 				<Card
@@ -121,7 +126,7 @@ const socialLinks = [
 	</section>
 
 	<section id="teaching" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Teaching" title="Teaching" description="Courses I teach at Davidson College." />
+		<SectionHeading icon="lucide:graduation-cap" eyebrow="Teaching" title="Teaching" description="Courses I teach at Davidson College." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{teachingItems.map((course) => (
 				<Card title={course.data.title} description={course.data.blurb} image={course.data.image} />
@@ -129,8 +134,9 @@ const socialLinks = [
 		</div>
 	</section>
 
-	<section id="code" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Code" title="Code" description="R packages and tools I've built or contributed to." />
+	<section id="code" class="relative mx-auto max-w-5xl overflow-hidden px-6 py-24">
+		<Glow color="var(--color-accent-500)" class="top-0 right-1/4" />
+		<SectionHeading icon="lucide:code-2" eyebrow="Code" title="Code" description="R packages and tools I've built or contributed to." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{codeItems.map((item) => (
 				<Card
@@ -144,7 +150,7 @@ const socialLinks = [
 	</section>
 
 	<section id="online" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Online Instruction" title="Online Instruction" description="Courses I've built for edX." />
+		<SectionHeading icon="lucide:monitor-play" eyebrow="Online Instruction" title="Online Instruction" description="Courses I've built for edX." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{onlineItems.map((course) => (
 				<Card
@@ -157,8 +163,9 @@ const socialLinks = [
 		</div>
 	</section>
 
-	<section id="talks" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Talks" title="Talks" description="Conference sessions and presentations." />
+	<section id="talks" class="relative mx-auto max-w-5xl overflow-hidden px-6 py-24">
+		<Glow color="var(--color-violet-500)" class="bottom-0 left-1/3" />
+		<SectionHeading icon="lucide:mic" eyebrow="Talks" title="Talks" description="Conference sessions and presentations." />
 		<div class="mt-8 overflow-x-auto rounded-xl border border-ink-800">
 			<table class="w-full text-left text-sm">
 				<thead>

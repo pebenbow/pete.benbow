@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components";
+
 const links = [
   { href: "/#about", label: "About" },
   { href: "/#skills", label: "Skills" },
@@ -24,8 +26,9 @@ const links = [
 			))}
 			<a
 				href="/cv"
-				class="rounded-full bg-accent-500 px-4 py-1.5 text-sm font-semibold text-ink-50 transition-colors hover:bg-accent-600"
+				class="flex items-center gap-1.5 rounded-full bg-accent-500 px-4 py-1.5 text-sm font-semibold text-ink-50 transition-colors hover:bg-accent-600"
 			>
+				<Icon name="lucide:file-text" class="h-4 w-4" />
 				CV
 			</a>
 		</nav>
@@ -38,9 +41,8 @@ const links = [
 			class="flex items-center justify-center rounded-md p-2 text-ink-200 md:hidden"
 		>
 			<span class="sr-only">Toggle navigation</span>
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
+			<Icon id="nav-icon-menu" name="lucide:menu" class="h-6 w-6" />
+			<Icon id="nav-icon-close" name="lucide:x" class="hidden h-6 w-6" />
 		</button>
 	</div>
 
@@ -65,18 +67,22 @@ const links = [
 <script>
 	const toggle = document.getElementById("nav-toggle");
 	const menu = document.getElementById("mobile-nav");
+	const iconMenu = document.getElementById("nav-icon-menu");
+	const iconClose = document.getElementById("nav-icon-close");
+
+	function setOpen(isOpen: boolean) {
+		menu?.classList.toggle("hidden", !isOpen);
+		menu?.classList.toggle("flex", isOpen);
+		iconMenu?.classList.toggle("hidden", isOpen);
+		iconClose?.classList.toggle("hidden", !isOpen);
+		toggle?.setAttribute("aria-expanded", String(isOpen));
+	}
 
 	toggle?.addEventListener("click", () => {
-		const isOpen = menu?.classList.toggle("flex");
-		menu?.classList.toggle("hidden");
-		toggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+		setOpen(menu?.classList.contains("hidden") ?? false);
 	});
 
 	menu?.querySelectorAll("a").forEach((link) => {
-		link.addEventListener("click", () => {
-			menu.classList.add("hidden");
-			menu.classList.remove("flex");
-			toggle?.setAttribute("aria-expanded", "false");
-		});
+		link.addEventListener("click", () => setOpen(false));
 	});
 </script>

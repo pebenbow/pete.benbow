@@ -18,6 +18,12 @@
   --color-accent-400: #5aa9ff;
   --color-accent-500: #2780e3;
   --color-accent-600: #1c66bd;
+
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+
+  --color-coral-400: #ff9770;
+  --color-coral-500: #ff7a45;
 }
 
 @layer base {

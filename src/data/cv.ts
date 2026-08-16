@@ -29,6 +29,7 @@ export interface Conference {
 
 export interface SkillGroup {
   category: string;
+  icon: string;
   items: string[];
 }
 
@@ -202,11 +203,9 @@ export const honors = [
 ];
 
 export const skills: SkillGroup[] = [
-  { category: "Languages & Data Tools", items: ["R", "SQL", "DAX", "tidyverse"] },
-  { category: "BI & Visualization", items: ["Power BI", "R Shiny", "highcharter"] },
-  {
-    category: "Data Engineering",
-    items: ["Azure DevOps", "ETL", "Enterprise Data Warehousing", "REST APIs", "MongoDB"],
-  },
-  { category: "Teaching & Platforms", items: ["Curriculum Design", "edX", "Gradescope", "Quarto"] },
+  { category: "Languages & Data Tools", icon: "lucide:code-2", items: ["SQL", "R", "Python", "DAX"] },
+  { category: "Databases", icon: "lucide:database", items: ["PostgreSQL", "Microsoft SQL Server", "MySQL", "Oracle RDBMS", "DuckDB", "MongoDB"] },
+  { category: "BI & Visualization", icon: "lucide:bar-chart-3", items: ["Power BI", "R Shiny", "Tableau"] },
+  { category: "Data Engineering", icon: "lucide:server", items: ["Databricks", "Microsoft Fabric", "Duckle"] },
+  { category: "Data Engineering", icon: "lucide:server", items: ["Databricks", "Microsoft Fabric", "Duckle"] }
 ];
