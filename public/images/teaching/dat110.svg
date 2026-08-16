@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+	<defs>
+		<filter id="blur3" x="-50%" y="-50%" width="200%" height="200%">
+			<feGaussianBlur stdDeviation="60" />
+		</filter>
+		<pattern id="dots3" width="28" height="28" patternUnits="userSpaceOnUse">
+			<circle cx="2" cy="2" r="1.4" fill="#26292e" />
+		</pattern>
+	</defs>
+
+	<rect width="800" height="450" fill="#0b0c0e" />
+	<rect width="800" height="450" fill="url(#dots3)" />
+
+	<circle cx="220" cy="130" r="140" fill="#ff7a45" opacity="0.18" filter="url(#blur3)" />
+	<circle cx="600" cy="330" r="150" fill="#8b5cf6" opacity="0.2" filter="url(#blur3)" />
+
+	<g fill="none" stroke="#ff9770" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M400 110 V330" />
+		<path d="M340 340 H460" />
+		<path d="M260 165 H540" />
+		<path d="M260 165 L200 260" />
+		<path d="M260 165 L320 260" />
+		<path d="M540 165 L480 260" />
+		<path d="M540 165 L600 260" />
+	</g>
+
+	<g fill="#0b0c0e" stroke="#a78bfa" stroke-width="7">
+		<circle cx="200" cy="260" r="17" />
+		<circle cx="320" cy="260" r="17" />
+		<circle cx="260" cy="215" r="17" />
+		<circle cx="480" cy="260" r="17" />
+		<circle cx="600" cy="260" r="17" />
+		<circle cx="540" cy="215" r="17" />
+	</g>
+	<g fill="none" stroke="#a78bfa" stroke-width="4" opacity="0.7">
+		<path d="M200 260 L260 215 L320 260" />
+		<path d="M480 260 L540 215 L600 260" />
+	</g>
+</svg>
