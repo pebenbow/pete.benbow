@@ -18,7 +18,7 @@ const code = defineCollection({
     title: z.string(),
     description: z.string(),
     image: z.string(),
-    links: z.array(z.object({ label: z.string(), href: z.string() })),
+    links: z.array(z.object({ label: z.string(), href: z.string(), icon: z.string().optional() })),
     order: z.number().default(0),
   }),
 });

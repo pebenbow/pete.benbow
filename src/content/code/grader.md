@@ -5,8 +5,10 @@ image: "/images/code/grader_logo.png"
 links:
   - label: "GitHub"
     href: "https://github.com/tbrown122387/gradeR"
+    icon: "simple-icons:github"
   - label: "CRAN"
     href: "https://cran.r-project.org/web/packages/gradeR/index.html"
+    icon: "simple-icons:r"
 order: 2
 ---
 

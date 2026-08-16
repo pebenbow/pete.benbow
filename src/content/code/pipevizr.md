@@ -5,6 +5,7 @@ image: "/images/code/pipevizr_logo.png"
 links:
   - label: "GitHub"
     href: "https://github.com/pebenbow/pipevizr"
+    icon: "simple-icons:github"
 order: 1
 ---
 
