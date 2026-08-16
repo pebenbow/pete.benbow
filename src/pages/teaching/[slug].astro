@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from "astro:content";
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Glow from "../../components/Glow.astro";
+
+export async function getStaticPaths() {
+  const courses = await getCollection("teaching");
+  return courses.map((course) => ({
+    params: { slug: course.id },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+const { Content } = await render(course);
+---
+
+<BaseLayout title={`${course.data.title} — Pete Benbow`} description={course.data.blurb}>
+	<article class="relative mx-auto max-w-3xl px-6 py-20">
+		<Glow color="var(--color-accent-500)" class="-top-20 -right-32" />
+		<Glow color="var(--color-coral-500)" class="top-[60%] -left-40" />
+		<a href="/#teaching" class="text-sm font-medium text-accent-400 hover:underline">&larr; Back to teaching</a>
+
+		<div class="mt-4 flex items-center gap-3">
+			<span class="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
+				<Icon name={course.data.icon} class="h-5 w-5" />
+			</span>
+			<h1 class="font-display text-4xl font-bold text-ink-50">{course.data.title}</h1>
+		</div>
+
+		<div class="mt-8 aspect-video w-full overflow-hidden rounded-xl border border-ink-800">
+			<img src={course.data.image} alt="" class="h-full w-full object-cover" />
+		</div>
+
+		<div class="prose prose-invert prose-headings:font-display prose-a:text-accent-400 mt-10 max-w-none">
+			<Content />
+		</div>
+	</article>
+</BaseLayout>

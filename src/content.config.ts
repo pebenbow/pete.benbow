@@ -34,12 +34,13 @@ const talks = defineCollection({
 });
 
 const teaching = defineCollection({
-  loader: file("./src/content/teaching.yaml"),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/teaching" }),
   schema: z.object({
-    id: z.string(),
     title: z.string(),
     image: z.string(),
+    icon: z.string(),
     blurb: z.string(),
+    order: z.number().default(0),
   }),
 });
 

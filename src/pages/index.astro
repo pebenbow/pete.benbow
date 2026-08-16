@@ -12,7 +12,9 @@ import { socialLinks } from "../data/social";
 const projects = (await getCollection("projects")).sort(
 	(a, b) => a.data.order - b.data.order,
 );
-const teachingItems = await getCollection("teaching");
+const teachingItems = (await getCollection("teaching")).sort(
+	(a, b) => a.data.order - b.data.order,
+);
 const codeItems = (await getCollection("code")).sort(
 	(a, b) => a.data.order - b.data.order,
 );
@@ -126,10 +128,15 @@ const talks = (await getCollection("talks")).sort(
 	</section>
 
 	<section id="teaching" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading icon="lucide:graduation-cap" eyebrow="Teaching" title="Teaching" description="Courses I teach at Davidson College." />
+		<SectionHeading icon="lucide:graduation-cap" title="Teaching" description="Courses I teach at Davidson College." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{teachingItems.map((course) => (
-				<Card title={course.data.title} description={course.data.blurb} image={course.data.image} />
+				<Card
+					title={course.data.title}
+					description={course.data.blurb}
+					image={course.data.image}
+					href={`/teaching/${course.id}/`}
+				/>
 			))}
 		</div>
 	</section>
