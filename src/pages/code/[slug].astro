@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import { Icon } from "astro-icon/components";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Glow from "../../components/Glow.astro";
 
 export async function getStaticPaths() {
   const items = await getCollection("code");
@@ -16,7 +17,9 @@ const { Content } = await render(item);
 ---
 
 <BaseLayout title={`${item.data.title} — Pete Benbow`} description={item.data.description}>
-	<article class="mx-auto max-w-3xl px-6 py-20">
+	<article class="relative mx-auto max-w-3xl px-6 py-20">
+		<Glow color="var(--color-coral-500)" class="-top-20 -left-32" />
+		<Glow color="var(--color-accent-500)" class="top-[60%] -right-40" />
 		<a href="/#code" class="text-sm font-medium text-accent-400 hover:underline">&larr; Back to code</a>
 
 		<h1 class="mt-4 font-display text-4xl font-bold text-ink-50">{item.data.title}</h1>
