@@ -91,6 +91,21 @@ const talks = (await getCollection("talks")).sort(
 		</div>
 	</section>
 
+	<section id="teaching" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading icon="lucide:graduation-cap" title="Teaching" description="Courses I teach at Davidson College." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{teachingItems.map((course) => (
+				<Card
+					title={course.data.title}
+					subtitle={course.data.subtitle}
+					description={course.data.blurb}
+					image={course.data.image}
+					href={`/teaching/${course.id}/`}
+				/>
+			))}
+		</div>
+	</section>
+
 	<section id="skills" class="relative mx-auto max-w-5xl px-6 py-24">
 		<Glow color="var(--color-coral-500)" class="top-0 right-0" />
 		<SectionHeading icon="lucide:sparkles" title="Skills" description="Tools and platforms I use for teaching, research, and building." />
@@ -107,21 +122,6 @@ const talks = (await getCollection("talks")).sort(
 						{group.items.map((item) => <TagChip label={item} />)}
 					</div>
 				</div>
-			))}
-		</div>
-	</section>
-
-	<section id="teaching" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading icon="lucide:graduation-cap" title="Teaching" description="Courses I teach at Davidson College." />
-		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			{teachingItems.map((course) => (
-				<Card
-					title={course.data.title}
-					subtitle={course.data.subtitle}
-					description={course.data.blurb}
-					image={course.data.image}
-					href={`/teaching/${course.id}/`}
-				/>
 			))}
 		</div>
 	</section>
