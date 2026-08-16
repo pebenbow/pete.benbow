@@ -1,0 +1,14 @@
+- id: dat110
+  title: "DAT 110: Data Science & Society"
+  image: "/images/teaching/dav-dat110.png"
+  blurb: "An introduction to exploratory data analysis (EDA) with R and the tidyverse, set against the backdrop of examining economic and social justice issues in the United States."
+
+- id: dat153
+  title: "DAT 153: Database Programming"
+  image: "/images/teaching/database.png"
+  blurb: "An introduction to database programming. Using SQL, students learn to explore and interact with databases, create and manipulate data, extract knowledge through analytics and visualization, and apply fundamental database design principles."
+
+- id: dat342
+  title: "DAT 342: Data Engineering"
+  image: "/images/teaching/database.png"
+  blurb: "The infrastructure that makes data science possible: pipelines, warehouses, lakehouses, and semantic models, built to ingest data from files, APIs, and non-relational databases at scale."

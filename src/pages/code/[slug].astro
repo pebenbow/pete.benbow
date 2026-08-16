@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const items = await getCollection("code");
+  return items.map((item) => ({
+    params: { slug: item.id },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+---
+
+<BaseLayout title={`${item.data.title} — Pete Benbow`} description={item.data.description}>
+	<article class="mx-auto max-w-3xl px-6 py-20">
+		<a href="/#code" class="text-sm font-medium text-accent-400 hover:underline">&larr; Back to code</a>
+
+		<h1 class="mt-4 font-display text-4xl font-bold text-ink-50">{item.data.title}</h1>
+		<p class="mt-2 text-ink-400">{item.data.description}</p>
+
+		<div class="mt-4 flex flex-wrap gap-3">
+			{item.data.links.map((link) => (
+				<a
+					href={link.href}
+					target="_blank"
+					rel="noreferrer"
+					class="rounded-full border border-ink-700 px-4 py-1.5 text-sm font-medium text-ink-200 transition-colors hover:border-accent-400 hover:text-accent-400"
+				>
+					{link.label}
+				</a>
+			))}
+		</div>
+
+		<div class="prose prose-invert prose-headings:font-display prose-a:text-accent-400 mt-10 max-w-none">
+			<Content />
+		</div>
+	</article>
+</BaseLayout>

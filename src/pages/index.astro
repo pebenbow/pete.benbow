@@ -9,6 +9,14 @@ import { skills as skillGroups } from "../data/cv";
 const projects = (await getCollection("projects")).sort(
 	(a, b) => a.data.order - b.data.order,
 );
+const teachingItems = await getCollection("teaching");
+const codeItems = (await getCollection("code")).sort(
+	(a, b) => a.data.order - b.data.order,
+);
+const onlineItems = await getCollection("online");
+const talks = (await getCollection("talks")).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
 
 const socialLinks = [
 	{ label: "GitHub", href: "https://github.com/pebenbow" },
@@ -113,6 +121,69 @@ const socialLinks = [
 	</section>
 
 	<section id="teaching" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Teaching" title="Teaching" />
+		<SectionHeading eyebrow="Teaching" title="Teaching" description="Courses I teach at Davidson College." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{teachingItems.map((course) => (
+				<Card title={course.data.title} description={course.data.blurb} image={course.data.image} />
+			))}
+		</div>
+	</section>
+
+	<section id="code" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading eyebrow="Code" title="Code" description="R packages and tools I've built or contributed to." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{codeItems.map((item) => (
+				<Card
+					title={item.data.title}
+					description={item.data.description}
+					image={item.data.image}
+					href={`/code/${item.id}/`}
+				/>
+			))}
+		</div>
+	</section>
+
+	<section id="online" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading eyebrow="Online Instruction" title="Online Instruction" description="Courses I've built for edX." />
+		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{onlineItems.map((course) => (
+				<Card
+					title={course.data.title}
+					description={course.data.blurb}
+					image={course.data.image}
+					href={course.data.url}
+				/>
+			))}
+		</div>
+	</section>
+
+	<section id="talks" class="mx-auto max-w-5xl px-6 py-24">
+		<SectionHeading eyebrow="Talks" title="Talks" description="Conference sessions and presentations." />
+		<div class="mt-8 overflow-x-auto rounded-xl border border-ink-800">
+			<table class="w-full text-left text-sm">
+				<thead>
+					<tr class="border-b border-ink-800 text-ink-400">
+						<th class="px-4 py-3 font-medium">Title</th>
+						<th class="px-4 py-3 font-medium">Date</th>
+						<th class="px-4 py-3 font-medium">Location</th>
+					</tr>
+				</thead>
+				<tbody>
+					{talks.map((talk) => (
+						<tr class="border-b border-ink-800 last:border-0 hover:bg-ink-900">
+							<td class="px-4 py-3">
+								<a href={`/talks/${talk.id}/`} class="font-medium text-ink-100 hover:text-accent-400">
+									{talk.data.title}
+								</a>
+							</td>
+							<td class="px-4 py-3 text-ink-400">
+								{talk.data.date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}
+							</td>
+							<td class="px-4 py-3 text-ink-400">{talk.data.location}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
 	</section>
 </BaseLayout>
