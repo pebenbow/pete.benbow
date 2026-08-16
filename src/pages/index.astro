@@ -1,8 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import Card from "../components/Card.astro";
 import TagChip from "../components/TagChip.astro";
+
+const projects = (await getCollection("projects")).sort(
+	(a, b) => a.data.order - b.data.order,
+);
 
 const socialLinks = [
 	{ label: "GitHub", href: "https://github.com/pebenbow" },
@@ -111,9 +116,17 @@ const skillGroups = [
 	</section>
 
 	<section id="projects" class="mx-auto max-w-5xl px-6 py-24">
-		<SectionHeading eyebrow="Projects" title="Projects" />
+		<SectionHeading eyebrow="Projects" title="Projects" description="A selection of the data, engineering, and hardware projects I've built." />
 		<div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			<Card title="Sample project" description="Card component check." tags={["R", "Shiny"]} href="/" />
+			{projects.map((project) => (
+				<Card
+					title={project.data.title}
+					description={project.data.summary}
+					image={project.data.image}
+					tags={project.data.tags}
+					href={`/projects/${project.id}/`}
+				/>
+			))}
 		</div>
 	</section>
 

@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagChip from "../../components/TagChip.astro";
+import "glightbox/dist/css/glightbox.min.css";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<BaseLayout title={`${project.data.title} — Pete Benbow`} description={project.data.summary}>
+	<article class="mx-auto max-w-3xl px-6 py-20">
+		<a href="/#projects" class="text-sm font-medium text-accent-400 hover:underline">&larr; Back to projects</a>
+
+		<h1 class="mt-4 font-display text-4xl font-bold text-ink-50">{project.data.title}</h1>
+		<p class="mt-2 text-ink-400">{project.data.summary}</p>
+
+		<div class="mt-4 flex flex-wrap gap-2">
+			{project.data.tags.map((tag) => <TagChip label={tag} />)}
+		</div>
+
+		<div class="prose prose-invert prose-headings:font-display prose-a:text-accent-400 mt-10 max-w-none">
+			<Content />
+		</div>
+	</article>
+</BaseLayout>
+
+<script>
+	import GLightbox from "glightbox";
+
+	const images = document.querySelectorAll<HTMLImageElement>("article img");
+	images.forEach((img) => {
+		if (img.closest("a")) return;
+		const link = document.createElement("a");
+		link.href = img.src;
+		link.className = "glightbox";
+		img.replaceWith(link);
+		link.appendChild(img);
+	});
+
+	GLightbox({ selector: ".glightbox" });
+</script>
