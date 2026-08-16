@@ -37,7 +37,9 @@ function serveDocs() {
 const server = await serveDocs();
 
 try {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}/cv/`, { waitUntil: "networkidle0" });
   await page.emulateMediaType("print");
