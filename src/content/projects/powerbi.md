@@ -2,7 +2,6 @@
 title: "Power BI"
 summary: "A modest selection of a few Power BI projects I've built over the years."
 image: "/images/projects/pbi.png"
-tags: ["Power BI", "DAX", "Data Visualization"]
 order: 1
 ---
 

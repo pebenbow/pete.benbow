@@ -2,7 +2,6 @@
 title: "R"
 summary: "R projects built in Shiny, Quarto, and other formats."
 image: "/images/projects/Rlogo.png"
-tags: ["R", "Shiny", "highcharter"]
 order: 2
 ---
 

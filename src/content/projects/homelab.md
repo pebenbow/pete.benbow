@@ -2,7 +2,6 @@
 title: "Home Lab"
 summary: "Gaming PCs and other cool stuff I've built for personal use."
 image: "/images/projects/custom-pc2025.jpg"
-tags: ["Hardware", "PC Building"]
 order: 3
 ---
 
