@@ -27,6 +27,11 @@
 }
 
 @layer base {
+  html {
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-ink-950);
     color: var(--color-ink-50);
