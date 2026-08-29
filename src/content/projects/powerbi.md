@@ -19,7 +19,7 @@ faculty demographics, and so forth.
 A few years ago, I was tasked with revamping Davidson's fact file into an
 interactive Power BI report, and this was the result.
 
-<iframe title="Davidson College Fact File" width="800" height="520" src="https://app.powerbi.com/view?r=eyJrIjoiYWFiYmZmZTktNGRmZC00NmNhLWFiNzItZDFlMmQ0MWViNzdjIiwidCI6IjM1ZDg3NjNjLWQyYjEtNDIxMy1iNjI5LWY1ZGYwYWY5ZTNjMyIsImMiOjF9" frameborder="0" allowfullscreen="true"></iframe>
+<iframe style="aspect-ratio:20/13" title="Davidson College Fact File" width="800" height="520" src="https://app.powerbi.com/view?r=eyJrIjoiYWFiYmZmZTktNGRmZC00NmNhLWFiNzItZDFlMmQ0MWViNzdjIiwidCI6IjM1ZDg3NjNjLWQyYjEtNDIxMy1iNjI5LWY1ZGYwYWY5ZTNjMyIsImMiOjF9" frameborder="0" allowfullscreen="true"></iframe>
 
 ### Basketball analytics
 
@@ -37,4 +37,4 @@ scatterplots with semi-transparent backgrounds laid on top of an image of an NCA
 regulation basketball court, and the chord diagram, which does a fantastic job of
 showing the relationships between players as they pass to each other.
 
-<iframe title="Davidson Mens Basketball 2017-18" width="800" height="480" src="https://app.powerbi.com/view?r=eyJrIjoiM2U5ZDY1NDctMGEwNC00MTg5LWI5NDItMDVhMTY1ZjdiMzZhIiwidCI6IjM1ZDg3NjNjLWQyYjEtNDIxMy1iNjI5LWY1ZGYwYWY5ZTNjMyIsImMiOjF9&pageName=ReportSection088b44c595a39c7c6380" frameborder="0" allowfullscreen="true"></iframe>
+<iframe style="aspect-ratio:5/3" title="Davidson Mens Basketball 2017-18" width="800" height="480" src="https://app.powerbi.com/view?r=eyJrIjoiM2U5ZDY1NDctMGEwNC00MTg5LWI5NDItMDVhMTY1ZjdiMzZhIiwidCI6IjM1ZDg3NjNjLWQyYjEtNDIxMy1iNjI5LWY1ZGYwYWY5ZTNjMyIsImMiOjF9&pageName=ReportSection088b44c595a39c7c6380" frameborder="0" allowfullscreen="true"></iframe>

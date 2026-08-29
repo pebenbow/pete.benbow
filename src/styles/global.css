@@ -71,6 +71,25 @@
   }
 }
 
+/* Decorative Glow orbs are intentionally positioned past the page edges.
+   overflow-x: clip contains them without creating a scroll container, so
+   overflow-y stays visible and the sticky nav keeps working (overflow-x:
+   hidden would force overflow-y to auto and nest a second scrollbar). */
+main {
+  overflow-x: clip;
+}
+
+/* Embeds are authored with fixed pixel width/height attributes (YouTube
+   560x315, Power BI 800x520). Scale them to the column instead, defaulting
+   to 16/9; embeds with other proportions set aspect-ratio inline. */
+.prose iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
 @media print {
   body {
     background: #fff;
