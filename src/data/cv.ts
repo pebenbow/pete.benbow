@@ -208,8 +208,10 @@ export const honors = [
 
 export const skills: SkillGroup[] = [
   { category: "Languages", icon: "lucide:code", items: ["SQL", "R", "Python"] },
-  { category: "Databases", icon: "lucide:database", items: ["PostgreSQL", "Microsoft SQL Server", "MySQL", "Oracle RDBMS", "DuckDB", "MongoDB"] },
-  { category: "BI & Data Viz", icon: "lucide:bar-chart-3", items: ["ggplot2", "Power BI", "R Shiny", "Tableau", "Superset"] },
-  { category: "Data Engineering", icon: "lucide:workflow", items: ["Databricks", "Microsoft Fabric", "Duckle", "Spark", "Polars"] },
+  { category: "Databases", icon: "lucide:database", items: ["DuckDB", "PostgreSQL", "Microsoft SQL Server", "MySQL", "Oracle", "MongoDB"] },
+  { category: "Data Wrangling", icon: "lucide:table-2", items: ["dplyr", "tidyr", "Polars", "pandas"] },
+  { category: "Visualization & BI", icon: "lucide:bar-chart-3", items: ["ggplot2", "R Shiny", "Power BI", "Tableau", "Superset"] },
+  { category: "Spatial", icon: "lucide:map", items: ["ArcGIS", "GeoLibre", "tmap", "leaflet"] },
+  { category: "Data Engineering", icon: "lucide:workflow", items: ["Spark", "PySpark", "DuckLake", "Databricks", "Microsoft Fabric"] },
   { category: "Web Development", icon: "lucide:globe", items: ["Quarto","Astro"] }
 ];
