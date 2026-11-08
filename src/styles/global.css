@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: "Atkinson Hyperlegible", sans-serif;
+  --font-sans: "Inter", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
 
   /* Type scale. Everything from text-xs to text-2xl (plus body and prose

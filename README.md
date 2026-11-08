@@ -118,7 +118,7 @@ When you run `npm run build`, `scripts/generate-cv-pdf.mjs` does the following a
 - Tailwind CSS v4 is loaded through the `@tailwindcss/vite` plugin. It has no `tailwind.config.js`. The design tokens live in the `@theme` block in `src/styles/global.css`:
   - `ink-*` for the dark neutral background and text scale
   - `accent-*` (blue), `violet-*`, and `coral-*` for highlights
-  - The `font-sans` (Atkinson Hyperlegible) and `font-display` (Space Grotesk) font families
+  - The `font-sans` (Inter) and `font-display` (Space Grotesk) font families
 - `@tailwindcss/typography` (`prose` classes) styles the rendered Markdown bodies.
 - The `Glow` component draws the blurred color blobs behind sections.
 - Icons come from [astro-icon](https://www.astroicon.dev/) with the Iconify `lucide` and `simple-icons` sets, for example `<Icon name="lucide:code" />` or `icon: "simple-icons:github"` in frontmatter.
