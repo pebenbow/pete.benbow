@@ -1,39 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 675">
 	<defs>
 		<filter id="blur3" x="-50%" y="-50%" width="200%" height="200%">
-			<feGaussianBlur stdDeviation="60" />
+			<feGaussianBlur stdDeviation="70" />
 		</filter>
 		<pattern id="dots3" width="28" height="28" patternUnits="userSpaceOnUse">
 			<circle cx="2" cy="2" r="1.4" fill="#26292e" />
 		</pattern>
 	</defs>
 
-	<rect width="800" height="450" fill="#0b0c0e" />
-	<rect width="800" height="450" fill="url(#dots3)" />
+	<rect width="800" height="675" fill="#0b0c0e" />
+	<rect width="800" height="675" fill="url(#dots3)" />
 
-	<circle cx="220" cy="130" r="140" fill="#ff7a45" opacity="0.18" filter="url(#blur3)" />
-	<circle cx="600" cy="330" r="150" fill="#8b5cf6" opacity="0.2" filter="url(#blur3)" />
+	<circle cx="210" cy="170" r="170" fill="#ff7a45" opacity="0.18" filter="url(#blur3)" />
+	<circle cx="610" cy="500" r="180" fill="#8b5cf6" opacity="0.2" filter="url(#blur3)" />
 
-	<g fill="none" stroke="#ff9770" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-		<path d="M400 110 V330" />
-		<path d="M340 340 H460" />
-		<path d="M260 165 H540" />
-		<path d="M260 165 L200 260" />
-		<path d="M260 165 L320 260" />
-		<path d="M540 165 L480 260" />
-		<path d="M540 165 L600 260" />
+	<!-- Stand and beam -->
+	<g fill="none" stroke="#ff9770" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M400 160 V585" />
+		<path d="M300 590 H500" />
+		<path d="M190 205 H610" />
+		<path d="M190 205 L115 415" />
+		<path d="M190 205 L265 415" />
+		<path d="M610 205 L535 415" />
+		<path d="M610 205 L685 415" />
+	</g>
+	<circle cx="400" cy="140" r="20" fill="#0b0c0e" stroke="#ff9770" stroke-width="8" />
+	<rect x="330" y="590" width="140" height="26" rx="8" fill="#ff9770" opacity="0.35" />
+
+	<!-- Left pan: data -->
+	<g fill="#a78bfa">
+		<rect x="139" y="352" width="20" height="56" rx="3" />
+		<rect x="169" y="322" width="20" height="86" rx="3" />
+		<rect x="199" y="337" width="20" height="71" rx="3" />
+		<rect x="229" y="302" width="20" height="106" rx="3" />
 	</g>
 
-	<g fill="#0b0c0e" stroke="#a78bfa" stroke-width="7">
-		<circle cx="200" cy="260" r="17" />
-		<circle cx="320" cy="260" r="17" />
-		<circle cx="260" cy="215" r="17" />
-		<circle cx="480" cy="260" r="17" />
-		<circle cx="600" cy="260" r="17" />
-		<circle cx="540" cy="215" r="17" />
+	<!-- Right pan: people -->
+	<g fill="#0b0c0e" stroke="#a78bfa" stroke-width="6" stroke-linejoin="round">
+		<circle cx="570" cy="350" r="13" />
+		<circle cx="610" cy="338" r="13" />
+		<circle cx="650" cy="350" r="13" />
+		<path d="M549 408 A21 26 0 0 1 591 408 Z" />
+		<path d="M589 408 A21 30 0 0 1 631 408 Z" />
+		<path d="M629 408 A21 26 0 0 1 671 408 Z" />
 	</g>
-	<g fill="none" stroke="#a78bfa" stroke-width="4" opacity="0.7">
-		<path d="M200 260 L260 215 L320 260" />
-		<path d="M480 260 L540 215 L600 260" />
+
+	<!-- Pans -->
+	<g fill="#0b0c0e" stroke="#ff9770" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M105 415 H275 A85 42 0 0 1 105 415 Z" />
+		<path d="M525 415 H695 A85 42 0 0 1 525 415 Z" />
 	</g>
 </svg>

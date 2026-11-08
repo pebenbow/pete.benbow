@@ -1,33 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 675">
 	<defs>
 		<filter id="blur2" x="-50%" y="-50%" width="200%" height="200%">
-			<feGaussianBlur stdDeviation="60" />
+			<feGaussianBlur stdDeviation="70" />
 		</filter>
 		<pattern id="dots2" width="28" height="28" patternUnits="userSpaceOnUse">
 			<circle cx="2" cy="2" r="1.4" fill="#26292e" />
 		</pattern>
+		<marker id="arrow2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+			<path d="M1 1 L9 5 L1 9 Z" fill="#a78bfa" />
+		</marker>
 	</defs>
 
-	<rect width="800" height="450" fill="#0b0c0e" />
-	<rect width="800" height="450" fill="url(#dots2)" />
+	<rect width="800" height="675" fill="#0b0c0e" />
+	<rect width="800" height="675" fill="url(#dots2)" />
 
-	<circle cx="620" cy="110" r="150" fill="#8b5cf6" opacity="0.2" filter="url(#blur2)" />
-	<circle cx="160" cy="360" r="140" fill="#2780e3" opacity="0.18" filter="url(#blur2)" />
+	<circle cx="630" cy="140" r="180" fill="#8b5cf6" opacity="0.2" filter="url(#blur2)" />
+	<circle cx="160" cy="540" r="170" fill="#2780e3" opacity="0.18" filter="url(#blur2)" />
 
-	<g fill="none" stroke="#a78bfa" stroke-width="8" stroke-linecap="round">
-		<path d="M150 300 L280 220" />
-		<path d="M150 220 L280 220" />
-		<path d="M280 220 L450 160" />
-		<path d="M450 160 L620 260" />
+	<g fill="none" stroke="#a78bfa" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow2)" opacity="0.85">
+		<path d="M158 170 C208 170 208 250 258 250" />
+		<path d="M158 340 C208 340 208 250 258 250" />
+		<path d="M158 340 C208 340 208 450 258 450" />
+		<path d="M158 510 C208 510 208 450 258 450" />
+		<path d="M334 250 C386 250 386 250 438 250" />
+		<path d="M334 450 C386 450 386 250 438 250" />
+		<path d="M334 450 C386 450 386 470 438 470" />
+		<path d="M514 250 C564 250 564 340 614 340" />
+		<path d="M514 470 C564 470 564 340 614 340" />
+		<path d="M334 250 C386 250 386 470 438 470" />
 	</g>
 
-	<g fill="#0b0c0e" stroke="#a78bfa" stroke-width="8">
-		<circle cx="150" cy="300" r="20" />
-		<circle cx="150" cy="220" r="20" />
-	</g>
-	<g fill="#0b0c0e" stroke="#5aa9ff" stroke-width="9">
-		<circle cx="280" cy="220" r="26" />
-		<circle cx="450" cy="160" r="26" />
-		<circle cx="620" cy="260" r="26" />
-	</g>
+	<circle cx="130" cy="170" r="20" fill="#0b0c0e" stroke="#a78bfa" stroke-width="8" />
+	<circle cx="130" cy="340" r="20" fill="#0b0c0e" stroke="#a78bfa" stroke-width="8" />
+	<circle cx="130" cy="510" r="20" fill="#0b0c0e" stroke="#a78bfa" stroke-width="8" />
+	<circle cx="300" cy="250" r="26" fill="#0b0c0e" stroke="#5aa9ff" stroke-width="9" />
+	<circle cx="300" cy="450" r="26" fill="#0b0c0e" stroke="#5aa9ff" stroke-width="9" />
+	<circle cx="480" cy="250" r="26" fill="#0b0c0e" stroke="#5aa9ff" stroke-width="9" />
+	<circle cx="480" cy="470" r="26" fill="#0b0c0e" stroke="#5aa9ff" stroke-width="9" />
+	<rect x="630" y="310" width="60" height="60" rx="10" fill="#0b0c0e" stroke="#5aa9ff" stroke-width="9" />
 </svg>

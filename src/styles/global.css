@@ -1,10 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: "Atkinson Hyperlegible", sans-serif;
+  --font-sans: "Inter", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
+
+  /* Type scale. Everything from text-xs to text-2xl (plus body and prose
+     text) is multiplied by --type-scale, so this one number is the knob for
+     experimenting. text-3xl and up (page/section headings) keep Tailwind's
+     defaults. Tailwind's default line heights are unitless ratios, so they
+     scale along with the sizes. */
+  --type-scale: 1.125;
+  --text-xs: calc(0.75rem * var(--type-scale));
+  --text-sm: calc(0.875rem * var(--type-scale));
+  --text-base: calc(1rem * var(--type-scale));
+  --text-lg: calc(1.125rem * var(--type-scale));
+  --text-xl: calc(1.25rem * var(--type-scale));
+  --text-2xl: calc(1.5rem * var(--type-scale));
 
   --color-ink-950: #0b0c0e;
   --color-ink-900: #121316;
@@ -36,6 +49,7 @@
     background-color: var(--color-ink-950);
     color: var(--color-ink-50);
     font-family: var(--font-sans);
+    font-size: var(--text-base);
   }
 
   h1,
@@ -79,6 +93,12 @@ main {
   overflow-x: clip;
 }
 
+/* The typography plugin hard-codes 1rem on .prose; follow the type scale
+   instead (child elements are em-based, so they scale too). */
+.prose {
+  font-size: var(--text-base);
+}
+
 /* Embeds are authored with fixed pixel width/height attributes (YouTube
    560x315, Power BI 800x520). Scale them to the column instead, defaulting
    to 16/9; embeds with other proportions set aspect-ratio inline. */
@@ -91,6 +111,11 @@ main {
 }
 
 @media print {
+  /* Keep the printed/PDF CV at its original size. */
+  :root {
+    --type-scale: 1;
+  }
+
   body {
     background: #fff;
     color: #000;
