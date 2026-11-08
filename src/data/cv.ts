@@ -16,11 +16,6 @@ export interface SoftwareProject {
   links?: { label: string; href: string }[];
 }
 
-export interface SoftwareCategory {
-  category: string;
-  projects: SoftwareProject[];
-}
-
 export interface Conference {
   title: string;
   note?: string;
@@ -37,57 +32,42 @@ export const education = [
   { degree: "A.B., Political Science", year: "2007", institution: "Davidson College" },
 ];
 
-export const experience: Organization[] = [
+// Current faculty roles. Earlier staff roles at Davidson live in
+// priorExperience; committee work lives in service regardless of which role
+// it was done under, since each item carries its own dates.
+export const appointments: Organization[] = [
   {
     name: "Davidson College",
     roles: [
       {
         title: "James B. Duke Assistant Professor of the Practice in Data Science",
-        dates: "2024 - Present",
+        dates: "2024 - present",
         bullets: [
+          "Developing new courses in Database Programming and Data Engineering",
           "Advising students majoring in Data Science",
           "Serving as faculty mentor to the Community Research Fellows program",
           "Developing extracurricular Data Science programs, including ASA DataFest and the Public Good Data Wrangle",
-          "Developing new courses in Database Programming and Data Engineering",
-          "Participated in interviewing and hiring Davidson's first tenure-track Professor of Data Science",
         ],
       },
       {
         title: "Director of Data CATS",
-        dates: "2024 - Present",
+        dates: "2024 - present",
         bullets: [
           "Managing a team of student tutors/consultants who provide data science services to students, faculty, staff, and community members",
           "Consulted on research project to identify significant drivers of donor giving in advance of new fundraising campaign",
           "Developed a dashboard visualizing planned courses for future years to aid departments in optimizing their schedules",
         ],
       },
-      {
-        title: "Technology & Innovation Department",
-        bullets: [
-          "Manager of Data Operations (2023 - 2024)",
-          "Business Intelligence Developer (2017 - 2023)",
-        ],
-      },
-      {
-        title: "Committee and Task Force Service",
-        bullets: [
-          "Advisory Board to the Franco Program on Public Policy and Research (2026 - present",
-          "Learning Spaces, Technology, and Design Committee (2025 - present)",
-          "Strategic Planning working group: “Discovering Passions, Developing Purpose” (2023 - 2024)",
-          "Search Committee: Director of Institutional Research (Spring 2024)",
-          "Search Committee: Assistant Director of Grants and Contracts (Fall 2019)",
-          "Working group for proposed Policy Studies major (2025 - 2026)",
-          "Data Governance Committee (2017 - 2024)",
-        ],
-      },
-      {
-        title: "Other Service",
-        bullets: [
-          "Holistic/pre-major advisor (2019 - Present)",
-          "Davidson College Class of 2007 Class Secretary (2026 - present)",
-          "Davidson College Class of 2007 20th Reunion Committee",
-        ],
-      },
+    ],
+  },
+];
+
+export const priorExperience: Organization[] = [
+  {
+    name: "Davidson College, Technology & Innovation",
+    roles: [
+      { title: "Manager of Data Operations", dates: "2023 - 2024" },
+      { title: "Business Intelligence Developer", dates: "2017 - 2023" },
     ],
   },
   {
@@ -102,12 +82,15 @@ export const experience: Organization[] = [
 
 export const teaching = {
   classroom: [
-    "DAT 342: Data Engineering (Fall 2026 - Present)",
-    "DAT 153: Database Programming (Spring 2025 - Present)",
-    "DAT 110: Data Science & Society (Fall 2024 - Present)",
+    "DAT 342: Data Engineering (Fall 2026 - present)",
+    "DAT 153: Database Programming (Spring 2025 - present)",
+    "DAT 110: Data Science & Society (Fall 2024 - present)",
   ],
   independent: [
     "DAT 395: Data Engineering (Spring 2026)",
+  ],
+  mentoring: [
+    "Holistic/pre-major advisor (2019 - present)",
   ],
   online: [
     "Analyzing & Visualizing Data with Power BI",
@@ -115,60 +98,42 @@ export const teaching = {
   ],
 };
 
-export const software: SoftwareCategory[] = [
+export const software: SoftwareProject[] = [
+//  {
+//    name: "pipevizR",
+//    description: "An R package that diagrams data lineage from tidyverse pipeline code",
+//    role: "Creator and primary author",
+//    links: [{ label: "GitHub", href: "https://github.com/pebenbow/pipevizr" }],
+//  },
   {
-    category: "R Packages/Projects",
-    projects: [
-      {
-        name: "pipevizR",
-        description: "An R package that diagrams data lineage from tidyverse pipeline code",
-        role: "Creator and primary author",
-        links: [{ label: "GitHub", href: "https://github.com/pebenbow/pipevizr" }],
-      },
-      {
-        name: "gradeR",
-        description: "An R package that autogrades programming assignments in Gradescope",
-        role: "Co-author",
-        links: [
-          { label: "GitHub", href: "https://github.com/tbrown122387/gradeR" },
-          { label: "CRAN", href: "https://cran.r-project.org/web/packages/gradeR/index.html" },
-        ],
-      },
-      {
-        name: "CatScheduler Dashboard",
-        description: "Interactive dashboard visualizing planned course schedules",
-        role: "Creator",
-        links: [
-          { label: "GitHub", href: "https://github.com/DavidsonCollege-DataScience/catsched-dashboard" },
-          { label: "In Production", href: "https://catsched-dashboard.run.k8s.davidson.edu/" },
-          { label: "Prototype", href: "https://pdbenbow.shinyapps.io/quarto-dash/" },
-        ],
-      },
+    name: "gradeR",
+    description: "An R package that autogrades programming assignments in Gradescope",
+    role: "Co-author",
+    links: [
+      { label: "GitHub", href: "https://github.com/tbrown122387/gradeR" },
+      { label: "CRAN", href: "https://cran.r-project.org/web/packages/gradeR/index.html" },
     ],
   },
   {
-    category: "Data Engineering Projects",
-    projects: [
-      {
-        name: "Davidson College Enterprise Data Warehouse (EDW)",
-        description: "Enterprise data warehouse supporting institutional reporting",
-      },
+    name: "CatScheduler Dashboard",
+    description: "An R Shiny app to be used by Davidson faculty when planning departmental course schedules for future academic years",
+    links: [
+      { label: "GitHub", href: "https://github.com/DavidsonCollege-DataScience/catsched-dashboard" },
+      { label: "In Production", href: "https://catsched-dashboard.run.k8s.davidson.edu/" },
+      { label: "Prototype", href: "https://pdbenbow.shinyapps.io/quarto-dash/" },
     ],
   },
   {
-    category: "Power BI Projects",
-    projects: [
-      {
-        name: "Davidson College Fact File",
-        description: "Institutional fact book",
-        links: [{ label: "go.davidson.edu/factfile", href: "https://go.davidson.edu/factfile" }],
-      },
-      { name: "National Student Clearinghouse graduate outcomes", description: "Graduate outcomes reporting" },
-      { name: "Davidson College departmental finance reports", description: "Departmental finance reporting" },
-      { name: "COVID-19 campus contact-tracing report", description: "Campus contact-tracing dashboard" },
-      { name: "Tutorial Services Dashboard", description: "Tutorial services reporting" },
-    ],
+    name: "Davidson College Enterprise Data Warehouse (EDW)",
+    description: "A large-scale enterprise data warehouse to support institutional reporting, including dimensional models, ELT pipelines, and semantic layer; built in Microsoft SQL Server",
   },
+  {
+    name: "Davidson College Fact File",
+    description: "A public-facing, interactive fact book built in Power BI for Institutional Research",
+    links: [{ label: "go.davidson.edu/factfile", href: "https://go.davidson.edu/factfile" }],
+  },
+  { name: "National Student Clearinghouse graduate outcomes", description: "Interactive Power BI report combining NSC data with Davidson internal data to investigate post-graduation outcomes of Davidson students; built in collaboration with Institutional Research" },
+  { name: "Davidson College departmental finance reports", description: "A suite of Power BI reports built on top of the college's enterprise data warehouse to provide comprehensive views into operating budgets and restricted funds" },
 ];
 
 export const conferences: Conference[] = [
@@ -196,11 +161,27 @@ export const conferences: Conference[] = [
   },
 ];
 
-export const professionalService = [
-  "Graduate, MOR Leaders Program for liberal arts colleges (2023-2024 cohort)",
-  "Founder and co-organizer, Higher Education Power BI User Group (Aug 2023 - Jan 2025)",
-  "Member, American Statistical Association (2024 - Present)",
-];
+// Newest first within each group.
+export const service = {
+  college: [
+    "Advisory Board to the Franco Program on Public Policy and Research (2026 - present)",
+    "Learning Spaces, Technology, and Design Committee (2025 - present)",
+    "Working group for proposed Policy Studies major (2025 - 2026)",
+    "Search Committee: Director of Institutional Research (Spring 2024)",
+    "Strategic Planning working group: “Discovering Passions, Developing Purpose” (2023 - 2024)",
+    "Search Committee: Assistant Director of Grants and Contracts (Fall 2019)",
+    "Data Governance Committee (2017 - 2024)",
+  ],
+  professional: [
+    "Graduate, MOR Leaders Program for liberal arts colleges (2023-2024 cohort)",
+    "Founder and co-organizer, Higher Education Power BI User Group (Aug 2023 - Jan 2025)",
+    "Member, American Statistical Association (2024 - present)",
+  ],
+  alumni: [
+    "Davidson College Class of 2007 Class Secretary (2026 - present)",
+    "Davidson College Class of 2007 20th Reunion Committee",
+  ],
+};
 
 export const honors = [
   "2023: First Place, Best Innovative Practice, Southern Association for Institutional Research annual conference (with L. Boyles)",
