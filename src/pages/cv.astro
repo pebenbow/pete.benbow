@@ -2,29 +2,45 @@
 import { Icon } from "astro-icon/components";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Glow from "../components/Glow.astro";
+import CvOrgList from "../components/CvOrgList.astro";
 import { socialLinks } from "../data/social";
 import {
     education,
-    experience,
+    appointments,
+    priorExperience,
     teaching,
     software,
     conferences,
-    professionalService,
+    service,
     honors,
 } from "../data/cv";
 
 const tocSections = [
     { id: "education", icon: "lucide:graduation-cap", title: "Education" },
-    { id: "experience", icon: "lucide:briefcase", title: "Experience" },
-    { id: "teaching", icon: "lucide:book-open", title: "Teaching" },
-    { id: "software", icon: "lucide:code", title: "Software Development" },
     {
-        id: "conferences",
-        icon: "lucide:mic",
-        title: "Conferences & Presentations",
+        id: "appointments",
+        icon: "lucide:briefcase",
+        title: "Academic Appointments",
     },
-    { id: "service", icon: "lucide:handshake", title: "Professional Service" },
+    { id: "teaching", icon: "lucide:book-open", title: "Teaching" },
+    { id: "service", icon: "lucide:handshake", title: "Service" },
+    {
+        id: "scholarship",
+        icon: "lucide:lightbulb",
+        title: "Scholarship & Professional Activity",
+    },
+    {
+        id: "prior-experience",
+        icon: "lucide:building-2",
+        title: "Prior Professional Experience",
+    },
     { id: "honors", icon: "lucide:award", title: "Honors and Awards" },
+];
+
+const serviceGroups = [
+    { title: "College Service", items: service.college },
+    { title: "Professional Service", items: service.professional },
+    { title: "Alumni Service", items: service.alumni },
 ];
 
 const sectionHeadingClass = "flex items-center gap-2.5 print:gap-0";
@@ -127,48 +143,14 @@ const bodyListClass =
             </div>
         </section>
 
-        <section id="experience" class="mt-8 print:mt-4">
+        <section id="appointments" class="mt-8 print:mt-4">
             <div class={sectionHeadingClass}>
                 <span class={iconBadgeClass}>
                     <Icon name="lucide:briefcase" class="h-4 w-4" />
                 </span>
-                <h2 class={headingTextClass}>Experience</h2>
+                <h2 class={headingTextClass}>Academic Appointments</h2>
             </div>
-            <div class="mt-3 space-y-5">
-                {experience.map((org) => (
-                    <div class={cardClass}>
-                        <h3 class="font-display text-base font-semibold text-ink-100 print:text-black">
-                            {org.name}
-                        </h3>
-                        <div class="mt-4 space-y-5 border-l border-ink-700 pl-5 print:mt-2 print:space-y-3 print:border-0 print:pl-0">
-                            {org.roles.map((role) => (
-                                <div class="relative">
-                                    <span class="absolute top-1.5 -left-[1.4rem] h-2 w-2 rounded-full bg-accent-500 print:hidden"></span>
-                                    <p class="font-medium text-ink-200 print:text-black">
-                                        {role.title}
-                                        {role.dates && (
-                                            <span class="text-ink-400 print:text-neutral-600">
-                                                {" "}
-                                                ({role.dates})
-                                            </span>
-                                        )}
-                                    </p>
-                                    {role.bullets &&
-                                        role.bullets.length > 0 && (
-                                            <ul
-                                                class={`mt-1 list-disc space-y-1 pl-5 ${bodyListClass}`}
-                                            >
-                                                {role.bullets.map((bullet) => (
-                                                    <li>{bullet}</li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <CvOrgList orgs={appointments} />
         </section>
 
         <section id="teaching" class="mt-8 print:mt-4">
@@ -196,6 +178,14 @@ const bodyListClass =
                     ))}
                 </ul>
                 <h3 class="mt-4 font-display text-base font-semibold text-ink-100 print:text-black">
+                    Advising &amp; Mentoring
+                </h3>
+                <ul class={`mt-1 list-disc space-y-1 pl-5 ${bodyListClass}`}>
+                    {teaching.mentoring.map((item) => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+                <h3 class="mt-4 font-display text-base font-semibold text-ink-100 print:text-black">
                     Online Instruction (edX)
                 </h3>
                 <ul class={`mt-1 list-disc space-y-1 pl-5 ${bodyListClass}`}>
@@ -206,69 +196,82 @@ const bodyListClass =
             </div>
         </section>
 
-        <section id="software" class="mt-8 print:mt-4">
+        <section id="service" class="mt-8 print:mt-4">
             <div class={sectionHeadingClass}>
                 <span class={iconBadgeClass}>
-                    <Icon name="lucide:code" class="h-4 w-4" />
+                    <Icon name="lucide:handshake" class="h-4 w-4" />
                 </span>
-                <h2 class={headingTextClass}>Software Development</h2>
+                <h2 class={headingTextClass}>Service</h2>
             </div>
-            <div class="mt-3 grid gap-4 sm:grid-cols-2 print:block print:space-y-3">
-                {software.map((group) => (
-                    <div class={cardClass}>
-                        <h3 class="font-display text-base font-semibold text-ink-100 print:text-black">
-                            {group.category}
+            <div class={`mt-3 ${cardClass}`}>
+                {serviceGroups.map((group, i) => (
+                    <>
+                        <h3
+                            class={`font-display text-base font-semibold text-ink-100 print:text-black ${i > 0 ? "mt-4" : ""}`}
+                        >
+                            {group.title}
                         </h3>
-                        <ul class={`mt-2 space-y-2 ${bodyListClass}`}>
-                            {group.projects.map((project) => (
-                                <li>
-                                    <span class="font-medium text-ink-200 print:text-black">
-                                        {project.name}
-                                    </span>
-                                    : {project.description}
-                                    {project.role && (
-                                        <span> — {project.role}</span>
-                                    )}
-                                    {project.links &&
-                                        project.links.length > 0 && (
-                                            <span>
-                                                {" "}
-                                                (
-                                                {project.links.map(
-                                                    (link, i) => (
-                                                        <>
-                                                            {i > 0 && " | "}
-                                                            <a
-                                                                href={link.href}
-                                                                target="_blank"
-                                                                rel="noreferrer"
-                                                                class="text-accent-400 print:text-black print:underline"
-                                                            >
-                                                                {link.label}
-                                                            </a>
-                                                        </>
-                                                    ),
-                                                )}
-                                                )
-                                            </span>
-                                        )}
-                                </li>
+                        <ul
+                            class={`mt-1 list-disc space-y-1 pl-5 ${bodyListClass}`}
+                        >
+                            {group.items.map((item) => (
+                                <li>{item}</li>
                             ))}
                         </ul>
-                    </div>
+                    </>
                 ))}
             </div>
         </section>
 
-        <section id="conferences" class="mt-8 print:mt-4">
+        <section id="scholarship" class="mt-8 print:mt-4">
             <div class={sectionHeadingClass}>
                 <span class={iconBadgeClass}>
-                    <Icon name="lucide:mic" class="h-4 w-4" />
+                    <Icon name="lucide:lightbulb" class="h-4 w-4" />
                 </span>
                 <h2 class={headingTextClass}>
-                    Conferences &amp; Presentations
+                    Scholarship &amp; Professional Activity
                 </h2>
             </div>
+
+            <div id="software" class="mt-5 print:mt-3">
+                <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-accent-400 print:text-black">Software Development</h3>
+            <div class={`mt-3 ${cardClass}`}>
+                <ul class={`list-disc space-y-2 pl-5 ${bodyListClass}`}>
+                    {software.map((project) => (
+                        <li>
+                            <span class="font-medium text-ink-200 print:text-black">
+                                {project.name}
+                            </span>
+                            : {project.description}
+                            {project.role && <span> — {project.role}</span>}
+                            {project.links && project.links.length > 0 && (
+                                <span>
+                                    {" "}
+                                    (
+                                    {project.links.map((link, i) => (
+                                        <>
+                                            {i > 0 && " | "}
+                                            <a
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                class="text-accent-400 print:text-black print:underline"
+                                            >
+                                                {link.label}
+                                            </a>
+                                        </>
+                                    ))}
+                                    )
+                                </span>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            </div>
+
+            <div id="conferences" class="mt-6 print:mt-4">
+                <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-accent-400 print:text-black">Conferences &amp; Presentations</h3>
             <div class="mt-3 space-y-3">
                 {conferences.map((conf) => (
                     <div class={cardClass}>
@@ -288,22 +291,17 @@ const bodyListClass =
                     </div>
                 ))}
             </div>
+            </div>
         </section>
 
-        <section id="service" class="mt-8 print:mt-4">
+        <section id="prior-experience" class="mt-8 print:mt-4">
             <div class={sectionHeadingClass}>
                 <span class={iconBadgeClass}>
-                    <Icon name="lucide:handshake" class="h-4 w-4" />
+                    <Icon name="lucide:building-2" class="h-4 w-4" />
                 </span>
-                <h2 class={headingTextClass}>Professional Service</h2>
+                <h2 class={headingTextClass}>Prior Professional Experience</h2>
             </div>
-            <div class={`mt-3 ${cardClass}`}>
-                <ul class={`list-disc space-y-1 pl-5 ${bodyListClass}`}>
-                    {professionalService.map((item) => (
-                        <li>{item}</li>
-                    ))}
-                </ul>
-            </div>
+            <CvOrgList orgs={priorExperience} />
         </section>
 
         <section id="honors" class="mt-8 print:mt-4">

@@ -16,3 +16,7 @@ npm-debug.log*
 .env
 .env.production
 .idea/
+
+# Typst CV experiments: generated data and output
+typst/cv.json
+typst/out/
