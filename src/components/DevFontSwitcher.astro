@@ -1,0 +1,111 @@
+---
+// Dev-only tool for comparing body fonts and type scales. BaseLayout only
+// renders it when import.meta.env.DEV is true, so it never ships to the
+// production build. Choices persist in localStorage across pages/reloads.
+const fonts = [
+  { label: "Inter (current)", family: "Inter" },
+  { label: "Atkinson Hyperlegible", family: "Atkinson Hyperlegible" },
+  { label: "Atkinson Hyperlegible Next", family: "Atkinson Hyperlegible Next" },
+  { label: "IBM Plex Sans", family: "IBM Plex Sans" },
+  { label: "Source Sans 3", family: "Source Sans 3" },
+  { label: "DM Sans", family: "DM Sans" },
+];
+
+// The current font is already loaded by global.css; load the rest here.
+const families = fonts
+  .slice(1)
+  .map((f) => `family=${f.family.replaceAll(" ", "+")}:ital,wght@0,400;0,700;1,400`)
+  .join("&");
+const href = `https://fonts.googleapis.com/css2?${families}&display=swap`;
+---
+
+<link rel="stylesheet" href={href} />
+
+<div
+	id="dev-font-switcher"
+	class="fixed bottom-4 left-4 z-[9999] w-64 rounded-xl border border-ink-700 bg-ink-900/95 p-4 text-[13px] leading-snug text-ink-200 shadow-xl backdrop-blur"
+	style="font-family: system-ui, sans-serif;"
+>
+	<div class="mb-3 flex items-center justify-between">
+		<span class="font-semibold uppercase tracking-wider text-ink-400">Body font (dev)</span>
+		<button type="button" data-toggle class="text-ink-400 hover:text-accent-400" aria-label="Collapse">–</button>
+	</div>
+	<div data-body>
+		<fieldset class="flex flex-col gap-1.5">
+			{fonts.map((f, i) => (
+				<label class="flex cursor-pointer items-center gap-2">
+					<input type="radio" name="dev-font" value={f.family} checked={i === 0} class="accent-accent-500" />
+					<span style={`font-family: "${f.family}"; font-size: 15px;`}>{f.label}</span>
+				</label>
+			))}
+		</fieldset>
+		<label class="mt-4 block">
+			<span class="flex justify-between">
+				<span>Type scale</span>
+				<span data-scale-value class="tabular-nums text-ink-400"></span>
+			</span>
+			<input type="range" min="0.875" max="1.3125" step="0.03125" data-scale class="mt-1 w-full accent-accent-500" />
+		</label>
+		<button type="button" data-reset class="mt-3 text-ink-400 underline hover:text-accent-400">Reset</button>
+	</div>
+</div>
+
+<script>
+	const root = document.documentElement;
+	const panel = document.getElementById("dev-font-switcher")!;
+	const radios = panel.querySelectorAll<HTMLInputElement>('input[name="dev-font"]');
+	const scale = panel.querySelector<HTMLInputElement>("[data-scale]")!;
+	const scaleValue = panel.querySelector<HTMLElement>("[data-scale-value]")!;
+	const body = panel.querySelector<HTMLElement>("[data-body]")!;
+	const toggle = panel.querySelector<HTMLButtonElement>("[data-toggle]")!;
+
+	const defaultScale = getComputedStyle(root).getPropertyValue("--type-scale").trim() || "1";
+
+	function applyFont(family: string | null) {
+		if (family) root.style.setProperty("--font-sans", `"${family}", sans-serif`);
+		else root.style.removeProperty("--font-sans");
+		radios.forEach((r) => (r.checked = r.value === (family ?? radios[0].value)));
+	}
+
+	function applyScale(value: string | null) {
+		if (value) root.style.setProperty("--type-scale", value);
+		else root.style.removeProperty("--type-scale");
+		scale.value = value ?? defaultScale;
+		scaleValue.textContent = Number(scale.value).toFixed(4).replace(/0+$/, "").replace(/\.$/, "");
+	}
+
+	function applyCollapsed(collapsed: boolean) {
+		body.hidden = collapsed;
+		toggle.textContent = collapsed ? "+" : "–";
+		toggle.setAttribute("aria-label", collapsed ? "Expand" : "Collapse");
+	}
+
+	applyFont(localStorage.getItem("dev-font"));
+	applyScale(localStorage.getItem("dev-type-scale"));
+	applyCollapsed(localStorage.getItem("dev-font-collapsed") === "1");
+
+	radios.forEach((r) =>
+		r.addEventListener("change", () => {
+			localStorage.setItem("dev-font", r.value);
+			applyFont(r.value);
+		}),
+	);
+
+	scale.addEventListener("input", () => {
+		localStorage.setItem("dev-type-scale", scale.value);
+		applyScale(scale.value);
+	});
+
+	toggle.addEventListener("click", () => {
+		const collapsed = !body.hidden;
+		localStorage.setItem("dev-font-collapsed", collapsed ? "1" : "0");
+		applyCollapsed(collapsed);
+	});
+
+	panel.querySelector("[data-reset]")!.addEventListener("click", () => {
+		localStorage.removeItem("dev-font");
+		localStorage.removeItem("dev-type-scale");
+		applyFont(null);
+		applyScale(null);
+	});
+</script>
