@@ -46,9 +46,9 @@ export const experience: Organization[] = [
         dates: "2024 - Present",
         bullets: [
           "Advising students majoring in Data Science",
-          "Faculty mentor, Community Research Fellows program",
+          "Serving as faculty mentor to the Community Research Fellows program",
           "Developing extracurricular Data Science programs, including ASA DataFest and the Public Good Data Wrangle",
-          "Developed Davidson's first course with a DAT (Data Science) subject code, DAT-153 Database Programming",
+          "Developing new courses in Database Programming and Data Engineering",
           "Participated in interviewing and hiring Davidson's first tenure-track Professor of Data Science",
         ],
       },
@@ -71,8 +71,9 @@ export const experience: Organization[] = [
       {
         title: "Committee and Task Force Service",
         bullets: [
+          "Advisory Board to the Franco Program on Public Policy and Research (2026 - present",
           "Learning Spaces, Technology, and Design Committee (2025 - present)",
-          "Strategic Planning working group member: “Discovering Passions, Developing Purpose” (2023 - 2024)",
+          "Strategic Planning working group: “Discovering Passions, Developing Purpose” (2023 - 2024)",
           "Search Committee: Director of Institutional Research (Spring 2024)",
           "Search Committee: Assistant Director of Grants and Contracts (Fall 2019)",
           "Working group for proposed Policy Studies major (2025 - 2026)",
@@ -84,6 +85,7 @@ export const experience: Organization[] = [
         bullets: [
           "Holistic/pre-major advisor (2019 - Present)",
           "Davidson College Class of 2007 Class Secretary (2026 - present)",
+          "Davidson College Class of 2007 20th Reunion Committee",
         ],
       },
     ],
@@ -100,14 +102,16 @@ export const experience: Organization[] = [
 
 export const teaching = {
   classroom: [
-    "DAT 395: Independent Study: Data Engineering (Spring 2026)",
     "DAT 342: Data Engineering (Fall 2026 - Present)",
     "DAT 153: Database Programming (Spring 2025 - Present)",
     "DAT 110: Data Science & Society (Fall 2024 - Present)",
   ],
+  independent: [
+    "DAT 395: Data Engineering (Spring 2026)",
+  ],
   online: [
-    "Analyzing & Visualizing Data with Power BI (2020 - present)",
-    "Introduction to SQL (2021 - present)",
+    "Analyzing & Visualizing Data with Power BI",
+    "Introduction to SQL",
   ],
 };
 
